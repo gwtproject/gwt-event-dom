@@ -1,0 +1,37 @@
+group = 'org.gwtproject.event'
+version = '1.0-SNAPSHOT'
+
+plugins {
+    id "java-library"
+    id "maven"
+}
+
+repositories {
+    mavenCentral()
+    // as long as gwt-dom is not in maven central
+    mavenLocal()
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+
+sourceCompatibility = 1.8
+
+dependencies {
+    api 'org.gwtproject.dom:gwt-dom:1.0-SNAPSHOT'
+    api 'org.gwtproject.event:gwt-event:HEAD-SNAPSHOT'
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'com.google.gwt:gwt-user:2.8.2'
+    testRuntimeOnly 'com.google.gwt:gwt-dev:2.8.2'
+}
+
+jar {
+    from sourceSets.main.allJava
+}
+
+test {
+    classpath += sourceSets.main.allJava.sourceDirectories + sourceSets.test.allJava.sourceDirectories
+    systemProperty "gwt.args", "-ea -draftCompile"
+    include '**/*Suite.class'
+    scanForTestClasses = false
+}
