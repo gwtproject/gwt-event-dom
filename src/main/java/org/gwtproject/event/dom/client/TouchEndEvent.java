@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2010 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -25,7 +27,7 @@ public class TouchEndEvent extends TouchEvent<TouchEndHandler> {
   /**
    * Event type for touch end events. Represents the meta-data associated with this event.
    */
-  private static final Type<TouchEndHandler> TYPE = new Type<TouchEndHandler>(
+  private static final Type<TouchEndHandler> TYPE = new Type<>(
       BrowserEvents.TOUCHEND, new TouchEndEvent());
 
   /**

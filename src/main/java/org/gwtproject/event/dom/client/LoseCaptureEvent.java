@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2008 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,7 +26,7 @@ public class LoseCaptureEvent extends DomEvent<LoseCaptureHandler> {
   /**
    * Event type for lose capture events. Represents the meta-data associated with this event.
    */
-  private static final Type<LoseCaptureHandler> TYPE = new Type<LoseCaptureHandler>(
+  private static final Type<LoseCaptureHandler> TYPE = new Type<>(
       BrowserEvents.LOSECAPTURE, new LoseCaptureEvent());
 
   /**

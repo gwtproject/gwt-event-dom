@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+  /*
  * Copyright 2008 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,7 +26,7 @@ public class ClickEvent extends MouseEvent<ClickHandler> {
   /**
    * Event type for click events. Represents the meta-data associated with this event.
    */
-  private static final Type<ClickHandler> TYPE = new Type<ClickHandler>(
+  private static final Type<ClickHandler> TYPE = new Type<>(
       BrowserEvents.CLICK, new ClickEvent());
 
   /**

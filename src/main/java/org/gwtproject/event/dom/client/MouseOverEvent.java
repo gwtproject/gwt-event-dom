@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2008 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -25,7 +27,7 @@ public class MouseOverEvent extends MouseEvent<MouseOverHandler> {
   /**
    * Event type for mouse over events. Represents the meta-data associated with this event.
    */
-  private static final Type<MouseOverHandler> TYPE = new Type<MouseOverHandler>(
+  private static final Type<MouseOverHandler> TYPE = new Type<>(
       BrowserEvents.MOUSEOVER, new MouseOverEvent());
 
   /**

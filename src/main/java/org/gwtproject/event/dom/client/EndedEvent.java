@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+  /*
  * Copyright 2011 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -30,8 +32,7 @@ public class EndedEvent extends DomEvent<EndedHandler> {
   /**
    * Event type for media ended events. Represents the meta-data associated with this event.
    */
-  private static final Type<EndedHandler> TYPE = new Type<
-      EndedHandler>(BrowserEvents.ENDED, new EndedEvent());
+  private static final Type<EndedHandler> TYPE = new Type<>(BrowserEvents.ENDED, new EndedEvent());
 
   /**
    * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,

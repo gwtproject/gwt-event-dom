@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+  /*
  * Copyright 2011 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -14,7 +16,6 @@ package org.gwtproject.event.dom.client;/*
  * the License.
  */
 
-import org.gwtproject.core.client.GWT;
 import org.gwtproject.dom.client.DataTransfer;
 import org.gwtproject.dom.client.PartialSupport;
 import org.gwtproject.event.shared.EventHandler;
@@ -28,20 +29,13 @@ import org.gwtproject.event.shared.EventHandler;
 public abstract class DragDropEventBase<H extends EventHandler> extends DomEvent<H> {
 
   /**
-   * The implementation singleton.
-   */
-  private static DragSupportDetector impl;
-
-  /**
    * Runtime check for whether drag events are supported in this browser.
    *
    * @return true if supported, false if not
    */
   public static boolean isSupported() {
-    if (impl == null) {
-      impl = GWT.create(DragSupportDetector.class);
-    }
-    return impl.isSupported();
+    // all supported brwoser have drag support!
+    return true;
   }
 
   /**
@@ -72,39 +66,5 @@ public abstract class DragDropEventBase<H extends EventHandler> extends DomEvent
    */
   public void setData(String format, String data) {
     getDataTransfer().setData(format, data);
-  }
-
-  /**
-   * Detector for browser support of drag events.
-   */
-  static class DragSupportDetector {
-
-    private final boolean isSupported = detectDragSupport();
-
-    /**
-     * Using a run-time check, return true if drag events are supported.
-     *
-     * @return true if supported, false otherwise.
-     */
-    public boolean isSupported() {
-      return isSupported;
-    }
-
-    private native boolean detectDragSupport() /*-{
-      var elem = document.createElement('div');
-      elem.setAttribute('ondragstart', 'return;');
-      return (typeof elem.ondragstart) == "function";
-    }-*/;
-  }
-
-  /**
-   * Detector for permutations that do not support drag events.
-   */
-  static class DragSupportDetectorNo extends DragSupportDetector {
-
-    @Override
-    public boolean isSupported() {
-      return false;
-    }
   }
 }

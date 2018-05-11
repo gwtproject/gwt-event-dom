@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+  /*
  * Copyright 2008 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,7 +26,7 @@ public class ChangeEvent extends DomEvent<ChangeHandler> {
   /**
    * Event type for change events. Represents the meta-data associated with this event.
    */
-  private static final Type<ChangeHandler> TYPE = new Type<ChangeHandler>(
+  private static final Type<ChangeHandler> TYPE = new Type<>(
       BrowserEvents.CHANGE, new ChangeEvent());
 
   /**

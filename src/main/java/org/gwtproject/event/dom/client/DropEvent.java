@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+  /*
  * Copyright 2011 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,7 +26,7 @@ public class DropEvent extends DragDropEventBase<DropHandler> {
   /**
    * Event type for drop events. Represents the meta-data associated with this event.
    */
-  private static final Type<DropHandler> TYPE = new Type<DropHandler>(
+  private static final Type<DropHandler> TYPE = new Type<>(
       BrowserEvents.DROP, new DropEvent());
 
   /**

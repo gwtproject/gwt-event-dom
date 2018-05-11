@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+  /*
  * Copyright 2011 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,7 +26,7 @@ public class DragLeaveEvent extends DragDropEventBase<DragLeaveHandler> {
   /**
    * Event type for drag leave events. Represents the meta-data associated with this event.
    */
-  private static final Type<DragLeaveHandler> TYPE = new Type<DragLeaveHandler>(
+  private static final Type<DragLeaveHandler> TYPE = new Type<>(
       BrowserEvents.DRAGLEAVE,
       new DragLeaveEvent());
 

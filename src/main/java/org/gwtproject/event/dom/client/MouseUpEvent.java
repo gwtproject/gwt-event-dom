@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2008 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,7 +26,7 @@ public class MouseUpEvent extends MouseEvent<MouseUpHandler> {
   /**
    * Event type for mouse up events. Represents the meta-data associated with this event.
    */
-  private static final Type<MouseUpHandler> TYPE = new Type<MouseUpHandler>(
+  private static final Type<MouseUpHandler> TYPE = new Type<>(
       BrowserEvents.MOUSEUP, new MouseUpEvent());
 
   /**

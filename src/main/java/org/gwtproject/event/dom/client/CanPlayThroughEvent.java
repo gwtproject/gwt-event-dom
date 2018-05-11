@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+  /*
  * Copyright 2011 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -31,8 +33,8 @@ public class CanPlayThroughEvent extends DomEvent<CanPlayThroughHandler> {
    * Event type for media can play through events. Represents the meta-data associated with this
    * event.
    */
-  private static final Type<CanPlayThroughHandler> TYPE = new Type<
-      CanPlayThroughHandler>(BrowserEvents.CANPLAYTHROUGH, new CanPlayThroughEvent());
+  private static final Type<CanPlayThroughHandler> TYPE = new Type<>(BrowserEvents.CANPLAYTHROUGH,
+      new CanPlayThroughEvent());
 
   /**
    * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,

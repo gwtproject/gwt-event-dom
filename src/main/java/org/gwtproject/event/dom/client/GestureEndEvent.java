@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2010 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,8 +26,8 @@ public class GestureEndEvent extends DomEvent<GestureEndHandler> {
   /**
    * Event type for gesture end events. Represents the meta-data associated with this event.
    */
-  private static final Type<GestureEndHandler> TYPE = new Type<
-      GestureEndHandler>(BrowserEvents.GESTUREEND, new GestureEndEvent());
+  private static final Type<GestureEndHandler> TYPE = new Type<>(BrowserEvents.GESTUREEND,
+      new GestureEndEvent());
 
   /**
    * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,

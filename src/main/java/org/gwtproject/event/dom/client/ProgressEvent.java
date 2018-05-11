@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2011 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -30,8 +32,7 @@ public class ProgressEvent extends DomEvent<ProgressHandler> {
   /**
    * Event type for media progress events. Represents the meta-data associated with this event.
    */
-  private static final Type<ProgressHandler> TYPE = new Type<
-      ProgressHandler>(BrowserEvents.PROGRESS, new ProgressEvent());
+  private static final Type<ProgressHandler> TYPE = new Type<>(BrowserEvents.PROGRESS, new ProgressEvent());
 
   /**
    * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,

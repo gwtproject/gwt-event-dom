@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2010 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,7 +26,7 @@ public class TouchMoveEvent extends TouchEvent<TouchMoveHandler> {
   /**
    * Event type for touch move events. Represents the meta-data associated with this event.
    */
-  private static final Type<TouchMoveHandler> TYPE = new Type<TouchMoveHandler>(
+  private static final Type<TouchMoveHandler> TYPE = new Type<>(
       BrowserEvents.TOUCHMOVE, new TouchMoveEvent());
 
   /**

@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+  /*
  * Copyright 2008 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,7 +26,7 @@ public class DoubleClickEvent extends MouseEvent<DoubleClickHandler> {
   /**
    * Event type for double click events. Represents the meta-data associated with this event.
    */
-  private static final Type<DoubleClickHandler> TYPE = new Type<DoubleClickHandler>(
+  private static final Type<DoubleClickHandler> TYPE = new Type<>(
       BrowserEvents.DBLCLICK, new DoubleClickEvent());
 
   /**

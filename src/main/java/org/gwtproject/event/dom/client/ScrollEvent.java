@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2008 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -25,7 +27,7 @@ public class ScrollEvent extends DomEvent<ScrollHandler> {
   /**
    * Event type for scroll events. Represents the meta-data associated with this event.
    */
-  private static final Type<ScrollHandler> TYPE = new Type<ScrollHandler>(
+  private static final Type<ScrollHandler> TYPE = new Type<>(
       BrowserEvents.SCROLL, new ScrollEvent());
 
   /**

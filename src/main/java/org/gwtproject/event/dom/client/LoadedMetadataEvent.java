@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2013 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -33,7 +35,7 @@ public class LoadedMetadataEvent extends DomEvent<LoadedMetadataHandler> {
    */
 
   private static final Type<LoadedMetadataHandler> TYPE =
-      new Type<LoadedMetadataHandler>(BrowserEvents.LOADEDMETADATA, new LoadedMetadataEvent());
+      new Type<>(BrowserEvents.LOADEDMETADATA, new LoadedMetadataEvent());
 
   /**
    * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,

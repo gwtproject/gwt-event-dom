@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2010 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,8 +26,7 @@ public class GestureStartEvent extends DomEvent<GestureStartHandler> {
   /**
    * Event type for gesture start events. Represents the meta-data associated with this event.
    */
-  private static final Type<GestureStartHandler> TYPE = new Type<
-      GestureStartHandler>(BrowserEvents.GESTURESTART, new GestureStartEvent());
+  private static final Type<GestureStartHandler> TYPE = new Type<>(BrowserEvents.GESTURESTART, new GestureStartEvent());
 
   /**
    * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,

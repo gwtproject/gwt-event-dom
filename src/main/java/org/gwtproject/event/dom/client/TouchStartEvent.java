@@ -1,4 +1,7 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+
+/*
  * Copyright 2010 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,8 +27,7 @@ public class TouchStartEvent extends TouchEvent<TouchStartHandler> {
   /**
    * Event type for touch start events. Represents the meta-data associated with this event.
    */
-  private static final Type<TouchStartHandler> TYPE = new Type<
-      TouchStartHandler>(BrowserEvents.TOUCHSTART, new TouchStartEvent());
+  private static final Type<TouchStartHandler> TYPE = new Type<>(BrowserEvents.TOUCHSTART, new TouchStartEvent());
 
   /**
    * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,

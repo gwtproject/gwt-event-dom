@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+  /*
  * Copyright 2008 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,7 +26,7 @@ public class ErrorEvent extends DomEvent<ErrorHandler> {
   /**
    * Event type for error events. Represents the meta-data associated with this event.
    */
-  private static final Type<ErrorHandler> TYPE = new Type<ErrorHandler>(
+  private static final Type<ErrorHandler> TYPE = new Type<>(
       BrowserEvents.ERROR, new ErrorEvent());
 
   /**

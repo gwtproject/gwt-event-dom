@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2010 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -14,6 +16,12 @@ package org.gwtproject.event.dom.client;/*
  * the License.
  */
 
+import com.google.gwt.core.client.JsArray;
+import elemental2.dom.HTMLDivElement;
+import jsinterop.annotations.JsMethod;
+import jsinterop.annotations.JsProperty;
+import jsinterop.annotations.JsType;
+import jsinterop.base.Js;
 import org.gwtproject.dom.client.Touch;
 import org.gwtproject.event.shared.EventHandler;
 
@@ -41,9 +49,9 @@ public abstract class TouchEvent<H extends EventHandler>
    */
   public static boolean isSupported() {
     if (impl == null) {
-      impl = GWT.create(TouchSupportDetector.class);
+      impl = new TouchSupportDetector();
     }
-    return impl.isSupported();
+    return impl.isSupported;
   }
 
   /**
@@ -81,34 +89,48 @@ public abstract class TouchEvent<H extends EventHandler>
   public JsArray<Touch> getTouches() {
     return getNativeEvent().getTouches();
   }
+//
+//  /**
+//   * Dectector for browser support for touch events.
+//   */
+//  private static class TouchSupportDetectorOld {
+//
+//    private final boolean isSupported = detectTouchSupport();
+//
+//    public boolean isSupported() {
+//      return isSupported;
+//    }
+//
+//    private native boolean detectTouchSupport() /*-{
+//      var elem = document.createElement('div');
+//      elem.setAttribute('ontouchstart', 'return;');
+//      return (typeof elem.ontouchstart) == "function";
+//    }-*/;
+//  }
+//
+//  /**
+//   * Detector for browsers that do not support touch events.
+//   */
+//  @SuppressWarnings("unused")
+//  private static class TouchSupportDetectorNo extends TouchSupportDetectorOld {
+//
+//    @Override
+//    public boolean isSupported() {
+//      return false;
+//    }
+//  }
 
-  /**
-   * Dectector for browser support for touch events.
-   */
-  private static class TouchSupportDetector {
+  @JsType(isNative = true)
+  static class TouchSupportDetector {
 
-    private final boolean isSupported = detectTouchSupport();
+    @JsProperty
+    private boolean isSupported = detectTouchSupport();
 
-    public boolean isSupported() {
-      return isSupported;
-    }
-
-    private native boolean detectTouchSupport() /*-{
-      var elem = document.createElement('div');
-      elem.setAttribute('ontouchstart', 'return;');
-      return (typeof elem.ontouchstart) == "function";
-    }-*/;
-  }
-
-  /**
-   * Detector for browsers that do not support touch events.
-   */
-  @SuppressWarnings("unused")
-  private static class TouchSupportDetectorNo extends TouchSupportDetector {
-
-    @Override
-    public boolean isSupported() {
-      return false;
+    @JsMethod
+    private boolean detectTouchSupport() {
+      HTMLDivElement divElement = new HTMLDivElement();
+      divElement.setAttribute("ontouchstart", "return;");
+      return "function".equals(Js.typeof(divElement.ontouchstart));
     }
   }
 }

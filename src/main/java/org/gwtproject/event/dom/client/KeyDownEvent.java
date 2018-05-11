@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2008 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -24,7 +26,7 @@ public class KeyDownEvent extends KeyCodeEvent<KeyDownHandler> {
   /**
    * Event type for key down events. Represents the meta-data associated with this event.
    */
-  private static final Type<KeyDownHandler> TYPE = new Type<KeyDownHandler>(
+  private static final Type<KeyDownHandler> TYPE = new Type<>(
       BrowserEvents.KEYDOWN, new KeyDownEvent());
 
   /**

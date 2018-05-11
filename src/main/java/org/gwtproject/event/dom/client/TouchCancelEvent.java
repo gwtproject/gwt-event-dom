@@ -1,4 +1,6 @@
-package org.gwtproject.event.dom.client;/*
+package org.gwtproject.event.dom.client;
+
+/*
  * Copyright 2010 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
@@ -25,8 +27,7 @@ public class TouchCancelEvent extends TouchEvent<TouchCancelHandler> {
   /**
    * Event type for touch start events. Represents the meta-data associated with this event.
    */
-  private static final Type<TouchCancelHandler> TYPE = new Type<
-      TouchCancelHandler>(BrowserEvents.TOUCHCANCEL, new TouchCancelEvent());
+  private static final Type<TouchCancelHandler> TYPE = new Type<>(BrowserEvents.TOUCHCANCEL, new TouchCancelEvent());
 
   /**
    * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
