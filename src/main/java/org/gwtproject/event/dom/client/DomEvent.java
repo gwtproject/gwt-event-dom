@@ -22,18 +22,18 @@ import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 import org.gwtproject.dom.client.Element;
 import org.gwtproject.dom.client.NativeEvent;
+import org.gwtproject.event.shared.Event;
 import org.gwtproject.event.shared.EventHandler;
-import org.gwtproject.event.shared.GwtEvent;
 import org.gwtproject.event.shared.HasHandlers;
 
 /**
- * {@link DomEvent} is a subclass of {@link GwtEvent} that provides events that underlying native
+ * {@link DomEvent} is a subclass of {@link Event} that provides events that underlying native
  * browser event object as well as a subclass of {@link Type} that understands GWT event bits used
  * by sinkEvents().
  *
  * @param <H> handler type
  */
-public abstract class DomEvent<H extends EventHandler> extends GwtEvent<H>
+public abstract class DomEvent<H extends EventHandler> extends Event<H>
     implements HasNativeEvent {
 
   private static JsPropertyMap<List<Type<?>>> registered;
@@ -92,7 +92,6 @@ public abstract class DomEvent<H extends EventHandler> extends GwtEvent<H>
   public abstract Type<H> getAssociatedType();
 
   public final NativeEvent getNativeEvent() {
-    assertLive();
     return nativeEvent;
   }
 
@@ -113,7 +112,6 @@ public abstract class DomEvent<H extends EventHandler> extends GwtEvent<H>
    * @return the event's relative element
    */
   public final Element getRelativeElement() {
-    assertLive();
     return relativeElem;
   }
 
@@ -130,7 +128,6 @@ public abstract class DomEvent<H extends EventHandler> extends GwtEvent<H>
    * Prevents the wrapped native event's default action.
    */
   public void preventDefault() {
-    assertLive();
     nativeEvent.preventDefault();
   }
 
@@ -138,7 +135,6 @@ public abstract class DomEvent<H extends EventHandler> extends GwtEvent<H>
    * Stops the propagation of the underlying native event.
    */
   public void stopPropagation() {
-    assertLive();
     nativeEvent.stopPropagation();
   }
 
@@ -148,7 +144,7 @@ public abstract class DomEvent<H extends EventHandler> extends GwtEvent<H>
    *
    * @param <H> handler type
    */
-  public static class Type<H extends EventHandler> extends GwtEvent.Type<H> {
+  public static class Type<H extends EventHandler> extends Event.Type<H> {
 
     private DomEvent<H> flyweight;
     private String name;
