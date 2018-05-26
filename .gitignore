@@ -2,3 +2,4 @@
 /.gradle
 /gradlew
 build
+/target/

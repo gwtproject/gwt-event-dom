@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
 /*
- * Copyright 2008 Google Inc.
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,6 +13,7 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+package org.gwtproject.event.dom.client;
 
 import org.gwtproject.event.shared.HandlerRegistration;
 import org.gwtproject.event.shared.HasHandlers;
@@ -23,13 +22,15 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link KeyPressHandler}
  * instances.
  */
-public interface HasKeyPressHandlers extends HasHandlers {
+public interface HasKeyPressHandlers
+        extends HasHandlers {
 
-  /**
-   * Adds a {@link KeyPressEvent} handler.
-   *
-   * @param handler the key press handler
-   * @return {@link HandlerRegistration} used to remove this handler
-   */
-  HandlerRegistration addKeyPressHandler(KeyPressHandler handler);
+    /**
+     * Adds a {@link KeyPressEvent} handler.
+     *
+     * @param handler the key press handler
+     *
+     * @return {@link HandlerRegistration} used to remove this handler
+     */
+    HandlerRegistration addKeyPressHandler(KeyPressHandler handler);
 }

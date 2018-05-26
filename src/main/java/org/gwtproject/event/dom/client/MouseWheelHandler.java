@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
 /*
- * Copyright 2008 Google Inc.
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,18 +13,18 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
-import org.gwtproject.event.shared.EventHandler;
+package org.gwtproject.event.dom.client;
 
 /**
  * Handler interface for {@link MouseWheelEvent} events.
  */
-public interface MouseWheelHandler extends EventHandler {
+public interface MouseWheelHandler
+        extends EventHandler {
 
-  /**
-   * Called when MouseWheelEvent is fired.
-   *
-   * @param event the {@link MouseWheelEvent} that was fired
-   */
-  void onMouseWheel(MouseWheelEvent event);
+    /**
+     * Called when MouseWheelEvent is fired.
+     *
+     * @param event the {@link MouseWheelEvent} that was fired
+     */
+    void onMouseWheel(MouseWheelEvent event);
 }

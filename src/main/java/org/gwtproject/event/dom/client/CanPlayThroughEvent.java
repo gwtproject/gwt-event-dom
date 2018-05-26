@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
-  /*
- * Copyright 2011 Google Inc.
+/*
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,6 +13,7 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
@@ -27,38 +26,39 @@ import org.gwtproject.dom.client.BrowserEvents;
  * </span>
  * </p>
  */
-public class CanPlayThroughEvent extends DomEvent<CanPlayThroughHandler> {
+public class CanPlayThroughEvent
+        extends DomEvent<CanPlayThroughHandler> {
 
-  /**
-   * Event type for media can play through events. Represents the meta-data associated with this
-   * event.
-   */
-  private static final Type<CanPlayThroughHandler> TYPE = new Type<>(BrowserEvents.CANPLAYTHROUGH,
-      new CanPlayThroughEvent());
+    /**
+     * Event type for media can play through events. Represents the meta-data associated with this
+     * event.
+     */
+    private static final Type<CanPlayThroughHandler> TYPE = new Type<>(BrowserEvents.CANPLAYTHROUGH,
+            new CanPlayThroughEvent());
 
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-   * org.gwtproject.event.shared.HasHandlers)} to fire media can play through events.
-   */
-  protected CanPlayThroughEvent() {
-  }
+    /**
+     * Gets the event type associated with media can play through events.
+     *
+     * @return the handler type
+     */
+    public static Type<CanPlayThroughHandler> getType() {
+        return TYPE;
+    }
 
-  /**
-   * Gets the event type associated with media can play through events.
-   *
-   * @return the handler type
-   */
-  public static Type<CanPlayThroughHandler> getType() {
-    return TYPE;
-  }
+    /**
+     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+     * org.gwtproject.event.shared.HasHandlers)} to fire media can play through events.
+     */
+    protected CanPlayThroughEvent() {
+    }
 
-  @Override
-  public final Type<CanPlayThroughHandler> getAssociatedType() {
-    return TYPE;
-  }
+    @Override
+    public final Type<CanPlayThroughHandler> getAssociatedType() {
+        return TYPE;
+    }
 
-  @Override
-  protected void dispatch(CanPlayThroughHandler handler) {
-    handler.onCanPlayThrough(this);
-  }
+    @Override
+    protected void dispatch(CanPlayThroughHandler handler) {
+        handler.onCanPlayThrough(this);
+    }
 }

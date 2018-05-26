@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
 /*
- * Copyright 2008 Google Inc.
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,6 +13,7 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+package org.gwtproject.event.dom.client;
 
 import org.gwtproject.event.shared.HandlerRegistration;
 import org.gwtproject.event.shared.HasHandlers;
@@ -23,13 +22,15 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link MouseOverHandler}
  * instances.
  */
-public interface HasMouseOverHandlers extends HasHandlers {
+public interface HasMouseOverHandlers
+        extends HasHandlers {
 
-  /**
-   * Adds a {@link MouseOverEvent} handler.
-   *
-   * @param handler the mouse over handler
-   * @return {@link HandlerRegistration} used to remove this handler
-   */
-  HandlerRegistration addMouseOverHandler(MouseOverHandler handler);
+    /**
+     * Adds a {@link MouseOverEvent} handler.
+     *
+     * @param handler the mouse over handler
+     *
+     * @return {@link HandlerRegistration} used to remove this handler
+     */
+    HandlerRegistration addMouseOverHandler(MouseOverHandler handler);
 }

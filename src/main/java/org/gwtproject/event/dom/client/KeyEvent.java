@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
 /*
- * Copyright 2008 Google Inc.
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,8 +13,7 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
-import org.gwtproject.event.shared.EventHandler;
+package org.gwtproject.event.dom.client;
 
 /**
  * Base class for Key events. The native keyboard events are somewhat a mess
@@ -25,52 +22,53 @@ import org.gwtproject.event.shared.EventHandler;
  *
  * @param <H> The event handler type
  */
-public abstract class KeyEvent<H extends EventHandler> extends DomEvent<H> {
+public abstract class KeyEvent<H extends EventHandler>
+        extends DomEvent<H> {
 
-  /**
-   * Is the <code>alt</code> key down?
-   *
-   * @return whether the alt key is down
-   */
-  public boolean isAltKeyDown() {
-    return getNativeEvent().getAltKey();
-  }
+    /**
+     * Does this event have any modifier keys down? Specifically. is the control, meta, shift, or alt
+     * key currently pressed?
+     *
+     * @return whether this event have any modifier key down
+     */
+    public boolean isAnyModifierKeyDown() {
+        return isControlKeyDown() || isShiftKeyDown() || isMetaKeyDown()
+                || isAltKeyDown();
+    }
 
-  /**
-   * Does this event have any modifier keys down? Specifically. is the control, meta, shift, or alt
-   * key currently pressed?
-   *
-   * @return whether this event have any modifier key down
-   */
-  public boolean isAnyModifierKeyDown() {
-    return isControlKeyDown() || isShiftKeyDown() || isMetaKeyDown()
-        || isAltKeyDown();
-  }
+    /**
+     * Is the <code>control</code> key down?
+     *
+     * @return whether the control key is down
+     */
+    public boolean isControlKeyDown() {
+        return getNativeEvent().getCtrlKey();
+    }
 
-  /**
-   * Is the <code>control</code> key down?
-   *
-   * @return whether the control key is down
-   */
-  public boolean isControlKeyDown() {
-    return getNativeEvent().getCtrlKey();
-  }
+    /**
+     * Is the <code>shift</code> key down?
+     *
+     * @return whether the shift key is down
+     */
+    public boolean isShiftKeyDown() {
+        return getNativeEvent().getShiftKey();
+    }
 
-  /**
-   * Is the <code>meta</code> key down?
-   *
-   * @return whether the meta key is down
-   */
-  public boolean isMetaKeyDown() {
-    return getNativeEvent().getMetaKey();
-  }
+    /**
+     * Is the <code>meta</code> key down?
+     *
+     * @return whether the meta key is down
+     */
+    public boolean isMetaKeyDown() {
+        return getNativeEvent().getMetaKey();
+    }
 
-  /**
-   * Is the <code>shift</code> key down?
-   *
-   * @return whether the shift key is down
-   */
-  public boolean isShiftKeyDown() {
-    return getNativeEvent().getShiftKey();
-  }
+    /**
+     * Is the <code>alt</code> key down?
+     *
+     * @return whether the alt key is down
+     */
+    public boolean isAltKeyDown() {
+        return getNativeEvent().getAltKey();
+    }
 }

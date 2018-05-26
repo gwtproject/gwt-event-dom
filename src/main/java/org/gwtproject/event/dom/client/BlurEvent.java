@@ -1,5 +1,5 @@
 /*
- * Copyright 2008 Google Inc.
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -20,38 +20,38 @@ import org.gwtproject.dom.client.BrowserEvents;
 /**
  * Represents a native blur event.
  */
-public class BlurEvent extends DomEvent<BlurHandler> {
+public class BlurEvent
+        extends DomEvent<BlurHandler> {
 
-  /**
-   * Event type for blur events. Represents the meta-data associated with this event.
-   */
-  private static final Type<BlurHandler> TYPE = new Type<>(BrowserEvents.BLUR,
-      new BlurEvent());
+    /**
+     * Event type for blur events. Represents the meta-data associated with this event.
+     */
+    private static final Type<BlurHandler> TYPE = new Type<>(BrowserEvents.BLUR,
+            new BlurEvent());
 
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-   * org.gwtproject.event.shared.HasHandlers)} to fire blur events.
-   */
-  protected BlurEvent() {
-  }
+    /**
+     * Gets the event type associated with blur events.
+     *
+     * @return the handler type
+     */
+    public static Type<BlurHandler> getType() {
+        return TYPE;
+    }
 
-  /**
-   * Gets the event type associated with blur events.
-   *
-   * @return the handler type
-   */
-  public static Type<BlurHandler> getType() {
-    return TYPE;
-  }
+    /**
+     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+     * org.gwtproject.event.shared.HasHandlers)} to fire blur events.
+     */
+    protected BlurEvent() {
+    }
 
-  @Override
-  public final Type<BlurHandler> getAssociatedType() {
-    return TYPE;
-  }
+    @Override
+    public final Type<BlurHandler> getAssociatedType() {
+        return TYPE;
+    }
 
-  @Override
-  protected void dispatch(BlurHandler handler) {
-    handler.onBlur(this);
-  }
-
+    @Override
+    protected void dispatch(BlurHandler handler) {
+        handler.onBlur(this);
+    }
 }

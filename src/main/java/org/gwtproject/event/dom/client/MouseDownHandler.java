@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
 /*
- * Copyright 2008 Google Inc.
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,18 +13,19 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
 
 /**
  * Handler interface for {@link MouseDownEvent} events.
  */
-public interface MouseDownHandler extends EventHandler {
+public interface MouseDownHandler
+        extends EventHandler {
 
-  /**
-   * Called when MouseDown is fired.
-   *
-   * @param event the {@link MouseDownEvent} that was fired
-   */
-  void onMouseDown(MouseDownEvent event);
+    /**
+     * Called when MouseDown is fired.
+     *
+     * @param event the {@link MouseDownEvent} that was fired
+     */
+    void onMouseDown(MouseDownEvent event);
 }

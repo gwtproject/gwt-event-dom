@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
 /*
- * Copyright 2008 Google Inc.
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,44 +13,45 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
 /**
  * Represents a native load event.
  */
-public class LoadEvent extends DomEvent<LoadHandler> {
+public class LoadEvent
+        extends DomEvent<LoadHandler> {
 
-  /**
-   * Event type for load events. Represents the meta-data associated with this event.
-   */
-  private static final Type<LoadHandler> TYPE = new Type<>(BrowserEvents.LOAD,
-      new LoadEvent());
+    /**
+     * Event type for load events. Represents the meta-data associated with this event.
+     */
+    private static final Type<LoadHandler> TYPE = new Type<>(BrowserEvents.LOAD,
+            new LoadEvent());
 
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-   * org.gwtproject.event.shared.HasHandlers)} to fire load events.
-   */
-  protected LoadEvent() {
-  }
+    /**
+     * Gets the event type associated with load events.
+     *
+     * @return the handler type
+     */
+    public static Type<LoadHandler> getType() {
+        return TYPE;
+    }
 
-  /**
-   * Gets the event type associated with load events.
-   *
-   * @return the handler type
-   */
-  public static Type<LoadHandler> getType() {
-    return TYPE;
-  }
+    /**
+     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+     * org.gwtproject.event.shared.HasHandlers)} to fire load events.
+     */
+    protected LoadEvent() {
+    }
 
-  @Override
-  public final Type<LoadHandler> getAssociatedType() {
-    return TYPE;
-  }
+    @Override
+    public final Type<LoadHandler> getAssociatedType() {
+        return TYPE;
+    }
 
-  @Override
-  protected void dispatch(LoadHandler handler) {
-    handler.onLoad(this);
-  }
-
+    @Override
+    protected void dispatch(LoadHandler handler) {
+        handler.onLoad(this);
+    }
 }

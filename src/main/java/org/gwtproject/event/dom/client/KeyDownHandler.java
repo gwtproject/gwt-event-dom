@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
 /*
- * Copyright 2008 Google Inc.
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,18 +13,19 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
 
 /**
  * Handler interface for {@link KeyDownEvent} events.
  */
-public interface KeyDownHandler extends EventHandler {
+public interface KeyDownHandler
+        extends EventHandler {
 
-  /**
-   * Called when {@link KeyDownEvent} is fired.
-   *
-   * @param event the {@link KeyDownEvent} that was fired
-   */
-  void onKeyDown(KeyDownEvent event);
+    /**
+     * Called when {@link KeyDownEvent} is fired.
+     *
+     * @param event the {@link KeyDownEvent} that was fired
+     */
+    void onKeyDown(KeyDownEvent event);
 }

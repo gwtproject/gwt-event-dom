@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
 /*
- * Copyright 2010 Google Inc.
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,51 +13,53 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
 /**
  * Represents a native gesture end event.
  */
-public class GestureEndEvent extends DomEvent<GestureEndHandler> {
+public class GestureEndEvent
+        extends DomEvent<GestureEndHandler> {
 
-  /**
-   * Event type for gesture end events. Represents the meta-data associated with this event.
-   */
-  private static final Type<GestureEndHandler> TYPE = new Type<>(BrowserEvents.GESTUREEND,
-      new GestureEndEvent());
+    /**
+     * Event type for gesture end events. Represents the meta-data associated with this event.
+     */
+    private static final Type<GestureEndHandler> TYPE = new Type<>(BrowserEvents.GESTUREEND,
+            new GestureEndEvent());
 
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-   * org.gwtproject.event.shared.HasHandlers)} to fire gesture end events.
-   */
-  protected GestureEndEvent() {
-  }
+    /**
+     * Gets the event type associated with gesture end events.
+     *
+     * @return the handler type
+     */
+    public static Type<GestureEndHandler> getType() {
+        return TYPE;
+    }
 
-  /**
-   * Gets the event type associated with gesture end events.
-   *
-   * @return the handler type
-   */
-  public static Type<GestureEndHandler> getType() {
-    return TYPE;
-  }
+    /**
+     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+     * org.gwtproject.event.shared.HasHandlers)} to fire gesture end events.
+     */
+    protected GestureEndEvent() {
+    }
 
-  @Override
-  public final Type<GestureEndHandler> getAssociatedType() {
-    return TYPE;
-  }
+    @Override
+    public final Type<GestureEndHandler> getAssociatedType() {
+        return TYPE;
+    }
 
-  public double getRotation() {
-    return getNativeEvent().getRotation();
-  }
+    public double getRotation() {
+        return getNativeEvent().getRotation();
+    }
 
-  public double getScale() {
-    return getNativeEvent().getScale();
-  }
+    public double getScale() {
+        return getNativeEvent().getScale();
+    }
 
-  @Override
-  protected void dispatch(GestureEndHandler handler) {
-    handler.onGestureEnd(this);
-  }
+    @Override
+    protected void dispatch(GestureEndHandler handler) {
+        handler.onGestureEnd(this);
+    }
 }

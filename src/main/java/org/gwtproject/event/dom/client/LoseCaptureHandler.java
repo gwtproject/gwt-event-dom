@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
 /*
- * Copyright 2008 Google Inc.
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,18 +13,19 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
 
 /**
  * Handler interface for {@link LoseCaptureEvent} events.
  */
-public interface LoseCaptureHandler extends EventHandler {
+public interface LoseCaptureHandler
+        extends EventHandler {
 
-  /**
-   * Called when LoseCaptureEvent is fired.
-   *
-   * @param event the {@link LoseCaptureEvent} that was fired
-   */
-  void onLoseCapture(LoseCaptureEvent event);
+    /**
+     * Called when LoseCaptureEvent is fired.
+     *
+     * @param event the {@link LoseCaptureEvent} that was fired
+     */
+    void onLoseCapture(LoseCaptureEvent event);
 }

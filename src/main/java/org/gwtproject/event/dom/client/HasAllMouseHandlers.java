@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
-  /*
- * Copyright 2008 Google Inc.
+/*
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,6 +13,7 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+package org.gwtproject.event.dom.client;
 
 /**
  * This is a convenience interface that includes all mouse handlers defined by the core GWT system.
@@ -24,8 +23,11 @@ package org.gwtproject.event.dom.client;
  * breaking API changes.
  * </p>
  */
-public interface HasAllMouseHandlers extends HasMouseDownHandlers,
-    HasMouseUpHandlers, HasMouseOutHandlers, HasMouseOverHandlers,
-    HasMouseMoveHandlers, HasMouseWheelHandlers {
-
+public interface HasAllMouseHandlers
+        extends HasMouseDownHandlers,
+        HasMouseUpHandlers,
+        HasMouseOutHandlers,
+        HasMouseOverHandlers,
+        HasMouseMoveHandlers,
+        HasMouseWheelHandlers {
 }

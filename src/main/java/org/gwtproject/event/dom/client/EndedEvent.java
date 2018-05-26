@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
-  /*
- * Copyright 2011 Google Inc.
+/*
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,6 +13,7 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
@@ -27,36 +26,38 @@ import org.gwtproject.dom.client.BrowserEvents;
  * </span>
  * </p>
  */
-public class EndedEvent extends DomEvent<EndedHandler> {
+public class EndedEvent
+        extends DomEvent<EndedHandler> {
 
-  /**
-   * Event type for media ended events. Represents the meta-data associated with this event.
-   */
-  private static final Type<EndedHandler> TYPE = new Type<>(BrowserEvents.ENDED, new EndedEvent());
+    /**
+     * Event type for media ended events. Represents the meta-data associated with this event.
+     */
+    private static final Type<EndedHandler> TYPE = new Type<>(BrowserEvents.ENDED,
+            new EndedEvent());
 
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-   * org.gwtproject.event.shared.HasHandlers)} to fire media ended events.
-   */
-  protected EndedEvent() {
-  }
+    /**
+     * Gets the event type associated with media ended events.
+     *
+     * @return the handler type
+     */
+    public static Type<EndedHandler> getType() {
+        return TYPE;
+    }
 
-  /**
-   * Gets the event type associated with media ended events.
-   *
-   * @return the handler type
-   */
-  public static Type<EndedHandler> getType() {
-    return TYPE;
-  }
+    /**
+     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+     * org.gwtproject.event.shared.HasHandlers)} to fire media ended events.
+     */
+    protected EndedEvent() {
+    }
 
-  @Override
-  public final Type<EndedHandler> getAssociatedType() {
-    return TYPE;
-  }
+    @Override
+    public final Type<EndedHandler> getAssociatedType() {
+        return TYPE;
+    }
 
-  @Override
-  protected void dispatch(EndedHandler handler) {
-    handler.onEnded(this);
-  }
+    @Override
+    protected void dispatch(EndedHandler handler) {
+        handler.onEnded(this);
+    }
 }

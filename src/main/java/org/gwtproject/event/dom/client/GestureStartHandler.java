@@ -1,7 +1,5 @@
-package org.gwtproject.event.dom.client;
-
 /*
- * Copyright 2010 Google Inc.
+ * Copyright 2018 The GWT Project Authors.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,18 +13,18 @@ package org.gwtproject.event.dom.client;
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-
-import org.gwtproject.event.shared.EventHandler;
+package org.gwtproject.event.dom.client;
 
 /**
  * Handler interface for {@link GestureStartEvent} events.
  */
-public interface GestureStartHandler extends EventHandler {
+public interface GestureStartHandler
+        extends EventHandler {
 
-  /**
-   * Called when GestureStartEvent is fired.
-   *
-   * @param event the {@link GestureStartEvent} that was fired
-   */
-  void onGestureStart(GestureStartEvent event);
+    /**
+     * Called when GestureStartEvent is fired.
+     *
+     * @param event the {@link GestureStartEvent} that was fired
+     */
+    void onGestureStart(GestureStartEvent event);
 }
