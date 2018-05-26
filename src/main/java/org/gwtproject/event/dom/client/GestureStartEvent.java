@@ -21,45 +21,45 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native gesture start event.
  */
 public class GestureStartEvent
-        extends DomEvent<GestureStartHandler> {
+  extends DomEvent<GestureStartHandler> {
 
-    /**
-     * Event type for gesture start events. Represents the meta-data associated with this event.
-     */
-    private static final Type<GestureStartHandler> TYPE = new Type<>(BrowserEvents.GESTURESTART,
-            new GestureStartEvent());
+  /**
+   * Event type for gesture start events. Represents the meta-data associated with this event.
+   */
+  private static final Type<GestureStartHandler> TYPE = new Type<>(BrowserEvents.GESTURESTART,
+                                                                   new GestureStartEvent());
 
-    /**
-     * Gets the event type associated with gesture start events.
-     *
-     * @return the handler type
-     */
-    public static Type<GestureStartHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire gesture start events.
+   */
+  protected GestureStartEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire gesture start events.
-     */
-    protected GestureStartEvent() {
-    }
+  /**
+   * Gets the event type associated with gesture start events.
+   *
+   * @return the handler type
+   */
+  public static Type<GestureStartHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<GestureStartHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<GestureStartHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    public double getRotation() {
-        return getNativeEvent().getRotation();
-    }
+  public double getRotation() {
+    return getNativeEvent().getRotation();
+  }
 
-    public double getScale() {
-        return getNativeEvent().getScale();
-    }
+  public double getScale() {
+    return getNativeEvent().getScale();
+  }
 
-    @Override
-    protected void dispatch(GestureStartHandler handler) {
-        handler.onGestureStart(this);
-    }
+  @Override
+  protected void dispatch(GestureStartHandler handler) {
+    handler.onGestureStart(this);
+  }
 }

@@ -21,38 +21,38 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native change event.
  */
 public class ChangeEvent
-        extends DomEvent<ChangeHandler> {
+  extends DomEvent<ChangeHandler> {
 
-    /**
-     * Event type for change events. Represents the meta-data associated with this event.
-     */
-    private static final Type<ChangeHandler> TYPE = new Type<>(
-            BrowserEvents.CHANGE,
-            new ChangeEvent());
+  /**
+   * Event type for change events. Represents the meta-data associated with this event.
+   */
+  private static final Type<ChangeHandler> TYPE = new Type<>(
+    BrowserEvents.CHANGE,
+    new ChangeEvent());
 
-    /**
-     * Gets the event type associated with change events.
-     *
-     * @return the handler type
-     */
-    public static Type<ChangeHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire change events.
+   */
+  protected ChangeEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire change events.
-     */
-    protected ChangeEvent() {
-    }
+  /**
+   * Gets the event type associated with change events.
+   *
+   * @return the handler type
+   */
+  public static Type<ChangeHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<ChangeHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<ChangeHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(ChangeHandler handler) {
-        handler.onChange(this);
-    }
+  @Override
+  protected void dispatch(ChangeHandler handler) {
+    handler.onChange(this);
+  }
 }

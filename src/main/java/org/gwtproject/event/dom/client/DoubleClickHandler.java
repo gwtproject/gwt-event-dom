@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link DoubleClickEvent} events.
  */
 public interface DoubleClickHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when a {@link DoubleClickEvent} is fired.
-     *
-     * @param event the {@link DoubleClickEvent} that was fired
-     */
-    void onDoubleClick(DoubleClickEvent event);
+  /**
+   * Called when a {@link DoubleClickEvent} is fired.
+   *
+   * @param event the {@link DoubleClickEvent} that was fired
+   */
+  void onDoubleClick(DoubleClickEvent event);
 }

@@ -21,39 +21,39 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native drag end event.
  */
 public class DragEndEvent
-        extends DragDropEventBase<DragEndHandler> {
+  extends DragDropEventBase<DragEndHandler> {
 
-    /**
-     * Event type for drag end events. Represents the meta-data associated with this event.
-     */
-    private static final Type<DragEndHandler> TYPE = new Type<>(BrowserEvents.DRAGEND,
-            new DragEndEvent());
+  /**
+   * Event type for drag end events. Represents the meta-data associated with this event.
+   */
+  private static final Type<DragEndHandler> TYPE = new Type<>(BrowserEvents.DRAGEND,
+                                                              new DragEndEvent());
 
-    /**
-     * Gets the event type associated with drag end events.
-     *
-     * @return the handler type
-     */
-    public static Type<DragEndHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drag end
+   * events.
+   */
+  protected DragEndEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drag end
-     * events.
-     */
-    protected DragEndEvent() {
-    }
+  /**
+   * Gets the event type associated with drag end events.
+   *
+   * @return the handler type
+   */
+  public static Type<DragEndHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<DragEndHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<DragEndHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(DragEndHandler handler) {
-        handler.onDragEnd(this);
-    }
+  @Override
+  protected void dispatch(DragEndHandler handler) {
+    handler.onDragEnd(this);
+  }
 }

@@ -21,40 +21,40 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native drag start event.
  */
 public class DragStartEvent
-        extends DragDropEventBase<DragStartHandler> {
+  extends DragDropEventBase<DragStartHandler> {
 
-    /**
-     * Event type for drag start events. Represents the meta-data associated with this event.
-     */
-    private static final Type<DragStartHandler> TYPE = new Type<>(
-            BrowserEvents.DRAGSTART,
-            new DragStartEvent());
+  /**
+   * Event type for drag start events. Represents the meta-data associated with this event.
+   */
+  private static final Type<DragStartHandler> TYPE = new Type<>(
+    BrowserEvents.DRAGSTART,
+    new DragStartEvent());
 
-    /**
-     * Gets the event type associated with drag start events.
-     *
-     * @return the handler type
-     */
-    public static Type<DragStartHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drag start
+   * events.
+   */
+  protected DragStartEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drag start
-     * events.
-     */
-    protected DragStartEvent() {
-    }
+  /**
+   * Gets the event type associated with drag start events.
+   *
+   * @return the handler type
+   */
+  public static Type<DragStartHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<DragStartHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<DragStartHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(DragStartHandler handler) {
-        handler.onDragStart(this);
-    }
+  @Override
+  protected void dispatch(DragStartHandler handler) {
+    handler.onDragStart(this);
+  }
 }

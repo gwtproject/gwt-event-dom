@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link DragLeaveEvent} events.
  */
 public interface DragLeaveHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when a {@link DragLeaveEvent} is fired.
-     *
-     * @param event the {@link DragLeaveEvent} that was fired
-     */
-    void onDragLeave(DragLeaveEvent event);
+  /**
+   * Called when a {@link DragLeaveEvent} is fired.
+   *
+   * @param event the {@link DragLeaveEvent} that was fired
+   */
+  void onDragLeave(DragLeaveEvent event);
 }

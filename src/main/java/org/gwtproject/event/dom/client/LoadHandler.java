@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link LoadEvent} events.
  */
 public interface LoadHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when LoadEvent is fired.
-     *
-     * @param event the {@link LoadEvent} that was fired
-     */
-    void onLoad(LoadEvent event);
+  /**
+   * Called when LoadEvent is fired.
+   *
+   * @param event the {@link LoadEvent} that was fired
+   */
+  void onLoad(LoadEvent event);
 }

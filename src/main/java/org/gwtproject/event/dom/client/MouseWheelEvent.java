@@ -21,81 +21,81 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native mouse wheel event.
  */
 public class MouseWheelEvent
-        extends MouseEvent<MouseWheelHandler> {
+  extends MouseEvent<MouseWheelHandler> {
 
+  /**
+   * Event type for mouse wheel events. Represents the meta-data associated with this event.
+   */
+  private static final Type<MouseWheelHandler> TYPE = new Type<>(
+    BrowserEvents.MOUSEWHEEL,
+    new MouseWheelEvent());
+
+  static {
     /**
-     * Event type for mouse wheel events. Represents the meta-data associated with this event.
+     * Hidden type used to ensure DOMMouseScroll gets registered in the type map.
+     * This is the special name used on Mozilla browsers for what everyone else
+     * calls 'mousewheel'.
      */
-    private static final Type<MouseWheelHandler> TYPE = new Type<>(
-            BrowserEvents.MOUSEWHEEL,
-            new MouseWheelEvent());
+    new Type<MouseWheelHandler>("DOMMouseScroll",
+                                new MouseWheelEvent());
+  }
 
-    /**
-     * Gets the event type associated with mouse wheel events.
-     *
-     * @return the handler type
-     */
-    public static Type<MouseWheelHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire mouse wheel events.
+   */
+  protected MouseWheelEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire mouse wheel events.
-     */
-    protected MouseWheelEvent() {
-    }
+  /**
+   * Gets the event type associated with mouse wheel events.
+   *
+   * @return the handler type
+   */
+  public static Type<MouseWheelHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<MouseWheelHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<MouseWheelHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    /**
-     * Convenience method that returns <code>true</code> if {@link #getDeltaY()} is a negative value
-     * (ie, the velocity is directed toward the top of the screen).
-     *
-     * @return true if the velocity is directed toward the top of the screen
-     */
-    public boolean isNorth() {
-        return getDeltaY() < 0;
-    }
+  /**
+   * Convenience method that returns <code>true</code> if {@link #getDeltaY()} is a negative value
+   * (ie, the velocity is directed toward the top of the screen).
+   *
+   * @return true if the velocity is directed toward the top of the screen
+   */
+  public boolean isNorth() {
+    return getDeltaY() < 0;
+  }
 
-    /**
-     * Get the change in the mouse wheel position along the Y-axis; negative if the mouse wheel is
-     * moving north (toward the top of the screen) or positive if the mouse wheel is moving south
-     * (toward the bottom of the screen).
-     * <p>
-     * Note that delta values are not normalized across browsers or OSes.
-     *
-     * @return the delta of the mouse wheel along the y axis
-     */
-    public int getDeltaY() {
-        return getNativeEvent().getMouseWheelVelocityY();
-    }
+  /**
+   * Get the change in the mouse wheel position along the Y-axis; negative if the mouse wheel is
+   * moving north (toward the top of the screen) or positive if the mouse wheel is moving south
+   * (toward the bottom of the screen).
+   * <p>
+   * Note that delta values are not normalized across browsers or OSes.
+   *
+   * @return the delta of the mouse wheel along the y axis
+   */
+  public int getDeltaY() {
+    return getNativeEvent().getMouseWheelVelocityY();
+  }
 
-    /**
-     * Convenience method that returns <code>true</code> if {@link #getDeltaY()} is a positive value
-     * (ie, the velocity is directed toward the bottom of the screen).
-     *
-     * @return true if the velocity is directed toward the bottom of the screen
-     */
-    public boolean isSouth() {
-        return getDeltaY() > 0;
-    }
+  /**
+   * Convenience method that returns <code>true</code> if {@link #getDeltaY()} is a positive value
+   * (ie, the velocity is directed toward the bottom of the screen).
+   *
+   * @return true if the velocity is directed toward the bottom of the screen
+   */
+  public boolean isSouth() {
+    return getDeltaY() > 0;
+  }
 
-    @Override
-    protected void dispatch(MouseWheelHandler handler) {
-        handler.onMouseWheel(this);
-    }
-
-    static {
-        /**
-         * Hidden type used to ensure DOMMouseScroll gets registered in the type map.
-         * This is the special name used on Mozilla browsers for what everyone else
-         * calls 'mousewheel'.
-         */
-        new Type<MouseWheelHandler>("DOMMouseScroll",
-                new MouseWheelEvent());
-    }
+  @Override
+  protected void dispatch(MouseWheelHandler handler) {
+    handler.onMouseWheel(this);
+  }
 }

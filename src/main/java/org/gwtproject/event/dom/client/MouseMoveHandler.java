@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link MouseMoveEvent} events.
  */
 public interface MouseMoveHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when MouseMoveEvent is fired.
-     *
-     * @param event the {@link MouseMoveEvent} that was fired
-     */
-    void onMouseMove(MouseMoveEvent event);
+  /**
+   * Called when MouseMoveEvent is fired.
+   *
+   * @param event the {@link MouseMoveEvent} that was fired
+   */
+  void onMouseMove(MouseMoveEvent event);
 }

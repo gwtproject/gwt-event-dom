@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasMouseUpHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link MouseUpEvent} handler.
-     *
-     * @param handler the mouse up handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addMouseUpHandler(MouseUpHandler handler);
+  /**
+   * Adds a {@link MouseUpEvent} handler.
+   *
+   * @param handler the mouse up handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addMouseUpHandler(MouseUpHandler handler);
 }

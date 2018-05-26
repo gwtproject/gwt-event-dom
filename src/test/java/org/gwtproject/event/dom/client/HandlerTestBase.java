@@ -30,9 +30,10 @@
  */
 package org.gwtproject.event.dom.client;
 
-import java.util.HashSet;
-
 import com.google.gwt.junit.client.GWTTestCase;
+import org.gwtproject.event.shared.EventHandler;
+
+import java.util.HashSet;
 
 /**
  * Support code for handler tests.

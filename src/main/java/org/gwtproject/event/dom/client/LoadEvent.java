@@ -21,37 +21,37 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native load event.
  */
 public class LoadEvent
-        extends DomEvent<LoadHandler> {
+  extends DomEvent<LoadHandler> {
 
-    /**
-     * Event type for load events. Represents the meta-data associated with this event.
-     */
-    private static final Type<LoadHandler> TYPE = new Type<>(BrowserEvents.LOAD,
-            new LoadEvent());
+  /**
+   * Event type for load events. Represents the meta-data associated with this event.
+   */
+  private static final Type<LoadHandler> TYPE = new Type<>(BrowserEvents.LOAD,
+                                                           new LoadEvent());
 
-    /**
-     * Gets the event type associated with load events.
-     *
-     * @return the handler type
-     */
-    public static Type<LoadHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire load events.
+   */
+  protected LoadEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire load events.
-     */
-    protected LoadEvent() {
-    }
+  /**
+   * Gets the event type associated with load events.
+   *
+   * @return the handler type
+   */
+  public static Type<LoadHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<LoadHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<LoadHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(LoadHandler handler) {
-        handler.onLoad(this);
-    }
+  @Override
+  protected void dispatch(LoadHandler handler) {
+    handler.onLoad(this);
+  }
 }

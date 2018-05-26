@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link GestureStartEvent} events.
  */
 public interface GestureStartHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when GestureStartEvent is fired.
-     *
-     * @param event the {@link GestureStartEvent} that was fired
-     */
-    void onGestureStart(GestureStartEvent event);
+  /**
+   * Called when GestureStartEvent is fired.
+   *
+   * @param event the {@link GestureStartEvent} that was fired
+   */
+  void onGestureStart(GestureStartEvent event);
 }

@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasClickHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link ClickEvent} handler.
-     *
-     * @param handler the click handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addClickHandler(ClickHandler handler);
+  /**
+   * Adds a {@link ClickEvent} handler.
+   *
+   * @param handler the click handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addClickHandler(ClickHandler handler);
 }

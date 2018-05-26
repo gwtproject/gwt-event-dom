@@ -27,37 +27,37 @@ import org.gwtproject.dom.client.BrowserEvents;
  * </p>
  */
 public class EndedEvent
-        extends DomEvent<EndedHandler> {
+  extends DomEvent<EndedHandler> {
 
-    /**
-     * Event type for media ended events. Represents the meta-data associated with this event.
-     */
-    private static final Type<EndedHandler> TYPE = new Type<>(BrowserEvents.ENDED,
-            new EndedEvent());
+  /**
+   * Event type for media ended events. Represents the meta-data associated with this event.
+   */
+  private static final Type<EndedHandler> TYPE = new Type<>(BrowserEvents.ENDED,
+                                                            new EndedEvent());
 
-    /**
-     * Gets the event type associated with media ended events.
-     *
-     * @return the handler type
-     */
-    public static Type<EndedHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire media ended events.
+   */
+  protected EndedEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire media ended events.
-     */
-    protected EndedEvent() {
-    }
+  /**
+   * Gets the event type associated with media ended events.
+   *
+   * @return the handler type
+   */
+  public static Type<EndedHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<EndedHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<EndedHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(EndedHandler handler) {
-        handler.onEnded(this);
-    }
+  @Override
+  protected void dispatch(EndedHandler handler) {
+    handler.onEnded(this);
+  }
 }

@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler for {@link ClickEvent} events.
  */
 public interface ClickHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when a native click event is fired.
-     *
-     * @param event the {@link ClickEvent} that was fired
-     */
-    void onClick(ClickEvent event);
+  /**
+   * Called when a native click event is fired.
+   *
+   * @param event the {@link ClickEvent} that was fired
+   */
+  void onClick(ClickEvent event);
 }

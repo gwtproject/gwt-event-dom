@@ -25,6 +25,6 @@ package org.gwtproject.event.dom.client;
  * </p>
  */
 public interface HasAllFocusHandlers
-        extends HasFocusHandlers,
-        HasBlurHandlers {
+  extends HasFocusHandlers,
+          HasBlurHandlers {
 }

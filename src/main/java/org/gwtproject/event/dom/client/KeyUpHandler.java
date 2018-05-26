@@ -16,16 +16,18 @@
 package org.gwtproject.event.dom.client;
 
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link KeyUpEvent} events.
  */
 public interface KeyUpHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when KeyUpEvent is fired.
-     *
-     * @param event the {@link KeyUpEvent} that was fired
-     */
-    void onKeyUp(KeyUpEvent event);
+  /**
+   * Called when KeyUpEvent is fired.
+   *
+   * @param event the {@link KeyUpEvent} that was fired
+   */
+  void onKeyUp(KeyUpEvent event);
 }

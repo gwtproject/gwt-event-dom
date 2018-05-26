@@ -44,14 +44,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * </p>
  */
 public interface HasDragOverHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link DragOverEvent} handler.
-     *
-     * @param handler the drag over handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addDragOverHandler(DragOverHandler handler);
+  /**
+   * Adds a {@link DragOverEvent} handler.
+   *
+   * @param handler the drag over handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addDragOverHandler(DragOverHandler handler);
 }

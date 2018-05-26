@@ -31,6 +31,7 @@
 package org.gwtproject.event.dom.client;
 
 import com.google.gwt.event.shared.HandlerManager;
+import org.gwtproject.event.shared.EventHandler;
 
 
 /**

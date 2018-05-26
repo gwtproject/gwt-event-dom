@@ -36,37 +36,37 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native touch start event.
  */
 public class TouchCancelEvent
-        extends TouchEvent<TouchCancelHandler> {
+  extends TouchEvent<TouchCancelHandler> {
 
-    /**
-     * Event type for touch start events. Represents the meta-data associated with this event.
-     */
-    private static final Type<TouchCancelHandler> TYPE = new Type<>(BrowserEvents.TOUCHCANCEL,
-            new TouchCancelEvent());
+  /**
+   * Event type for touch start events. Represents the meta-data associated with this event.
+   */
+  private static final Type<TouchCancelHandler> TYPE = new Type<>(BrowserEvents.TOUCHCANCEL,
+                                                                  new TouchCancelEvent());
 
-    /**
-     * Gets the event type associated with touch start events.
-     *
-     * @return the handler type
-     */
-    public static Type<TouchCancelHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire touch start events.
+   */
+  protected TouchCancelEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire touch start events.
-     */
-    protected TouchCancelEvent() {
-    }
+  /**
+   * Gets the event type associated with touch start events.
+   *
+   * @return the handler type
+   */
+  public static Type<TouchCancelHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<TouchCancelHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<TouchCancelHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(TouchCancelHandler handler) {
-        handler.onTouchCancel(this);
-    }
+  @Override
+  protected void dispatch(TouchCancelHandler handler) {
+    handler.onTouchCancel(this);
+  }
 }

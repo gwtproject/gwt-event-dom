@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasContextMenuHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link ContextMenuEvent} handler.
-     *
-     * @param handler the context menu handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addContextMenuHandler(ContextMenuHandler handler);
+  /**
+   * Adds a {@link ContextMenuEvent} handler.
+   *
+   * @param handler the context menu handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addContextMenuHandler(ContextMenuHandler handler);
 }

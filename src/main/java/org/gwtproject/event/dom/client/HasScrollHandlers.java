@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasScrollHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link ScrollEvent} handler.
-     *
-     * @param handler the scroll handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addScrollHandler(ScrollHandler handler);
+  /**
+   * Adds a {@link ScrollEvent} handler.
+   *
+   * @param handler the scroll handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addScrollHandler(ScrollHandler handler);
 }

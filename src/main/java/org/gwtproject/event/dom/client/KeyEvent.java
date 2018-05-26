@@ -15,6 +15,8 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Base class for Key events. The native keyboard events are somewhat a mess
  * (http://www.quirksmode.org/js/keys.html), we do some trivial normalization here, but do not
@@ -23,52 +25,52 @@ package org.gwtproject.event.dom.client;
  * @param <H> The event handler type
  */
 public abstract class KeyEvent<H extends EventHandler>
-        extends DomEvent<H> {
+  extends DomEvent<H> {
 
-    /**
-     * Does this event have any modifier keys down? Specifically. is the control, meta, shift, or alt
-     * key currently pressed?
-     *
-     * @return whether this event have any modifier key down
-     */
-    public boolean isAnyModifierKeyDown() {
-        return isControlKeyDown() || isShiftKeyDown() || isMetaKeyDown()
-                || isAltKeyDown();
-    }
+  /**
+   * Does this event have any modifier keys down? Specifically. is the control, meta, shift, or alt
+   * key currently pressed?
+   *
+   * @return whether this event have any modifier key down
+   */
+  public boolean isAnyModifierKeyDown() {
+    return isControlKeyDown() || isShiftKeyDown() || isMetaKeyDown()
+           || isAltKeyDown();
+  }
 
-    /**
-     * Is the <code>control</code> key down?
-     *
-     * @return whether the control key is down
-     */
-    public boolean isControlKeyDown() {
-        return getNativeEvent().getCtrlKey();
-    }
+  /**
+   * Is the <code>control</code> key down?
+   *
+   * @return whether the control key is down
+   */
+  public boolean isControlKeyDown() {
+    return getNativeEvent().getCtrlKey();
+  }
 
-    /**
-     * Is the <code>shift</code> key down?
-     *
-     * @return whether the shift key is down
-     */
-    public boolean isShiftKeyDown() {
-        return getNativeEvent().getShiftKey();
-    }
+  /**
+   * Is the <code>shift</code> key down?
+   *
+   * @return whether the shift key is down
+   */
+  public boolean isShiftKeyDown() {
+    return getNativeEvent().getShiftKey();
+  }
 
-    /**
-     * Is the <code>meta</code> key down?
-     *
-     * @return whether the meta key is down
-     */
-    public boolean isMetaKeyDown() {
-        return getNativeEvent().getMetaKey();
-    }
+  /**
+   * Is the <code>meta</code> key down?
+   *
+   * @return whether the meta key is down
+   */
+  public boolean isMetaKeyDown() {
+    return getNativeEvent().getMetaKey();
+  }
 
-    /**
-     * Is the <code>alt</code> key down?
-     *
-     * @return whether the alt key is down
-     */
-    public boolean isAltKeyDown() {
-        return getNativeEvent().getAltKey();
-    }
+  /**
+   * Is the <code>alt</code> key down?
+   *
+   * @return whether the alt key is down
+   */
+  public boolean isAltKeyDown() {
+    return getNativeEvent().getAltKey();
+  }
 }

@@ -21,40 +21,40 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native drag enter event.
  */
 public class DragEnterEvent
-        extends DragDropEventBase<DragEnterHandler> {
+  extends DragDropEventBase<DragEnterHandler> {
 
-    /**
-     * Event type for drag enter events. Represents the meta-data associated with this event.
-     */
-    private static final Type<DragEnterHandler> TYPE = new Type<>(
-            BrowserEvents.DRAGENTER,
-            new DragEnterEvent());
+  /**
+   * Event type for drag enter events. Represents the meta-data associated with this event.
+   */
+  private static final Type<DragEnterHandler> TYPE = new Type<>(
+    BrowserEvents.DRAGENTER,
+    new DragEnterEvent());
 
-    /**
-     * Gets the event type associated with drag enter events.
-     *
-     * @return the handler type
-     */
-    public static Type<DragEnterHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drag enter
+   * events.
+   */
+  protected DragEnterEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drag enter
-     * events.
-     */
-    protected DragEnterEvent() {
-    }
+  /**
+   * Gets the event type associated with drag enter events.
+   *
+   * @return the handler type
+   */
+  public static Type<DragEnterHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<DragEnterHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<DragEnterHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(DragEnterHandler handler) {
-        handler.onDragEnter(this);
-    }
+  @Override
+  protected void dispatch(DragEnterHandler handler) {
+    handler.onDragEnter(this);
+  }
 }

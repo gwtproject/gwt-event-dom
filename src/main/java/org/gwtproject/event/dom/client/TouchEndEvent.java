@@ -36,38 +36,38 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native touch end event.
  */
 public class TouchEndEvent
-        extends TouchEvent<TouchEndHandler> {
+  extends TouchEvent<TouchEndHandler> {
 
-    /**
-     * Event type for touch end events. Represents the meta-data associated with this event.
-     */
-    private static final Type<TouchEndHandler> TYPE = new Type<>(
-            BrowserEvents.TOUCHEND,
-            new TouchEndEvent());
+  /**
+   * Event type for touch end events. Represents the meta-data associated with this event.
+   */
+  private static final Type<TouchEndHandler> TYPE = new Type<>(
+    BrowserEvents.TOUCHEND,
+    new TouchEndEvent());
 
-    /**
-     * Gets the event type associated with touch end events.
-     *
-     * @return the handler type
-     */
-    public static Type<TouchEndHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire touch end events.
+   */
+  protected TouchEndEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire touch end events.
-     */
-    protected TouchEndEvent() {
-    }
+  /**
+   * Gets the event type associated with touch end events.
+   *
+   * @return the handler type
+   */
+  public static Type<TouchEndHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<TouchEndHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<TouchEndHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(TouchEndHandler handler) {
-        handler.onTouchEnd(this);
-    }
+  @Override
+  protected void dispatch(TouchEndHandler handler) {
+    handler.onTouchEnd(this);
+  }
 }

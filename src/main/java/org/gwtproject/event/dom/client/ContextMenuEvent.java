@@ -21,38 +21,38 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native context menu event.
  */
 public class ContextMenuEvent
-        extends DomEvent<ContextMenuHandler> {
+  extends DomEvent<ContextMenuHandler> {
 
-    /**
-     * Event type for context menu events. Represents the meta-data associated with this event.
-     */
-    private static final Type<ContextMenuHandler> TYPE = new Type<>(
-            BrowserEvents.CONTEXTMENU,
-            new ContextMenuEvent());
+  /**
+   * Event type for context menu events. Represents the meta-data associated with this event.
+   */
+  private static final Type<ContextMenuHandler> TYPE = new Type<>(
+    BrowserEvents.CONTEXTMENU,
+    new ContextMenuEvent());
 
-    /**
-     * Gets the event type associated with context menu events.
-     *
-     * @return the handler type
-     */
-    public static Type<ContextMenuHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire context menu events.
+   */
+  protected ContextMenuEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire context menu events.
-     */
-    protected ContextMenuEvent() {
-    }
+  /**
+   * Gets the event type associated with context menu events.
+   *
+   * @return the handler type
+   */
+  public static Type<ContextMenuHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<ContextMenuHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<ContextMenuHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(ContextMenuHandler handler) {
-        handler.onContextMenu(this);
-    }
+  @Override
+  protected void dispatch(ContextMenuHandler handler) {
+    handler.onContextMenu(this);
+  }
 }

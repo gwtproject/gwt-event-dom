@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link ErrorEvent} events.
  */
 public interface ErrorHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when ErrorEvent is fired.
-     *
-     * @param event the {@link ErrorEvent} that was fired
-     */
-    void onError(ErrorEvent event);
+  /**
+   * Called when ErrorEvent is fired.
+   *
+   * @param event the {@link ErrorEvent} that was fired
+   */
+  void onError(ErrorEvent event);
 }

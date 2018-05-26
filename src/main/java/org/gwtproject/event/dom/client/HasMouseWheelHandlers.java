@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasMouseWheelHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link MouseWheelEvent} handler.
-     *
-     * @param handler the mouse wheel handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addMouseWheelHandler(MouseWheelHandler handler);
+  /**
+   * Adds a {@link MouseWheelEvent} handler.
+   *
+   * @param handler the mouse wheel handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addMouseWheelHandler(MouseWheelHandler handler);
 }

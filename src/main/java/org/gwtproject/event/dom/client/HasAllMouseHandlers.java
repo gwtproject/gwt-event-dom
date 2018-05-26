@@ -24,10 +24,10 @@ package org.gwtproject.event.dom.client;
  * </p>
  */
 public interface HasAllMouseHandlers
-        extends HasMouseDownHandlers,
-        HasMouseUpHandlers,
-        HasMouseOutHandlers,
-        HasMouseOverHandlers,
-        HasMouseMoveHandlers,
-        HasMouseWheelHandlers {
+  extends HasMouseDownHandlers,
+          HasMouseUpHandlers,
+          HasMouseOutHandlers,
+          HasMouseOverHandlers,
+          HasMouseMoveHandlers,
+          HasMouseWheelHandlers {
 }

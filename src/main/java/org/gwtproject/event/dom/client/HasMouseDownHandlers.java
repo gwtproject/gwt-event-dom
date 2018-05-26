@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasMouseDownHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link MouseDownEvent} handler.
-     *
-     * @param handler the mouse down handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addMouseDownHandler(MouseDownHandler handler);
+  /**
+   * Adds a {@link MouseDownEvent} handler.
+   *
+   * @param handler the mouse down handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addMouseDownHandler(MouseDownHandler handler);
 }

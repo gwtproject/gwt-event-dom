@@ -16,16 +16,18 @@
 package org.gwtproject.event.dom.client;
 
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link KeyPressEvent} events.
  */
 public interface KeyPressHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when KeyPressEvent is fired.
-     *
-     * @param event the {@link KeyPressEvent} that was fired
-     */
-    void onKeyPress(KeyPressEvent event);
+  /**
+   * Called when KeyPressEvent is fired.
+   *
+   * @param event the {@link KeyPressEvent} that was fired
+   */
+  void onKeyPress(KeyPressEvent event);
 }

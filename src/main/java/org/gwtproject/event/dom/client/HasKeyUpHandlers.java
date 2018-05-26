@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasKeyUpHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link KeyUpEvent} handler.
-     *
-     * @param handler the key up handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addKeyUpHandler(KeyUpHandler handler);
+  /**
+   * Adds a {@link KeyUpEvent} handler.
+   *
+   * @param handler the key up handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addKeyUpHandler(KeyUpHandler handler);
 }

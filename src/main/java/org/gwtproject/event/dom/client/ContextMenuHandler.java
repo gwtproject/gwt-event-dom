@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler for {@link ContextMenuEvent} events.
  */
 public interface ContextMenuHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when a native context menu event is fired.
-     *
-     * @param event the {@link ContextMenuEvent} that was fired
-     */
-    void onContextMenu(ContextMenuEvent event);
+  /**
+   * Called when a native context menu event is fired.
+   *
+   * @param event the {@link ContextMenuEvent} that was fired
+   */
+  void onContextMenu(ContextMenuEvent event);
 }

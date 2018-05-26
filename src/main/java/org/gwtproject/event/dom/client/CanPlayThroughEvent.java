@@ -27,38 +27,38 @@ import org.gwtproject.dom.client.BrowserEvents;
  * </p>
  */
 public class CanPlayThroughEvent
-        extends DomEvent<CanPlayThroughHandler> {
+  extends DomEvent<CanPlayThroughHandler> {
 
-    /**
-     * Event type for media can play through events. Represents the meta-data associated with this
-     * event.
-     */
-    private static final Type<CanPlayThroughHandler> TYPE = new Type<>(BrowserEvents.CANPLAYTHROUGH,
-            new CanPlayThroughEvent());
+  /**
+   * Event type for media can play through events. Represents the meta-data associated with this
+   * event.
+   */
+  private static final Type<CanPlayThroughHandler> TYPE = new Type<>(BrowserEvents.CANPLAYTHROUGH,
+                                                                     new CanPlayThroughEvent());
 
-    /**
-     * Gets the event type associated with media can play through events.
-     *
-     * @return the handler type
-     */
-    public static Type<CanPlayThroughHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire media can play through events.
+   */
+  protected CanPlayThroughEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire media can play through events.
-     */
-    protected CanPlayThroughEvent() {
-    }
+  /**
+   * Gets the event type associated with media can play through events.
+   *
+   * @return the handler type
+   */
+  public static Type<CanPlayThroughHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<CanPlayThroughHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<CanPlayThroughHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(CanPlayThroughHandler handler) {
-        handler.onCanPlayThrough(this);
-    }
+  @Override
+  protected void dispatch(CanPlayThroughHandler handler) {
+    handler.onCanPlayThrough(this);
+  }
 }

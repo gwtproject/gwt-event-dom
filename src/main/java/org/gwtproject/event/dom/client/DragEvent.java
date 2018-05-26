@@ -21,39 +21,39 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native drag event.
  */
 public class DragEvent
-        extends DragDropEventBase<DragHandler> {
+  extends DragDropEventBase<DragHandler> {
 
-    /**
-     * Event type for drag events. Represents the meta-data associated with this event.
-     */
-    private static final Type<DragHandler> TYPE = new Type<>(BrowserEvents.DRAG,
-            new DragEvent());
+  /**
+   * Event type for drag events. Represents the meta-data associated with this event.
+   */
+  private static final Type<DragHandler> TYPE = new Type<>(BrowserEvents.DRAG,
+                                                           new DragEvent());
 
-    /**
-     * Gets the event type associated with drag events.
-     *
-     * @return the handler type
-     */
-    public static Type<DragHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drag
+   * events.
+   */
+  protected DragEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drag
-     * events.
-     */
-    protected DragEvent() {
-    }
+  /**
+   * Gets the event type associated with drag events.
+   *
+   * @return the handler type
+   */
+  public static Type<DragHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<DragHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<DragHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(DragHandler handler) {
-        handler.onDrag(this);
-    }
+  @Override
+  protected void dispatch(DragHandler handler) {
+    handler.onDrag(this);
+  }
 }

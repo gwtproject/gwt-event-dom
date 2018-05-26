@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler for {@link ChangeEvent} events.
  */
 public interface ChangeHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when a change event is fired.
-     *
-     * @param event the {@link ChangeEvent} that was fired
-     */
-    void onChange(ChangeEvent event);
+  /**
+   * Called when a change event is fired.
+   *
+   * @param event the {@link ChangeEvent} that was fired
+   */
+  void onChange(ChangeEvent event);
 }

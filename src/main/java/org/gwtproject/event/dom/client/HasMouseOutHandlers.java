@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasMouseOutHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link MouseOutEvent} handler.
-     *
-     * @param handler the mouse out handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addMouseOutHandler(MouseOutHandler handler);
+  /**
+   * Adds a {@link MouseOutEvent} handler.
+   *
+   * @param handler the mouse out handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addMouseOutHandler(MouseOutHandler handler);
 }

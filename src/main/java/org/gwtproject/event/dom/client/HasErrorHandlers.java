@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasErrorHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds an {@link ErrorEvent} handler.
-     *
-     * @param handler the error handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addErrorHandler(ErrorHandler handler);
+  /**
+   * Adds an {@link ErrorEvent} handler.
+   *
+   * @param handler the error handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addErrorHandler(ErrorHandler handler);
 }

@@ -16,80 +16,81 @@
 package org.gwtproject.event.dom.client;
 
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Key up and key down are both events based upon a given key code.
  *
  * @param <H> handler type
  */
 public abstract class KeyCodeEvent<H extends EventHandler>
-        extends KeyEvent<H> {
+  extends KeyEvent<H> {
 
-    /**
-     * Does the key code represent an arrow key?
-     *
-     * @param keyCode the key code
-     *
-     * @return if it is an arrow key code
-     */
-    public static boolean isArrow(int keyCode) {
-        switch (keyCode) {
-            case KeyCodes.KEY_DOWN:
-            case KeyCodes.KEY_RIGHT:
-            case KeyCodes.KEY_UP:
-            case KeyCodes.KEY_LEFT:
-                return true;
-            default:
-                return false;
-        }
+  /**
+   * Does the key code represent an arrow key?
+   *
+   * @param keyCode the key code
+   * @return if it is an arrow key code
+   */
+  public static boolean isArrow(int keyCode) {
+    switch (keyCode) {
+      case KeyCodes.KEY_DOWN:
+      case KeyCodes.KEY_RIGHT:
+      case KeyCodes.KEY_UP:
+      case KeyCodes.KEY_LEFT:
+        return true;
+      default:
+        return false;
     }
+  }
 
-    /**
-     * Is this a key down arrow?
-     *
-     * @return whether this is a down arrow key event
-     */
-    public boolean isDownArrow() {
-        return getNativeKeyCode() == KeyCodes.KEY_DOWN;
-    }
+  /**
+   * Is this a key down arrow?
+   *
+   * @return whether this is a down arrow key event
+   */
+  public boolean isDownArrow() {
+    return getNativeKeyCode() == KeyCodes.KEY_DOWN;
+  }
 
-    /**
-     * Gets the native key code. These key codes are enumerated in the {@link KeyCodes} class.
-     *
-     * @return the key code
-     */
-    public int getNativeKeyCode() {
-        return getNativeEvent().getKeyCode();
-    }
+  /**
+   * Gets the native key code. These key codes are enumerated in the {@link KeyCodes} class.
+   *
+   * @return the key code
+   */
+  public int getNativeKeyCode() {
+    return getNativeEvent().getKeyCode();
+  }
 
-    /**
-     * Is this a left arrow?
-     *
-     * @return whether this is a left arrow key event
-     */
-    public boolean isLeftArrow() {
-        return getNativeKeyCode() == KeyCodes.KEY_LEFT;
-    }
+  /**
+   * Is this a left arrow?
+   *
+   * @return whether this is a left arrow key event
+   */
+  public boolean isLeftArrow() {
+    return getNativeKeyCode() == KeyCodes.KEY_LEFT;
+  }
 
-    /**
-     * Is this a right arrow?
-     *
-     * @return whether this is a right arrow key event
-     */
-    public boolean isRightArrow() {
-        return getNativeKeyCode() == KeyCodes.KEY_RIGHT;
-    }
+  /**
+   * Is this a right arrow?
+   *
+   * @return whether this is a right arrow key event
+   */
+  public boolean isRightArrow() {
+    return getNativeKeyCode() == KeyCodes.KEY_RIGHT;
+  }
 
-    /**
-     * Is this a up arrow?
-     *
-     * @return whether this is a right arrow key event
-     */
-    public boolean isUpArrow() {
-        return getNativeKeyCode() == KeyCodes.KEY_UP;
-    }
+  /**
+   * Is this a up arrow?
+   *
+   * @return whether this is a right arrow key event
+   */
+  public boolean isUpArrow() {
+    return getNativeKeyCode() == KeyCodes.KEY_UP;
+  }
 
-    @Override
-    public String toDebugString() {
-        return super.toDebugString() + "[" + getNativeKeyCode() + "]";
-    }
+  @Override
+  public String toDebugString() {
+    return super.toDebugString() + "[" + getNativeKeyCode() + "]";
+  }
 }

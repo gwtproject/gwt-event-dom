@@ -17,11 +17,7 @@
 <!-- This module is typically inherited via com.google.gwt.user.User        -->
 <!--                                                                        -->
 <module>
-  <inherits name="jsinterop.base.Base"/>
-  <inherits name="elemental2.dom.Dom"/>
-  <inherits name="org.gwtproject.dom.DOM"/>
-  <inherits name="org.gwtproject.event.Event"/>
 
-  <source path="client" />
+  <source path="shared" />
 
 </module>

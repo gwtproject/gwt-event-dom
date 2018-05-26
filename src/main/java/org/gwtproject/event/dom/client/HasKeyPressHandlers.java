@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasKeyPressHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link KeyPressEvent} handler.
-     *
-     * @param handler the key press handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addKeyPressHandler(KeyPressHandler handler);
+  /**
+   * Adds a {@link KeyPressEvent} handler.
+   *
+   * @param handler the key press handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addKeyPressHandler(KeyPressHandler handler);
 }

@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link DragStartEvent} events.
  */
 public interface DragStartHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when a {@link DragStartEvent} is fired.
-     *
-     * @param event the {@link DragStartEvent} that was fired
-     */
-    void onDragStart(DragStartEvent event);
+  /**
+   * Called when a {@link DragStartEvent} is fired.
+   *
+   * @param event the {@link DragStartEvent} that was fired
+   */
+  void onDragStart(DragStartEvent event);
 }

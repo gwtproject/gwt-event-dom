@@ -16,16 +16,18 @@
 package org.gwtproject.event.dom.client;
 
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link MouseDownEvent} events.
  */
 public interface MouseDownHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when MouseDown is fired.
-     *
-     * @param event the {@link MouseDownEvent} that was fired
-     */
-    void onMouseDown(MouseDownEvent event);
+  /**
+   * Called when MouseDown is fired.
+   *
+   * @param event the {@link MouseDownEvent} that was fired
+   */
+  void onMouseDown(MouseDownEvent event);
 }

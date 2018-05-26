@@ -23,44 +23,44 @@ package org.gwtproject.event.dom.client;
  * cause breaking API changes.
  */
 public abstract class HandlesAllMouseEvents
-        implements MouseDownHandler,
-        MouseUpHandler,
-        MouseMoveHandler,
-        MouseOutHandler,
-        MouseOverHandler,
-        MouseWheelHandler {
+  implements MouseDownHandler,
+             MouseUpHandler,
+             MouseMoveHandler,
+             MouseOutHandler,
+             MouseOverHandler,
+             MouseWheelHandler {
 
-    /**
-     * Convenience method used to handle all mouse events from an event source.
-     *
-     * @param <H>      receiver type, must implement all mouse handlers
-     * @param source   the event source
-     * @param reciever the receiver implementing all mouse handlers
-     */
-    public static <H extends MouseDownHandler & MouseUpHandler & MouseOutHandler & MouseOverHandler & MouseMoveHandler & MouseWheelHandler> void handle(
-            HasAllMouseHandlers source,
-            H reciever) {
-        source.addMouseDownHandler(reciever);
-        source.addMouseUpHandler(reciever);
-        source.addMouseOutHandler(reciever);
-        source.addMouseOverHandler(reciever);
-        source.addMouseMoveHandler(reciever);
-        source.addMouseWheelHandler(reciever);
-    }
+  /**
+   * Constructor.
+   */
+  public HandlesAllMouseEvents() {
+  }
 
-    /**
-     * Constructor.
-     */
-    public HandlesAllMouseEvents() {
-    }
+  /**
+   * Convenience method to handle all mouse events from an event source.
+   *
+   * @param eventSource the event source
+   */
+  public void handle(HasAllMouseHandlers eventSource) {
+    handle(eventSource,
+           this);
+  }
 
-    /**
-     * Convenience method to handle all mouse events from an event source.
-     *
-     * @param eventSource the event source
-     */
-    public void handle(HasAllMouseHandlers eventSource) {
-        handle(eventSource,
-                this);
-    }
+  /**
+   * Convenience method used to handle all mouse events from an event source.
+   *
+   * @param <H>      receiver type, must implement all mouse handlers
+   * @param source   the event source
+   * @param reciever the receiver implementing all mouse handlers
+   */
+  public static <H extends MouseDownHandler & MouseUpHandler & MouseOutHandler & MouseOverHandler & MouseMoveHandler & MouseWheelHandler> void handle(
+    HasAllMouseHandlers source,
+    H reciever) {
+    source.addMouseDownHandler(reciever);
+    source.addMouseUpHandler(reciever);
+    source.addMouseOutHandler(reciever);
+    source.addMouseOverHandler(reciever);
+    source.addMouseMoveHandler(reciever);
+    source.addMouseWheelHandler(reciever);
+  }
 }

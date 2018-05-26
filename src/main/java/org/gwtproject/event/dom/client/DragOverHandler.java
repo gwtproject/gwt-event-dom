@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link DragOverEvent} events.
  */
 public interface DragOverHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when a {@link DragOverEvent} is fired.
-     *
-     * @param event the {@link DragOverEvent} that was fired
-     */
-    void onDragOver(DragOverEvent event);
+  /**
+   * Called when a {@link DragOverEvent} is fired.
+   *
+   * @param event the {@link DragOverEvent} that was fired
+   */
+  void onDragOver(DragOverEvent event);
 }

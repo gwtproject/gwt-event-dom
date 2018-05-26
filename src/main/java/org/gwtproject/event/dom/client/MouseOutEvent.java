@@ -22,47 +22,47 @@ import org.gwtproject.dom.client.EventTarget;
  * Represents a native mouse out event.
  */
 public class MouseOutEvent
-        extends MouseEvent<MouseOutHandler> {
+  extends MouseEvent<MouseOutHandler> {
 
-    /**
-     * Event type for mouse out events. Represents the meta-data associated with this event.
-     */
-    private static final Type<MouseOutHandler> TYPE = new Type<>(
-            BrowserEvents.MOUSEOUT,
-            new MouseOutEvent());
+  /**
+   * Event type for mouse out events. Represents the meta-data associated with this event.
+   */
+  private static final Type<MouseOutHandler> TYPE = new Type<>(
+    BrowserEvents.MOUSEOUT,
+    new MouseOutEvent());
 
-    /**
-     * Gets the event type associated with mouse out events.
-     *
-     * @return the handler type
-     */
-    public static Type<MouseOutHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire mouse out events.
+   */
+  protected MouseOutEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire mouse out events.
-     */
-    protected MouseOutEvent() {
-    }
+  /**
+   * Gets the event type associated with mouse out events.
+   *
+   * @return the handler type
+   */
+  public static Type<MouseOutHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<MouseOutHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<MouseOutHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    /**
-     * Gets the target to which the mouse pointer was moved.
-     *
-     * @return the target to which the mouse pointer was moved
-     */
-    public EventTarget getRelatedTarget() {
-        return getNativeEvent().getRelatedEventTarget();
-    }
+  /**
+   * Gets the target to which the mouse pointer was moved.
+   *
+   * @return the target to which the mouse pointer was moved
+   */
+  public EventTarget getRelatedTarget() {
+    return getNativeEvent().getRelatedEventTarget();
+  }
 
-    @Override
-    protected void dispatch(MouseOutHandler handler) {
-        handler.onMouseOut(this);
-    }
+  @Override
+  protected void dispatch(MouseOutHandler handler) {
+    handler.onMouseOut(this);
+  }
 }

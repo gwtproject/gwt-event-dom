@@ -21,38 +21,38 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native key down event.
  */
 public class KeyDownEvent
-        extends KeyCodeEvent<KeyDownHandler> {
+  extends KeyCodeEvent<KeyDownHandler> {
 
-    /**
-     * Event type for key down events. Represents the meta-data associated with this event.
-     */
-    private static final Type<KeyDownHandler> TYPE = new Type<>(
-            BrowserEvents.KEYDOWN,
-            new KeyDownEvent());
+  /**
+   * Event type for key down events. Represents the meta-data associated with this event.
+   */
+  private static final Type<KeyDownHandler> TYPE = new Type<>(
+    BrowserEvents.KEYDOWN,
+    new KeyDownEvent());
 
-    /**
-     * Gets the event type associated with key down events.
-     *
-     * @return the handler type
-     */
-    public static Type<KeyDownHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire key down events.
+   */
+  protected KeyDownEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire key down events.
-     */
-    protected KeyDownEvent() {
-    }
+  /**
+   * Gets the event type associated with key down events.
+   *
+   * @return the handler type
+   */
+  public static Type<KeyDownHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<KeyDownHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<KeyDownHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(KeyDownHandler handler) {
-        handler.onKeyDown(this);
-    }
+  @Override
+  protected void dispatch(KeyDownHandler handler) {
+    handler.onKeyDown(this);
+  }
 }

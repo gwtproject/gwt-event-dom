@@ -21,38 +21,38 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native mouse up event.
  */
 public class MouseUpEvent
-        extends MouseEvent<MouseUpHandler> {
+  extends MouseEvent<MouseUpHandler> {
 
-    /**
-     * Event type for mouse up events. Represents the meta-data associated with this event.
-     */
-    private static final Type<MouseUpHandler> TYPE = new Type<>(
-            BrowserEvents.MOUSEUP,
-            new MouseUpEvent());
+  /**
+   * Event type for mouse up events. Represents the meta-data associated with this event.
+   */
+  private static final Type<MouseUpHandler> TYPE = new Type<>(
+    BrowserEvents.MOUSEUP,
+    new MouseUpEvent());
 
-    /**
-     * Gets the event type associated with mouse up events.
-     *
-     * @return the handler type
-     */
-    public static Type<MouseUpHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire mouse up events.
+   */
+  protected MouseUpEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire mouse up events.
-     */
-    protected MouseUpEvent() {
-    }
+  /**
+   * Gets the event type associated with mouse up events.
+   *
+   * @return the handler type
+   */
+  public static Type<MouseUpHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<MouseUpHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<MouseUpHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(MouseUpHandler handler) {
-        handler.onMouseUp(this);
-    }
+  @Override
+  protected void dispatch(MouseUpHandler handler) {
+    handler.onMouseUp(this);
+  }
 }

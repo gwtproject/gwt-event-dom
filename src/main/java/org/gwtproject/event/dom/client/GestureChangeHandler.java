@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link GestureChangeEvent} events.
  */
 public interface GestureChangeHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when GestureChangeEvent is fired.
-     *
-     * @param event the {@link GestureChangeEvent} that was fired
-     */
-    void onGestureChange(GestureChangeEvent event);
+  /**
+   * Called when GestureChangeEvent is fired.
+   *
+   * @param event the {@link GestureChangeEvent} that was fired
+   */
+  void onGestureChange(GestureChangeEvent event);
 }

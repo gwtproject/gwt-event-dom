@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasLoseCaptureHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link LoseCaptureEvent} handler.
-     *
-     * @param handler the lose capture handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addLoseCaptureHandler(LoseCaptureHandler handler);
+  /**
+   * Adds a {@link LoseCaptureEvent} handler.
+   *
+   * @param handler the lose capture handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addLoseCaptureHandler(LoseCaptureHandler handler);
 }

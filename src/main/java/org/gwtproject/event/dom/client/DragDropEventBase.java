@@ -17,6 +17,7 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.DataTransfer;
 import org.gwtproject.dom.client.PartialSupport;
+import org.gwtproject.event.shared.EventHandler;
 
 /**
  * Base class for drag and drop events.
@@ -25,48 +26,47 @@ import org.gwtproject.dom.client.PartialSupport;
  */
 @PartialSupport
 public abstract class DragDropEventBase<H extends EventHandler>
-        extends DomEvent<H> {
+  extends DomEvent<H> {
 
-    /**
-     * Runtime check for whether drag events are supported in this browser.
-     *
-     * @return true if supported, false if not
-     */
-    public static boolean isSupported() {
-        // all supported brwoser have drag support!
-        return true;
-    }
+  /**
+   * Runtime check for whether drag events are supported in this browser.
+   *
+   * @return true if supported, false if not
+   */
+  public static boolean isSupported() {
+    // all supported brwoser have drag support!
+    return true;
+  }
 
-    /**
-     * Get the data for the specified format from the {@link DataTransfer} object.
-     *
-     * @param format the format
-     *
-     * @return the data for the specified format
-     */
-    public String getData(String format) {
-        DataTransfer dt = getDataTransfer();
-        return getDataTransfer().getData(format);
-    }
+  /**
+   * Get the data for the specified format from the {@link DataTransfer} object.
+   *
+   * @param format the format
+   * @return the data for the specified format
+   */
+  public String getData(String format) {
+    DataTransfer dt = getDataTransfer();
+    return getDataTransfer().getData(format);
+  }
 
-    /**
-     * Get the {@link DataTransfer} associated with the current drag event.
-     *
-     * @return the {@link DataTransfer} object
-     */
-    public DataTransfer getDataTransfer() {
-        return getNativeEvent().getDataTransfer();
-    }
+  /**
+   * Get the {@link DataTransfer} associated with the current drag event.
+   *
+   * @return the {@link DataTransfer} object
+   */
+  public DataTransfer getDataTransfer() {
+    return getNativeEvent().getDataTransfer();
+  }
 
-    /**
-     * Set the data in the {@link DataTransfer} object for the specified format.
-     *
-     * @param format the format
-     * @param data   the data to associate with the format
-     */
-    public void setData(String format,
-            String data) {
-        getDataTransfer().setData(format,
-                data);
-    }
+  /**
+   * Set the data in the {@link DataTransfer} object for the specified format.
+   *
+   * @param format the format
+   * @param data   the data to associate with the format
+   */
+  public void setData(String format,
+                      String data) {
+    getDataTransfer().setData(format,
+                              data);
+  }
 }

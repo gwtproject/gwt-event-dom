@@ -13,12 +13,12 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.gwtproject.event.dom.client;
+package org.gwtproject.event.shared;
 
 /**
  * Marker interface for event handlers. All stock GWT Widget and dom event
  * handlers extend {@link EventHandler}.
- *
+ * <p>
  * Added this marker interface to DOM-Event cause it is removed from c.g.g.event.shared:
  */
 public interface EventHandler {

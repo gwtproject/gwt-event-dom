@@ -42,37 +42,37 @@ import org.gwtproject.dom.client.BrowserEvents;
  * </p>
  */
 public class ProgressEvent
-        extends DomEvent<ProgressHandler> {
+  extends DomEvent<ProgressHandler> {
 
-    /**
-     * Event type for media progress events. Represents the meta-data associated with this event.
-     */
-    private static final Type<ProgressHandler> TYPE = new Type<>(BrowserEvents.PROGRESS,
-            new ProgressEvent());
+  /**
+   * Event type for media progress events. Represents the meta-data associated with this event.
+   */
+  private static final Type<ProgressHandler> TYPE = new Type<>(BrowserEvents.PROGRESS,
+                                                               new ProgressEvent());
 
-    /**
-     * Gets the event type associated with media progress events.
-     *
-     * @return the handler type
-     */
-    public static Type<ProgressHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire media progress events.
+   */
+  protected ProgressEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire media progress events.
-     */
-    protected ProgressEvent() {
-    }
+  /**
+   * Gets the event type associated with media progress events.
+   *
+   * @return the handler type
+   */
+  public static Type<ProgressHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<ProgressHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<ProgressHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(ProgressHandler handler) {
-        handler.onProgress(this);
-    }
+  @Override
+  protected void dispatch(ProgressHandler handler) {
+    handler.onProgress(this);
+  }
 }

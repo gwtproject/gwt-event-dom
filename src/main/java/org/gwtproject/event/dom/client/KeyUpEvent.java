@@ -21,38 +21,38 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native key up event.
  */
 public class KeyUpEvent
-        extends KeyCodeEvent<KeyUpHandler> {
+  extends KeyCodeEvent<KeyUpHandler> {
 
-    /**
-     * Event type for key up events. Represents the meta-data associated with this event.
-     */
-    private static final Type<KeyUpHandler> TYPE = new Type<>(
-            BrowserEvents.KEYUP,
-            new KeyUpEvent());
+  /**
+   * Event type for key up events. Represents the meta-data associated with this event.
+   */
+  private static final Type<KeyUpHandler> TYPE = new Type<>(
+    BrowserEvents.KEYUP,
+    new KeyUpEvent());
 
-    /**
-     * Gets the event type associated with key up events.
-     *
-     * @return the handler type
-     */
-    public static Type<KeyUpHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire key up events.
+   */
+  protected KeyUpEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire key up events.
-     */
-    protected KeyUpEvent() {
-    }
+  /**
+   * Gets the event type associated with key up events.
+   *
+   * @return the handler type
+   */
+  public static Type<KeyUpHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<KeyUpHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<KeyUpHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(KeyUpHandler handler) {
-        handler.onKeyUp(this);
-    }
+  @Override
+  protected void dispatch(KeyUpHandler handler) {
+    handler.onKeyUp(this);
+  }
 }

@@ -21,38 +21,38 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native mouse move event.
  */
 public class MouseMoveEvent
-        extends MouseEvent<MouseMoveHandler> {
+  extends MouseEvent<MouseMoveHandler> {
 
-    /**
-     * Event type for mouse move events. Represents the meta-data associated with this event.
-     */
-    private static final Type<MouseMoveHandler> TYPE = new Type<>(
-            BrowserEvents.MOUSEMOVE,
-            new MouseMoveEvent());
+  /**
+   * Event type for mouse move events. Represents the meta-data associated with this event.
+   */
+  private static final Type<MouseMoveHandler> TYPE = new Type<>(
+    BrowserEvents.MOUSEMOVE,
+    new MouseMoveEvent());
 
-    /**
-     * Gets the event type associated with mouse move events.
-     *
-     * @return the handler type
-     */
-    public static Type<MouseMoveHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire mouse move events.
+   */
+  protected MouseMoveEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire mouse move events.
-     */
-    protected MouseMoveEvent() {
-    }
+  /**
+   * Gets the event type associated with mouse move events.
+   *
+   * @return the handler type
+   */
+  public static Type<MouseMoveHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<MouseMoveHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<MouseMoveHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(MouseMoveHandler handler) {
-        handler.onMouseMove(this);
-    }
+  @Override
+  protected void dispatch(MouseMoveHandler handler) {
+    handler.onMouseMove(this);
+  }
 }

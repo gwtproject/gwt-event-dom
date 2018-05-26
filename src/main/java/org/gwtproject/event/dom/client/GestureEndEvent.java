@@ -21,45 +21,45 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native gesture end event.
  */
 public class GestureEndEvent
-        extends DomEvent<GestureEndHandler> {
+  extends DomEvent<GestureEndHandler> {
 
-    /**
-     * Event type for gesture end events. Represents the meta-data associated with this event.
-     */
-    private static final Type<GestureEndHandler> TYPE = new Type<>(BrowserEvents.GESTUREEND,
-            new GestureEndEvent());
+  /**
+   * Event type for gesture end events. Represents the meta-data associated with this event.
+   */
+  private static final Type<GestureEndHandler> TYPE = new Type<>(BrowserEvents.GESTUREEND,
+                                                                 new GestureEndEvent());
 
-    /**
-     * Gets the event type associated with gesture end events.
-     *
-     * @return the handler type
-     */
-    public static Type<GestureEndHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire gesture end events.
+   */
+  protected GestureEndEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire gesture end events.
-     */
-    protected GestureEndEvent() {
-    }
+  /**
+   * Gets the event type associated with gesture end events.
+   *
+   * @return the handler type
+   */
+  public static Type<GestureEndHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<GestureEndHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<GestureEndHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    public double getRotation() {
-        return getNativeEvent().getRotation();
-    }
+  public double getRotation() {
+    return getNativeEvent().getRotation();
+  }
 
-    public double getScale() {
-        return getNativeEvent().getScale();
-    }
+  public double getScale() {
+    return getNativeEvent().getScale();
+  }
 
-    @Override
-    protected void dispatch(GestureEndHandler handler) {
-        handler.onGestureEnd(this);
-    }
+  @Override
+  protected void dispatch(GestureEndHandler handler) {
+    handler.onGestureEnd(this);
+  }
 }

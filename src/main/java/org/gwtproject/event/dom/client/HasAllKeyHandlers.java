@@ -25,7 +25,7 @@ package org.gwtproject.event.dom.client;
  * </p>
  */
 public interface HasAllKeyHandlers
-        extends HasKeyUpHandlers,
-        HasKeyDownHandlers,
-        HasKeyPressHandlers {
+  extends HasKeyUpHandlers,
+          HasKeyDownHandlers,
+          HasKeyPressHandlers {
 }

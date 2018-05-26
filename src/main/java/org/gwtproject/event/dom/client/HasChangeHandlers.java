@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasChangeHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link ChangeEvent} handler.
-     *
-     * @param handler the change handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addChangeHandler(ChangeHandler handler);
+  /**
+   * Adds a {@link ChangeEvent} handler.
+   *
+   * @param handler the change handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addChangeHandler(ChangeHandler handler);
 }

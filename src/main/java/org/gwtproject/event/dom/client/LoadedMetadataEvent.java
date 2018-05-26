@@ -42,39 +42,39 @@ import org.gwtproject.dom.client.BrowserEvents;
  * </p>
  */
 public class LoadedMetadataEvent
-        extends DomEvent<LoadedMetadataHandler> {
+  extends DomEvent<LoadedMetadataHandler> {
 
-    /**
-     * Event type for media loadedmetadata events. Represents the meta-data associated with this
-     * event.
-     */
-    private static final Type<LoadedMetadataHandler> TYPE =
-            new Type<>(BrowserEvents.LOADEDMETADATA,
-                    new LoadedMetadataEvent());
+  /**
+   * Event type for media loadedmetadata events. Represents the meta-data associated with this
+   * event.
+   */
+  private static final Type<LoadedMetadataHandler> TYPE =
+    new Type<>(BrowserEvents.LOADEDMETADATA,
+               new LoadedMetadataEvent());
 
-    /**
-     * Gets the event type associated with media loadedmetadata events.
-     *
-     * @return the handler type
-     */
-    public static Type<LoadedMetadataHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire media loadedmetadata events.
+   */
+  protected LoadedMetadataEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire media loadedmetadata events.
-     */
-    protected LoadedMetadataEvent() {
-    }
+  /**
+   * Gets the event type associated with media loadedmetadata events.
+   *
+   * @return the handler type
+   */
+  public static Type<LoadedMetadataHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<LoadedMetadataHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<LoadedMetadataHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(LoadedMetadataHandler handler) {
-        handler.onLoadedMetadata(this);
-    }
+  @Override
+  protected void dispatch(LoadedMetadataHandler handler) {
+    handler.onLoadedMetadata(this);
+  }
 }

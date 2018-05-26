@@ -21,38 +21,38 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native mouse down event.
  */
 public class MouseDownEvent
-        extends MouseEvent<MouseDownHandler> {
+  extends MouseEvent<MouseDownHandler> {
 
-    /**
-     * Event type for mouse down events. Represents the meta-data associated with this event.
-     */
-    private static final Type<MouseDownHandler> TYPE = new Type<>(
-            BrowserEvents.MOUSEDOWN,
-            new MouseDownEvent());
+  /**
+   * Event type for mouse down events. Represents the meta-data associated with this event.
+   */
+  private static final Type<MouseDownHandler> TYPE = new Type<>(
+    BrowserEvents.MOUSEDOWN,
+    new MouseDownEvent());
 
-    /**
-     * Gets the event type associated with mouse down events.
-     *
-     * @return the handler type
-     */
-    public static Type<MouseDownHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire mouse down events.
+   */
+  protected MouseDownEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire mouse down events.
-     */
-    protected MouseDownEvent() {
-    }
+  /**
+   * Gets the event type associated with mouse down events.
+   *
+   * @return the handler type
+   */
+  public static Type<MouseDownHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<MouseDownHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<MouseDownHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    protected void dispatch(MouseDownHandler handler) {
-        handler.onMouseDown(this);
-    }
+  @Override
+  protected void dispatch(MouseDownHandler handler) {
+    handler.onMouseDown(this);
+  }
 }

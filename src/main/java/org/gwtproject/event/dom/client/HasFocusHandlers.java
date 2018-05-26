@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasFocusHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link FocusEvent} handler.
-     *
-     * @param handler the focus handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addFocusHandler(FocusHandler handler);
+  /**
+   * Adds a {@link FocusEvent} handler.
+   *
+   * @param handler the focus handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addFocusHandler(FocusHandler handler);
 }

@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasMouseOverHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link MouseOverEvent} handler.
-     *
-     * @param handler the mouse over handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addMouseOverHandler(MouseOverHandler handler);
+  /**
+   * Adds a {@link MouseOverEvent} handler.
+   *
+   * @param handler the mouse over handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addMouseOverHandler(MouseOverHandler handler);
 }

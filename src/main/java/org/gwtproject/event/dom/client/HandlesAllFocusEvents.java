@@ -19,37 +19,37 @@ package org.gwtproject.event.dom.client;
  * Receiver used to handle all focus events at once.
  */
 public abstract class HandlesAllFocusEvents
-        implements FocusHandler,
-        BlurHandler {
+  implements FocusHandler,
+             BlurHandler {
 
-    /**
-     * Convenience method used to handle both focus and blur events from an event source.
-     *
-     * @param <H>         receiver type, must implement both {@link FocusHandler} and {@link BlurHandler}
-     *                    handlers
-     * @param eventSource the event source
-     * @param reciever    the receiver implementing both focus and blur handlers
-     */
-    public static <H extends BlurHandler & FocusHandler> void handle(
-            HasAllFocusHandlers eventSource,
-            H reciever) {
-        eventSource.addBlurHandler(reciever);
-        eventSource.addFocusHandler(reciever);
-    }
+  /**
+   * Constructor.
+   */
+  public HandlesAllFocusEvents() {
+  }
 
-    /**
-     * Constructor.
-     */
-    public HandlesAllFocusEvents() {
-    }
+  /**
+   * Convenience method to handle both focus and blur events from an event source.
+   *
+   * @param source the event source
+   */
+  public void handle(HasAllFocusHandlers source) {
+    handle(source,
+           this);
+  }
 
-    /**
-     * Convenience method to handle both focus and blur events from an event source.
-     *
-     * @param source the event source
-     */
-    public void handle(HasAllFocusHandlers source) {
-        handle(source,
-                this);
-    }
+  /**
+   * Convenience method used to handle both focus and blur events from an event source.
+   *
+   * @param <H>         receiver type, must implement both {@link FocusHandler} and {@link BlurHandler}
+   *                    handlers
+   * @param eventSource the event source
+   * @param reciever    the receiver implementing both focus and blur handlers
+   */
+  public static <H extends BlurHandler & FocusHandler> void handle(
+    HasAllFocusHandlers eventSource,
+    H reciever) {
+    eventSource.addBlurHandler(reciever);
+    eventSource.addFocusHandler(reciever);
+  }
 }

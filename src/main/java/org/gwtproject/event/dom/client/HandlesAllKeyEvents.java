@@ -23,38 +23,38 @@ package org.gwtproject.event.dom.client;
  * breaking API changes.
  */
 public abstract class HandlesAllKeyEvents
-        implements KeyDownHandler,
-        KeyUpHandler,
-        KeyPressHandler {
+  implements KeyDownHandler,
+             KeyUpHandler,
+             KeyPressHandler {
 
-    /**
-     * Convenience method used to handle all key events from an event source.
-     *
-     * @param <H>         receiver type, must implement all key handlers
-     * @param eventSource the event source
-     * @param reciever    the receiver implementing all key handlers
-     */
-    public static <H extends KeyDownHandler & KeyUpHandler & KeyPressHandler> void addHandlers(
-            HasAllKeyHandlers eventSource,
-            H reciever) {
-        eventSource.addKeyDownHandler(reciever);
-        eventSource.addKeyPressHandler(reciever);
-        eventSource.addKeyUpHandler(reciever);
-    }
+  /**
+   * Constructor.
+   */
+  public HandlesAllKeyEvents() {
+  }
 
-    /**
-     * Constructor.
-     */
-    public HandlesAllKeyEvents() {
-    }
-
-    /**
-     * Convenience method to handle all key events from an event source.
-     *
-     * @param source the event source
-     */
-    public final void addKeyHandlersTo(HasAllKeyHandlers source) {
-        addHandlers(source,
+  /**
+   * Convenience method to handle all key events from an event source.
+   *
+   * @param source the event source
+   */
+  public final void addKeyHandlersTo(HasAllKeyHandlers source) {
+    addHandlers(source,
                 this);
-    }
+  }
+
+  /**
+   * Convenience method used to handle all key events from an event source.
+   *
+   * @param <H>         receiver type, must implement all key handlers
+   * @param eventSource the event source
+   * @param reciever    the receiver implementing all key handlers
+   */
+  public static <H extends KeyDownHandler & KeyUpHandler & KeyPressHandler> void addHandlers(
+    HasAllKeyHandlers eventSource,
+    H reciever) {
+    eventSource.addKeyDownHandler(reciever);
+    eventSource.addKeyPressHandler(reciever);
+    eventSource.addKeyUpHandler(reciever);
+  }
 }

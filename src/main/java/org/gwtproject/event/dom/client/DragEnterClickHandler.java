@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link DragEnterEvent} events.
  */
 public interface DragEnterClickHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when a {@link DragEnterEvent} is fired.
-     *
-     * @param event the {@link DragEnterEvent} that was fired
-     */
-    void onDoubleClick(DragEnterEvent event);
+  /**
+   * Called when a {@link DragEnterEvent} is fired.
+   *
+   * @param event the {@link DragEnterEvent} that was fired
+   */
+  void onDoubleClick(DragEnterEvent event);
 }

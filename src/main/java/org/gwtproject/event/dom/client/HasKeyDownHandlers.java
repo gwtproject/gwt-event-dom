@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasKeyDownHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link KeyDownEvent} handler.
-     *
-     * @param handler the key down handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addKeyDownHandler(KeyDownHandler handler);
+  /**
+   * Adds a {@link KeyDownEvent} handler.
+   *
+   * @param handler the key down handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addKeyDownHandler(KeyDownHandler handler);
 }

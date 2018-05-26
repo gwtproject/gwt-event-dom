@@ -15,16 +15,18 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link DropEvent} events.
  */
 public interface DropHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when a {@link DropEvent} is fired.
-     *
-     * @param event the {@link DropEvent} that was fired
-     */
-    void onDrop(DropEvent event);
+  /**
+   * Called when a {@link DropEvent} is fired.
+   *
+   * @param event the {@link DropEvent} that was fired
+   */
+  void onDrop(DropEvent event);
 }

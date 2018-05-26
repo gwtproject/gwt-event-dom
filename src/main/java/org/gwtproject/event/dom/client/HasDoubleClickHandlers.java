@@ -23,14 +23,13 @@ import org.gwtproject.event.shared.HasHandlers;
  * instances.
  */
 public interface HasDoubleClickHandlers
-        extends HasHandlers {
+  extends HasHandlers {
 
-    /**
-     * Adds a {@link DoubleClickEvent} handler.
-     *
-     * @param handler the double click handler
-     *
-     * @return {@link HandlerRegistration} used to remove this handler
-     */
-    HandlerRegistration addDoubleClickHandler(DoubleClickHandler handler);
+  /**
+   * Adds a {@link DoubleClickEvent} handler.
+   *
+   * @param handler the double click handler
+   * @return {@link HandlerRegistration} used to remove this handler
+   */
+  HandlerRegistration addDoubleClickHandler(DoubleClickHandler handler);
 }

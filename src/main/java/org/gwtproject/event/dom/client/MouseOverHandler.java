@@ -16,16 +16,18 @@
 package org.gwtproject.event.dom.client;
 
 
+import org.gwtproject.event.shared.EventHandler;
+
 /**
  * Handler interface for {@link MouseOverEvent} events.
  */
 public interface MouseOverHandler
-        extends EventHandler {
+  extends EventHandler {
 
-    /**
-     * Called when MouseOverEvent is fired.
-     *
-     * @param event the {@link MouseOverEvent} that was fired
-     */
-    void onMouseOver(MouseOverEvent event);
+  /**
+   * Called when MouseOverEvent is fired.
+   *
+   * @param event the {@link MouseOverEvent} that was fired
+   */
+  void onMouseOver(MouseOverEvent event);
 }

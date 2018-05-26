@@ -21,61 +21,61 @@ import org.gwtproject.dom.client.BrowserEvents;
  * Represents a native key press event.
  */
 public class KeyPressEvent
-        extends KeyEvent<KeyPressHandler> {
+  extends KeyEvent<KeyPressHandler> {
 
-    /**
-     * Event type for key press events. Represents the meta-data associated with this event.
-     */
-    private static final Type<KeyPressHandler> TYPE = new Type<>(
-            BrowserEvents.KEYPRESS,
-            new KeyPressEvent());
+  /**
+   * Event type for key press events. Represents the meta-data associated with this event.
+   */
+  private static final Type<KeyPressHandler> TYPE = new Type<>(
+    BrowserEvents.KEYPRESS,
+    new KeyPressEvent());
 
-    /**
-     * Gets the event type associated with key press events.
-     *
-     * @return the handler type
-     */
-    public static Type<KeyPressHandler> getType() {
-        return TYPE;
-    }
+  /**
+   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} to fire key press events.
+   */
+  protected KeyPressEvent() {
+  }
 
-    /**
-     * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-     * org.gwtproject.event.shared.HasHandlers)} to fire key press events.
-     */
-    protected KeyPressEvent() {
-    }
+  /**
+   * Gets the event type associated with key press events.
+   *
+   * @return the handler type
+   */
+  public static Type<KeyPressHandler> getType() {
+    return TYPE;
+  }
 
-    @Override
-    public final Type<KeyPressHandler> getAssociatedType() {
-        return TYPE;
-    }
+  @Override
+  public final Type<KeyPressHandler> getAssociatedType() {
+    return TYPE;
+  }
 
-    @Override
-    public String toDebugString() {
-        return super.toDebugString() + "[" + getCharCode() + "]";
-    }
+  @Override
+  public String toDebugString() {
+    return super.toDebugString() + "[" + getCharCode() + "]";
+  }
 
-    /**
-     * Gets the char code for this event.
-     *
-     * @return the char code
-     */
-    public char getCharCode() {
-        return (char) getUnicodeCharCode();
-    }
+  /**
+   * Gets the char code for this event.
+   *
+   * @return the char code
+   */
+  public char getCharCode() {
+    return (char) getUnicodeCharCode();
+  }
 
-    /**
-     * Gets the Unicode char code (code point) for this event.
-     *
-     * @return the Unicode char code
-     */
-    public int getUnicodeCharCode() {
-        return getNativeEvent().getCharCode();
-    }
+  /**
+   * Gets the Unicode char code (code point) for this event.
+   *
+   * @return the Unicode char code
+   */
+  public int getUnicodeCharCode() {
+    return getNativeEvent().getCharCode();
+  }
 
-    @Override
-    protected void dispatch(KeyPressHandler handler) {
-        handler.onKeyPress(this);
-    }
+  @Override
+  protected void dispatch(KeyPressHandler handler) {
+    handler.onKeyPress(this);
+  }
 }
