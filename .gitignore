@@ -245,3 +245,6 @@ Temporary Items
 .idea/
 src/test/resources/
 target/
+/.project
+/.checkstyle
+/.classpath
