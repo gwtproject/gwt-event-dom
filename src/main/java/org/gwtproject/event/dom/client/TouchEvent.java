@@ -22,7 +22,6 @@ import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import org.gwtproject.core.client.JsArray;
 import org.gwtproject.dom.client.Touch;
-import org.gwtproject.event.shared.EventHandler;
 
 /**
  * Abstract class representing touch events.
@@ -32,7 +31,7 @@ import org.gwtproject.event.shared.EventHandler;
  *
  * @param <H> handler type
  */
-public abstract class TouchEvent<H extends EventHandler>
+public abstract class TouchEvent<H extends DomEventHandler>
   extends HumanInputEvent<H> {
 
   /**

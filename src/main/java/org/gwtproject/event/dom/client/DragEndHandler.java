@@ -15,13 +15,11 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link DragEndEvent} events.
  */
 public interface DragEndHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when a {@link DragEndEvent} is fired.

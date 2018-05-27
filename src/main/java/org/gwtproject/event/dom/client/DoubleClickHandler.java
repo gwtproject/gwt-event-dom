@@ -15,13 +15,11 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link DoubleClickEvent} events.
  */
 public interface DoubleClickHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when a {@link DoubleClickEvent} is fired.

@@ -15,8 +15,6 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link CanPlayThroughEvent} events.
  *
@@ -27,7 +25,7 @@ import org.gwtproject.event.shared.EventHandler;
  * </p>
  */
 public interface CanPlayThroughHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when CanPlayThroughEvent is fired.

@@ -15,13 +15,11 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link TouchEndEvent} events.
  */
 public interface TouchEndHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when TouchEndEvent is fired.

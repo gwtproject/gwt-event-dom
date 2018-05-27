@@ -15,13 +15,11 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link MouseWheelEvent} events.
  */
 public interface MouseWheelHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when MouseWheelEvent is fired.

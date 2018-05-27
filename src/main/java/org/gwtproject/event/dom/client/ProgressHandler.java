@@ -15,8 +15,6 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link ProgressEvent} events.
  *
@@ -27,7 +25,7 @@ import org.gwtproject.event.shared.EventHandler;
  * </p>
  */
 public interface ProgressHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when ProgressEvent is fired.

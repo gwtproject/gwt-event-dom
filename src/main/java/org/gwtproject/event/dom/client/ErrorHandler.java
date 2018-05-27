@@ -15,13 +15,11 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link ErrorEvent} events.
  */
 public interface ErrorHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when ErrorEvent is fired.

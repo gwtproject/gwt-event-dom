@@ -15,13 +15,11 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler for {@link ContextMenuEvent} events.
  */
 public interface ContextMenuHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when a native context menu event is fired.

@@ -17,14 +17,13 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.Element;
 import org.gwtproject.dom.client.NativeEvent;
-import org.gwtproject.event.shared.EventHandler;
 
 /**
  * Abstract class representing mouse events.
  *
  * @param <H> handler type
  */
-public abstract class MouseEvent<H extends EventHandler>
+public abstract class MouseEvent<H extends DomEventHandler>
   extends HumanInputEvent<H> {
 
   /**

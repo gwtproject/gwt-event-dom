@@ -15,14 +15,12 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Abstract class representing position events such as mouse or touch events.
  *
  * @param <H> handler type
  */
-public abstract class HumanInputEvent<H extends EventHandler>
+public abstract class HumanInputEvent<H extends DomEventHandler>
   extends DomEvent<
                     H> {
 

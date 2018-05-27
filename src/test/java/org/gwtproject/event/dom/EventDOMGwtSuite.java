@@ -1,5 +1,5 @@
 /*
- * Copyright 2018 The GWT Project Authors.
+ * Copyright 2011 Google Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -13,14 +13,23 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.gwtproject.event.shared;
+package org.gwtproject.event.dom;
+
+import junit.framework.Test;
+import junit.framework.TestSuite;
+import org.gwtproject.event.dom.client.DomEventTest;
 
 /**
- * Marker interface for event handlers. All stock GWT Widget and dom event
- * handlers extend {@link EventHandler}.
- * <p>
- * Added this marker interface to DOM-Event cause it is removed from c.g.g.event.shared:
+ * Tests of the animation package.
  */
-public interface EventHandler {
+public class EventDOMGwtSuite {
 
+
+  public static Test suite() {
+    TestSuite suite = new TestSuite("Tests of the event dom package");
+
+    suite.addTestSuite(DomEventTest.class);
+
+    return suite;
+  }
 }

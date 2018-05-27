@@ -15,13 +15,11 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link TouchCancelEvent} events.
  */
 public interface TouchCancelHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when TouchCancelEvent is fired.

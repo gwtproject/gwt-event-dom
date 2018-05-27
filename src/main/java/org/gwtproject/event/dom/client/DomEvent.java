@@ -20,7 +20,6 @@ import jsinterop.base.JsPropertyMap;
 import org.gwtproject.dom.client.Element;
 import org.gwtproject.dom.client.NativeEvent;
 import org.gwtproject.event.shared.Event;
-import org.gwtproject.event.shared.EventHandler;
 import org.gwtproject.event.shared.HasHandlers;
 
 import java.util.ArrayList;
@@ -33,7 +32,7 @@ import java.util.List;
  *
  * @param <H> handler type
  */
-public abstract class DomEvent<H extends EventHandler>
+public abstract class DomEvent<H extends DomEventHandler>
   extends Event<H>
   implements HasNativeEvent {
 
@@ -144,7 +143,7 @@ public abstract class DomEvent<H extends EventHandler>
    *
    * @param <H> handler type
    */
-  public static class Type<H extends EventHandler>
+  public static class Type<H extends DomEventHandler>
     extends Event.Type<H> {
 
     private DomEvent<H> flyweight;

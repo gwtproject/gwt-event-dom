@@ -15,13 +15,11 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link FocusEvent} events.
  */
 public interface FocusHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when FocusEvent is fired.

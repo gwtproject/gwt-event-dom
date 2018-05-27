@@ -16,15 +16,16 @@
 package org.gwtproject.event.dom.client;
 
 /**
- * Handler interface for {@link DragEvent} events.
+ * Marker interface for DOM event handlers. All dom event handlers extend {@link DomEventHandler}.
+ * <p>
+ * Added this marker interface to DOM-Event cause it is removed from c.g.g.event.shared.
+ * </p>
+ * <p>
+ *   There is no really need for a EventHandler interface except for the fact, that it will
+ *   save us a lot of code in case of dealing with dom event handlers in generics especially when
+ *   dealing with {@link DomEvent}.
+ * </p>
  */
-public interface DragHandler
-  extends DomEventHandler {
+public interface DomEventHandler {
 
-  /**
-   * Called when a {@link DragEvent} is fired.
-   *
-   * @param event the {@link DragEvent} that was fired
-   */
-  void onDrag(DragEvent event);
 }

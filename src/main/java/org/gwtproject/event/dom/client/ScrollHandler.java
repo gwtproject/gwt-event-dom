@@ -31,13 +31,11 @@
 package org.gwtproject.event.dom.client;
 
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link ScrollEvent} events.
  */
 public interface ScrollHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when ScrollEvent is fired.

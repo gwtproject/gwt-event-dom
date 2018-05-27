@@ -15,8 +15,6 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link EndedEvent} events.
  *
@@ -27,7 +25,7 @@ import org.gwtproject.event.shared.EventHandler;
  * </p>
  */
 public interface EndedHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when EndedEvent is fired.

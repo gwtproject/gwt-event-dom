@@ -16,13 +16,11 @@
 package org.gwtproject.event.dom.client;
 
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link LoseCaptureEvent} events.
  */
 public interface LoseCaptureHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when LoseCaptureEvent is fired.

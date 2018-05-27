@@ -15,13 +15,11 @@
  */
 package org.gwtproject.event.dom.client;
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Handler interface for {@link GestureEndEvent} events.
  */
 public interface GestureEndHandler
-  extends EventHandler {
+  extends DomEventHandler {
 
   /**
    * Called when GestureEndEvent is fired.

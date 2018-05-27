@@ -16,14 +16,12 @@
 package org.gwtproject.event.dom.client;
 
 
-import org.gwtproject.event.shared.EventHandler;
-
 /**
  * Key up and key down are both events based upon a given key code.
  *
  * @param <H> handler type
  */
-public abstract class KeyCodeEvent<H extends EventHandler>
+public abstract class KeyCodeEvent<H extends DomEventHandler>
   extends KeyEvent<H> {
 
   /**
