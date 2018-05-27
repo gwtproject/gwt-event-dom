@@ -4,7 +4,6 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/dictionaries
 .idea/**/shelf
@@ -53,15 +52,12 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 ### GWT template
-*.class
 
 # Package Files #
-*.jar
 *.war
 
 # gwt caches and compiled units #
 war/gwt_bree/
-gwt-unitCache/
 
 # boilerplate generated classes #
 .apt_generated/
@@ -72,9 +68,6 @@ war/WEB-INF/classes/
 
 #compilation logs
 .gwt/
-
-#caching for already compiled files
-gwt-unitCache/
 
 #gwt junit compilation files
 www-test/
@@ -168,7 +161,6 @@ local.properties
 .worksheet
 ### Java template
 # Compiled class file
-*.class
 
 # Log file
 *.log
@@ -180,8 +172,6 @@ local.properties
 .mtj.tmp/
 
 # Package Files #
-*.jar
-*.war
 *.nar
 *.ear
 *.zip
@@ -243,7 +233,6 @@ Temporary Items
 .apdisk
 
 .idea/
-src/test/resources/
 target/
 /.project
 /.checkstyle
