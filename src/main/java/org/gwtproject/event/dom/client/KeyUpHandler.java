@@ -19,8 +19,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link KeyUpEvent} events.
  */
-public interface KeyUpHandler
-  extends DomEventHandler {
+public interface KeyUpHandler {
 
   /**
    * Called when KeyUpEvent is fired.

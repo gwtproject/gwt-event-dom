@@ -57,6 +57,11 @@
       <artifactId>gwt-event</artifactId>
       <version>${event.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.gwtproject.event</groupId>
+      <artifactId>gwt-event-legacy</artifactId>
+      <version>${event.version}</version>
+    </dependency>
 
     <!-- only for testing -->
     <dependency>

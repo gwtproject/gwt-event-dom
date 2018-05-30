@@ -19,8 +19,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link MouseOutEvent} events.
  */
-public interface MouseOutHandler
-  extends DomEventHandler {
+public interface MouseOutHandler {
 
   /**
    * Called when MouseOutEvent is fired.

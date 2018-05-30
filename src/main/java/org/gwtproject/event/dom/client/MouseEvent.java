@@ -23,7 +23,7 @@ import org.gwtproject.dom.client.NativeEvent;
  *
  * @param <H> handler type
  */
-public abstract class MouseEvent<H extends DomEventHandler>
+public abstract class MouseEvent<H>
   extends HumanInputEvent<H> {
 
   /**

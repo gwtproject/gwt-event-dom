@@ -19,8 +19,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link MouseUpEvent} events.
  */
-public interface MouseUpHandler
-  extends DomEventHandler {
+public interface MouseUpHandler {
 
   /**
    * Called when MouseUpEvent is fired.

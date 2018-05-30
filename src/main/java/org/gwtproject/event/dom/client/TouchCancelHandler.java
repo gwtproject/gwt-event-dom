@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link TouchCancelEvent} events.
  */
-public interface TouchCancelHandler
-  extends DomEventHandler {
+public interface TouchCancelHandler {
 
   /**
    * Called when TouchCancelEvent is fired.

@@ -19,8 +19,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link MouseOverEvent} events.
  */
-public interface MouseOverHandler
-  extends DomEventHandler {
+public interface MouseOverHandler {
 
   /**
    * Called when MouseOverEvent is fired.

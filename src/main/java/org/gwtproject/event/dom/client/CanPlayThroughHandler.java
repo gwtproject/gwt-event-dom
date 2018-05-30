@@ -24,8 +24,7 @@ package org.gwtproject.event.dom.client;
  * </span>
  * </p>
  */
-public interface CanPlayThroughHandler
-  extends DomEventHandler {
+public interface CanPlayThroughHandler {
 
   /**
    * Called when CanPlayThroughEvent is fired.

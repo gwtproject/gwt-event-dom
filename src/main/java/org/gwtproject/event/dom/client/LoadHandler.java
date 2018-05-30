@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link LoadEvent} events.
  */
-public interface LoadHandler
-  extends DomEventHandler {
+public interface LoadHandler {
 
   /**
    * Called when LoadEvent is fired.

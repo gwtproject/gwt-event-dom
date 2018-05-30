@@ -24,7 +24,7 @@ import org.gwtproject.dom.client.PartialSupport;
  * @param <H> handler type
  */
 @PartialSupport
-public abstract class DragDropEventBase<H extends DomEventHandler>
+public abstract class DragDropEventBase<H>
   extends DomEvent<H> {
 
   /**

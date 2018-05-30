@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link TouchMoveEvent} events.
  */
-public interface TouchMoveHandler
-  extends DomEventHandler {
+public interface TouchMoveHandler {
 
   /**
    * Called when TouchMoveEvent is fired.

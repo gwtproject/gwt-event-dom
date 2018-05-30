@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler for {@link ChangeEvent} events.
  */
-public interface ChangeHandler
-  extends DomEventHandler {
+public interface ChangeHandler {
 
   /**
    * Called when a change event is fired.

@@ -22,7 +22,7 @@ package org.gwtproject.event.dom.client;
  *
  * @param <H> The event handler type
  */
-public abstract class KeyEvent<H extends DomEventHandler>
+public abstract class KeyEvent<H>
   extends DomEvent<H> {
 
   /**

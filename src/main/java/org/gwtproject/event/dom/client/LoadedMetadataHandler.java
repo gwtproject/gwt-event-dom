@@ -24,8 +24,7 @@ package org.gwtproject.event.dom.client;
  * </span>
  * </p>
  */
-public interface LoadedMetadataHandler
-  extends DomEventHandler {
+public interface LoadedMetadataHandler {
 
   /**
    * Called when LoadedMetadataEvent is fired.

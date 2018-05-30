@@ -31,7 +31,7 @@ import org.gwtproject.dom.client.Touch;
  *
  * @param <H> handler type
  */
-public abstract class TouchEvent<H extends DomEventHandler>
+public abstract class TouchEvent<H>
   extends HumanInputEvent<H> {
 
   /**

@@ -213,7 +213,7 @@ public class DomEventTest
   }
 
   interface CustomClickHandler
-    extends DomEventHandler {
+      {
 
     void onClick(CustomClickEvent evt);
   }

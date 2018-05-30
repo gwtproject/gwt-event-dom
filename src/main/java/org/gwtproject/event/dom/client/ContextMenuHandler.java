@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler for {@link ContextMenuEvent} events.
  */
-public interface ContextMenuHandler
-  extends DomEventHandler {
+public interface ContextMenuHandler {
 
   /**
    * Called when a native context menu event is fired.

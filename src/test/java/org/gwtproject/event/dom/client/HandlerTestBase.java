@@ -41,7 +41,7 @@ public abstract class HandlerTestBase
   extends GWTTestCase {
 
   Adaptor adaptor1 = new Adaptor();
-  private HashSet<DomEventHandler> active = new HashSet<>();
+  private HashSet<Object> active = new HashSet<>();
   MouseDownHandler mouse1 = new MouseDownHandler() {
     @Override
     public void onMouseDown(MouseDownEvent event) {
@@ -114,18 +114,18 @@ public abstract class HandlerTestBase
     return "org.gwtproject.event.dom.EventDOMTest";
   }
 
-  void add(DomEventHandler handler) {
+  void add(Object handler) {
     active.add(handler);
   }
 
-  void assertFired(DomEventHandler... handler) {
+  void assertFired(Object... handler) {
     for (int i = 0; i < handler.length; i++) {
       assertTrue(handler[i] + " should have fired",
                  active.contains(handler[i]));
     }
   }
 
-  void assertNotFired(DomEventHandler... handler) {
+  void assertNotFired(Object... handler) {
     for (int i = 0; i < handler.length; i++) {
       assertFalse(handler[i] + " should not have fired",
                   active.contains(handler[i]));

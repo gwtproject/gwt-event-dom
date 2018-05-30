@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link ErrorEvent} events.
  */
-public interface ErrorHandler
-  extends DomEventHandler {
+public interface ErrorHandler {
 
   /**
    * Called when ErrorEvent is fired.

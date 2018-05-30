@@ -20,7 +20,7 @@ package org.gwtproject.event.dom.client;
  *
  * @param <H> handler type
  */
-public abstract class HumanInputEvent<H extends DomEventHandler>
+public abstract class HumanInputEvent<H>
   extends DomEvent<
                     H> {
 

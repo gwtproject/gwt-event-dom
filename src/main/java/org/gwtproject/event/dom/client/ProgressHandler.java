@@ -24,8 +24,7 @@ package org.gwtproject.event.dom.client;
  * </span>
  * </p>
  */
-public interface ProgressHandler
-  extends DomEventHandler {
+public interface ProgressHandler {
 
   /**
    * Called when ProgressEvent is fired.

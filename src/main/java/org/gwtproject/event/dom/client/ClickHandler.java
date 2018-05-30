@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler for {@link ClickEvent} events.
  */
-public interface ClickHandler
-  extends DomEventHandler {
+public interface ClickHandler {
 
   /**
    * Called when a native click event is fired.

@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link MouseMoveEvent} events.
  */
-public interface MouseMoveHandler
-  extends DomEventHandler {
+public interface MouseMoveHandler {
 
   /**
    * Called when MouseMoveEvent is fired.

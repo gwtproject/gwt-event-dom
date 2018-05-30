@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link TouchEndEvent} events.
  */
-public interface TouchEndHandler
-  extends DomEventHandler {
+public interface TouchEndHandler {
 
   /**
    * Called when TouchEndEvent is fired.

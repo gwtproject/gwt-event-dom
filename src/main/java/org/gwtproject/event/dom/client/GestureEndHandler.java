@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link GestureEndEvent} events.
  */
-public interface GestureEndHandler
-  extends DomEventHandler {
+public interface GestureEndHandler {
 
   /**
    * Called when GestureEndEvent is fired.

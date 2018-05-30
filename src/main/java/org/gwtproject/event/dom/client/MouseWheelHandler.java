@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link MouseWheelEvent} events.
  */
-public interface MouseWheelHandler
-  extends DomEventHandler {
+public interface MouseWheelHandler {
 
   /**
    * Called when MouseWheelEvent is fired.

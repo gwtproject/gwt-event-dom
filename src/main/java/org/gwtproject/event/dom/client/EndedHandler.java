@@ -24,8 +24,7 @@ package org.gwtproject.event.dom.client;
  * </span>
  * </p>
  */
-public interface EndedHandler
-  extends DomEventHandler {
+public interface EndedHandler {
 
   /**
    * Called when EndedEvent is fired.

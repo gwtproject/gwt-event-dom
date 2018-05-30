@@ -19,8 +19,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link KeyPressEvent} events.
  */
-public interface KeyPressHandler
-  extends DomEventHandler {
+public interface KeyPressHandler {
 
   /**
    * Called when KeyPressEvent is fired.

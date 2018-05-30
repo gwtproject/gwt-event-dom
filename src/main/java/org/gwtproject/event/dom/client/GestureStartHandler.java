@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link GestureStartEvent} events.
  */
-public interface GestureStartHandler
-  extends DomEventHandler {
+public interface GestureStartHandler {
 
   /**
    * Called when GestureStartEvent is fired.

@@ -32,7 +32,7 @@ import java.util.List;
  *
  * @param <H> handler type
  */
-public abstract class DomEvent<H extends DomEventHandler>
+public abstract class DomEvent<H>
   extends Event<H>
   implements HasNativeEvent {
 
@@ -143,7 +143,7 @@ public abstract class DomEvent<H extends DomEventHandler>
    *
    * @param <H> handler type
    */
-  public static class Type<H extends DomEventHandler>
+  public static class Type<H>
     extends Event.Type<H> {
 
     private DomEvent<H> flyweight;

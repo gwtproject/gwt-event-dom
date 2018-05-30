@@ -18,8 +18,7 @@ package org.gwtproject.event.dom.client;
 /**
  * Handler interface for {@link DragOverEvent} events.
  */
-public interface DragOverHandler
-  extends DomEventHandler {
+public interface DragOverHandler {
 
   /**
    * Called when a {@link DragOverEvent} is fired.
