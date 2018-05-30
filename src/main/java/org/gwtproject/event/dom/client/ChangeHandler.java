@@ -15,10 +15,13 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.legacy.shared.EventHandler;
+
 /**
  * Handler for {@link ChangeEvent} events.
  */
-public interface ChangeHandler {
+public interface ChangeHandler
+  extends EventHandler {
 
   /**
    * Called when a change event is fired.

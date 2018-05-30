@@ -15,14 +15,15 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.legacy.shared.EventHandler;
+
 /**
  * Abstract class representing position events such as mouse or touch events.
  *
  * @param <H> handler type
  */
-public abstract class HumanInputEvent<H>
-  extends DomEvent<
-                    H> {
+public abstract class HumanInputEvent<H extends EventHandler>
+  extends DomEvent<H> {
 
   /**
    * Is <code>alt</code> key down.

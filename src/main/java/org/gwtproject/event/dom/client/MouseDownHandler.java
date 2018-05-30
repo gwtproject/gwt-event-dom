@@ -15,11 +15,13 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.legacy.shared.EventHandler;
 
 /**
  * Handler interface for {@link MouseDownEvent} events.
  */
-public interface MouseDownHandler {
+public interface MouseDownHandler
+  extends EventHandler {
 
   /**
    * Called when MouseDown is fired.

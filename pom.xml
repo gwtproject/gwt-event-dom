@@ -81,6 +81,10 @@
       <artifactId>gwt-dev</artifactId>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>com.google.gwt</groupId>
+      <artifactId>gwt-user</artifactId>
+    </dependency>
   </dependencies>
 
   <build>

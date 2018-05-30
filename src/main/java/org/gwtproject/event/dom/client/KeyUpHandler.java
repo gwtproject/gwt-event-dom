@@ -15,11 +15,13 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.legacy.shared.EventHandler;
 
 /**
  * Handler interface for {@link KeyUpEvent} events.
  */
-public interface KeyUpHandler {
+public interface KeyUpHandler
+  extends EventHandler {
 
   /**
    * Called when KeyUpEvent is fired.

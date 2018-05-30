@@ -30,11 +30,13 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.legacy.shared.EventHandler;
 
 /**
  * Handler interface for {@link ScrollEvent} events.
  */
-public interface ScrollHandler {
+public interface ScrollHandler
+  extends EventHandler {
 
   /**
    * Called when ScrollEvent is fired.

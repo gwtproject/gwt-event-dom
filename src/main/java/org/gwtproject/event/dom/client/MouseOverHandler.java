@@ -15,11 +15,13 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.legacy.shared.EventHandler;
 
 /**
  * Handler interface for {@link MouseOverEvent} events.
  */
-public interface MouseOverHandler {
+public interface MouseOverHandler
+  extends EventHandler {
 
   /**
    * Called when MouseOverEvent is fired.

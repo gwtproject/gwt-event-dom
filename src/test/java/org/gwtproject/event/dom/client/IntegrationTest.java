@@ -14,6 +14,7 @@
  * the License.
  */
 package org.gwtproject.event.dom.client;
+
 /**
  * Used to configure test executions that should come after regular tests.
  * <p>

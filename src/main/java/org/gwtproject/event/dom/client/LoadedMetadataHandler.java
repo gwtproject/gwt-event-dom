@@ -15,6 +15,8 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.legacy.shared.EventHandler;
+
 /**
  * Handler interface for {@link LoadedMetadataEvent} events.
  *
@@ -24,7 +26,8 @@ package org.gwtproject.event.dom.client;
  * </span>
  * </p>
  */
-public interface LoadedMetadataHandler {
+public interface LoadedMetadataHandler
+  extends EventHandler {
 
   /**
    * Called when LoadedMetadataEvent is fired.

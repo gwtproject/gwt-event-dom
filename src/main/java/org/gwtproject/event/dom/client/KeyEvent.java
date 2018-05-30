@@ -15,6 +15,8 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.legacy.shared.EventHandler;
+
 /**
  * Base class for Key events. The native keyboard events are somewhat a mess
  * (http://www.quirksmode.org/js/keys.html), we do some trivial normalization here, but do not
@@ -22,7 +24,7 @@ package org.gwtproject.event.dom.client;
  *
  * @param <H> The event handler type
  */
-public abstract class KeyEvent<H>
+public abstract class KeyEvent<H extends EventHandler>
   extends DomEvent<H> {
 
   /**

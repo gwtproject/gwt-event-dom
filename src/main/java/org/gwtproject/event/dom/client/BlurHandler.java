@@ -15,10 +15,13 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.legacy.shared.EventHandler;
+
 /**
  * Handler interface for {@link BlurEvent} events.
  */
-public interface BlurHandler {
+public interface BlurHandler
+  extends EventHandler {
 
   /**
    * Called when BlurEvent is fired.

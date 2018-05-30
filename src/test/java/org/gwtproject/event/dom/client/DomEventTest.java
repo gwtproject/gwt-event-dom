@@ -30,6 +30,7 @@
  */
 package org.gwtproject.event.dom.client;
 
+import org.gwtproject.event.legacy.shared.EventHandler;
 import org.gwtproject.event.shared.HandlerRegistration;
 import org.gwtproject.event.shared.SimpleEventBus;
 
@@ -80,21 +81,13 @@ public class DomEventTest
           });
 
       HandlerRegistration clickRegistration = eventbus.addHandler(
-          ClickEvent
-              .getType(), new ClickHandler() {
-            @Override
-            public void onClick(ClickEvent event) {
-              flag.flag = true;
-            }
-          });
+        ClickEvent
+              .getType(),
+        (ClickHandler) event -> flag.flag = true);
 
       HandlerRegistration dblclickRegistration = eventbus.addHandler(
-          DoubleClickEvent.getType(), new DoubleClickHandler() {
-            @Override
-            public void onDoubleClick(DoubleClickEvent event) {
-              flag.flag = true;
-            }
-          });
+        DoubleClickEvent.getType(),
+        (DoubleClickHandler) event -> flag.flag = true);
 
       HandlerRegistration outRegistration = eventbus.addHandler(
           MouseOutEvent.getType(), new MouseOutHandler() {
@@ -213,7 +206,7 @@ public class DomEventTest
   }
 
   interface CustomClickHandler
-      {
+    extends EventHandler {
 
     void onClick(CustomClickEvent evt);
   }
