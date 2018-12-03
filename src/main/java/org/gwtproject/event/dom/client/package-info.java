@@ -16,3 +16,4 @@
 /**
  * Types related to DOM events.
  */
+package org.gwtproject.event.dom.client;
