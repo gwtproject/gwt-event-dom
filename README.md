@@ -2,6 +2,8 @@
 
 # gwt-event-dom
 
-This repository tries to make GWT SDK 2.x Event Dom API compatible to GWT 3 by removing old Browser support, GWT.create() and JSNI.
+Migrated module of gwt-event-dom.
+
+All generatos, JSNI and GWT.create()-statments have been remove.
 
 Commits can be rewritten at any time.
