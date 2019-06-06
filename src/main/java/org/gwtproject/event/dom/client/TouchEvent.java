@@ -16,8 +16,6 @@
 package org.gwtproject.event.dom.client;
 
 import elemental2.dom.HTMLDivElement;
-import jsinterop.annotations.JsMethod;
-import jsinterop.annotations.JsProperty;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
 import org.gwtproject.core.client.JsArray;
@@ -119,13 +117,11 @@ public abstract class TouchEvent<H extends EventHandler>
   //      return false;
   //    }
   //  }
-  @JsType(isNative = true)
+  @JsType
   static class TouchSupportDetector {
 
-    @JsProperty
     private boolean isSupported = detectTouchSupport();
 
-    @JsMethod
     private boolean detectTouchSupport() {
       HTMLDivElement divElement = new HTMLDivElement();
       divElement.setAttribute("ontouchstart",
