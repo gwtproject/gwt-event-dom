@@ -15,6 +15,7 @@
  */
 package org.gwtproject.event.dom.client;
 
+import elemental2.dom.DomGlobal;
 import elemental2.dom.HTMLDivElement;
 import jsinterop.annotations.JsType;
 import jsinterop.base.Js;
@@ -123,7 +124,7 @@ public abstract class TouchEvent<H extends EventHandler>
     private boolean isSupported = detectTouchSupport();
 
     private boolean detectTouchSupport() {
-      HTMLDivElement divElement = new HTMLDivElement();
+      HTMLDivElement divElement = (HTMLDivElement) DomGlobal.document.createElement("div");
       divElement.setAttribute("ontouchstart",
                               "return;");
       return "function".equals(Js.typeof(divElement.ontouchstart));
