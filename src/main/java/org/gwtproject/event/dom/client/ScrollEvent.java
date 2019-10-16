@@ -17,25 +17,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native scroll event.
- */
-public class ScrollEvent
-  extends DomEvent<ScrollHandler> {
+/** Represents a native scroll event. */
+public class ScrollEvent extends DomEvent<ScrollHandler> {
+
+  /** Event type for scroll events. Represents the meta-data associated with this event. */
+  private static final Type<ScrollHandler> TYPE =
+      new Type<>(BrowserEvents.SCROLL, new ScrollEvent());
 
   /**
-   * Event type for scroll events. Represents the meta-data associated with this event.
-   */
-  private static final Type<ScrollHandler> TYPE = new Type<>(
-    BrowserEvents.SCROLL,
-    new ScrollEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire scroll events.
    */
-  protected ScrollEvent() {
-  }
+  protected ScrollEvent() {}
 
   /**
    * Gets the event type associated with scroll events.

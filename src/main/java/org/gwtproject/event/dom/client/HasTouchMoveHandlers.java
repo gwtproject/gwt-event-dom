@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link TouchMoveHandler}
  * instances.
  */
-public interface HasTouchMoveHandlers
-  extends HasHandlers {
+public interface HasTouchMoveHandlers extends HasHandlers {
 
   /**
    * Adds a {@link TouchMoveEvent} handler.

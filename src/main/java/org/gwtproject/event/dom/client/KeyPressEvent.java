@@ -17,25 +17,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native key press event.
- */
-public class KeyPressEvent
-  extends KeyEvent<KeyPressHandler> {
+/** Represents a native key press event. */
+public class KeyPressEvent extends KeyEvent<KeyPressHandler> {
+
+  /** Event type for key press events. Represents the meta-data associated with this event. */
+  private static final Type<KeyPressHandler> TYPE =
+      new Type<>(BrowserEvents.KEYPRESS, new KeyPressEvent());
 
   /**
-   * Event type for key press events. Represents the meta-data associated with this event.
-   */
-  private static final Type<KeyPressHandler> TYPE = new Type<>(
-    BrowserEvents.KEYPRESS,
-    new KeyPressEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire key press events.
    */
-  protected KeyPressEvent() {
-  }
+  protected KeyPressEvent() {}
 
   /**
    * Gets the event type associated with key press events.

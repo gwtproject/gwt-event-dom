@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link LoseCaptureHandler}
  * instances.
  */
-public interface HasLoseCaptureHandlers
-  extends HasHandlers {
+public interface HasLoseCaptureHandlers extends HasHandlers {
 
   /**
    * Adds a {@link LoseCaptureEvent} handler.

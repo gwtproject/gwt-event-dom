@@ -17,26 +17,22 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native drag end event.
- */
-public class DragEndEvent
-  extends DragDropEventBase<DragEndHandler> {
+/** Represents a native drag end event. */
+public class DragEndEvent extends DragDropEventBase<DragEndHandler> {
+
+  /** Event type for drag end events. Represents the meta-data associated with this event. */
+  private static final Type<DragEndHandler> TYPE =
+      new Type<>(BrowserEvents.DRAGEND, new DragEndEvent());
 
   /**
-   * Event type for drag end events. Represents the meta-data associated with this event.
-   */
-  private static final Type<DragEndHandler> TYPE = new Type<>(BrowserEvents.DRAGEND,
-                                                              new DragEndEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-   * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} or {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drag end
    * events.
    */
-  protected DragEndEvent() {
-  }
+  protected DragEndEvent() {}
 
   /**
    * Gets the event type associated with drag end events.

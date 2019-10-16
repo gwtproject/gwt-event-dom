@@ -17,25 +17,18 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native error event.
- */
-public class ErrorEvent
-  extends DomEvent<ErrorHandler> {
+/** Represents a native error event. */
+public class ErrorEvent extends DomEvent<ErrorHandler> {
+
+  /** Event type for error events. Represents the meta-data associated with this event. */
+  private static final Type<ErrorHandler> TYPE = new Type<>(BrowserEvents.ERROR, new ErrorEvent());
 
   /**
-   * Event type for error events. Represents the meta-data associated with this event.
-   */
-  private static final Type<ErrorHandler> TYPE = new Type<>(
-    BrowserEvents.ERROR,
-    new ErrorEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire error events.
    */
-  protected ErrorEvent() {
-  }
+  protected ErrorEvent() {}
 
   /**
    * Gets the event type associated with error events.

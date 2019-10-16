@@ -17,35 +17,27 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native mouse wheel event.
- */
-public class MouseWheelEvent
-  extends MouseEvent<MouseWheelHandler> {
+/** Represents a native mouse wheel event. */
+public class MouseWheelEvent extends MouseEvent<MouseWheelHandler> {
 
-  /**
-   * Event type for mouse wheel events. Represents the meta-data associated with this event.
-   */
-  private static final Type<MouseWheelHandler> TYPE = new Type<>(
-    BrowserEvents.MOUSEWHEEL,
-    new MouseWheelEvent());
+  /** Event type for mouse wheel events. Represents the meta-data associated with this event. */
+  private static final Type<MouseWheelHandler> TYPE =
+      new Type<>(BrowserEvents.MOUSEWHEEL, new MouseWheelEvent());
 
   static {
     /**
-     * Hidden type used to ensure DOMMouseScroll gets registered in the type map.
-     * This is the special name used on Mozilla browsers for what everyone else
-     * calls 'mousewheel'.
+     * Hidden type used to ensure DOMMouseScroll gets registered in the type map. This is the
+     * special name used on Mozilla browsers for what everyone else calls 'mousewheel'.
      */
-    new Type<MouseWheelHandler>("DOMMouseScroll",
-                                new MouseWheelEvent());
+    new Type<MouseWheelHandler>("DOMMouseScroll", new MouseWheelEvent());
   }
 
   /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire mouse wheel events.
    */
-  protected MouseWheelEvent() {
-  }
+  protected MouseWheelEvent() {}
 
   /**
    * Gets the event type associated with mouse wheel events.
@@ -75,8 +67,8 @@ public class MouseWheelEvent
    * Get the change in the mouse wheel position along the Y-axis; negative if the mouse wheel is
    * moving north (toward the top of the screen) or positive if the mouse wheel is moving south
    * (toward the bottom of the screen).
-   * <p>
-   * Note that delta values are not normalized across browsers or OSes.
+   *
+   * <p>Note that delta values are not normalized across browsers or OSes.
    *
    * @return the delta of the mouse wheel along the y axis
    */

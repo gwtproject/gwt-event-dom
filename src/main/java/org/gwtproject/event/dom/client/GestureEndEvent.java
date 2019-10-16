@@ -17,24 +17,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native gesture end event.
- */
-public class GestureEndEvent
-  extends DomEvent<GestureEndHandler> {
+/** Represents a native gesture end event. */
+public class GestureEndEvent extends DomEvent<GestureEndHandler> {
+
+  /** Event type for gesture end events. Represents the meta-data associated with this event. */
+  private static final Type<GestureEndHandler> TYPE =
+      new Type<>(BrowserEvents.GESTUREEND, new GestureEndEvent());
 
   /**
-   * Event type for gesture end events. Represents the meta-data associated with this event.
-   */
-  private static final Type<GestureEndHandler> TYPE = new Type<>(BrowserEvents.GESTUREEND,
-                                                                 new GestureEndEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire gesture end events.
    */
-  protected GestureEndEvent() {
-  }
+  protected GestureEndEvent() {}
 
   /**
    * Gets the event type associated with gesture end events.

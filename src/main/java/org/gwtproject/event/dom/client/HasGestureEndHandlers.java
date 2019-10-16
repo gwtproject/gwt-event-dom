@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link GestureEndHandler}
  * instances.
  */
-public interface HasGestureEndHandlers
-  extends HasHandlers {
+public interface HasGestureEndHandlers extends HasHandlers {
 
   /**
    * Adds a {@link GestureEndEvent} handler.

@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link TouchCancelHandler}
  * instances.
  */
-public interface HasTouchCancelHandlers
-  extends HasHandlers {
+public interface HasTouchCancelHandlers extends HasHandlers {
 
   /**
    * Adds a {@link TouchCancelEvent} handler.

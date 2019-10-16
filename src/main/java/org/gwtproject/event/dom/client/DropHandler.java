@@ -17,11 +17,8 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.event.legacy.shared.EventHandler;
 
-/**
- * Handler interface for {@link DropEvent} events.
- */
-public interface DropHandler
-  extends EventHandler {
+/** Handler interface for {@link DropEvent} events. */
+public interface DropHandler extends EventHandler {
 
   /**
    * Called when a {@link DropEvent} is fired.

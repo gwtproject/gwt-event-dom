@@ -17,11 +17,8 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.event.legacy.shared.EventHandler;
 
-/**
- * Handler for {@link ClickEvent} events.
- */
-public interface ClickHandler
-  extends EventHandler {
+/** Handler for {@link ClickEvent} events. */
+public interface ClickHandler extends EventHandler {
 
   /**
    * Called when a native click event is fired.

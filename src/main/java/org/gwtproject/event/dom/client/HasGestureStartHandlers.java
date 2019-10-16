@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link GestureStartHandler}
  * instances.
  */
-public interface HasGestureStartHandlers
-  extends HasHandlers {
+public interface HasGestureStartHandlers extends HasHandlers {
 
   /**
    * Adds a {@link GestureStartEvent} handler.

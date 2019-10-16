@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link DoubleClickHandler}
  * instances.
  */
-public interface HasDoubleClickHandlers
-  extends HasHandlers {
+public interface HasDoubleClickHandlers extends HasHandlers {
 
   /**
    * Adds a {@link DoubleClickEvent} handler.

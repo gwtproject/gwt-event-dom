@@ -18,25 +18,19 @@ package org.gwtproject.event.dom.client;
 import org.gwtproject.dom.client.BrowserEvents;
 import org.gwtproject.dom.client.EventTarget;
 
-/**
- * Represents a native mouse over event.
- */
-public class MouseOverEvent
-  extends MouseEvent<MouseOverHandler> {
+/** Represents a native mouse over event. */
+public class MouseOverEvent extends MouseEvent<MouseOverHandler> {
+
+  /** Event type for mouse over events. Represents the meta-data associated with this event. */
+  private static final Type<MouseOverHandler> TYPE =
+      new Type<>(BrowserEvents.MOUSEOVER, new MouseOverEvent());
 
   /**
-   * Event type for mouse over events. Represents the meta-data associated with this event.
-   */
-  private static final Type<MouseOverHandler> TYPE = new Type<>(
-    BrowserEvents.MOUSEOVER,
-    new MouseOverEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire mouse over events.
    */
-  protected MouseOverEvent() {
-  }
+  protected MouseOverEvent() {}
 
   /**
    * Gets the event type associated with mouse over events.

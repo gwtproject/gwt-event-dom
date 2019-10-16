@@ -20,8 +20,7 @@ import org.gwtproject.event.shared.HandlerRegistration;
 import org.gwtproject.event.shared.SimpleEventBus;
 
 /** Events test. */
-public class DomEventGwt2Test
-    extends HandlerGwt2BaseTest {
+public class DomEventGwt2Test extends HandlerGwt2BaseTest {
 
   public void testKeyEvents() {
 

@@ -17,9 +17,7 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.NativeEvent;
 
-/**
- * An object that implements this interface has a native event associated with it.
- */
+/** An object that implements this interface has a native event associated with it. */
 public interface HasNativeEvent {
 
   /**

@@ -35,27 +35,21 @@ import org.gwtproject.dom.client.BrowserEvents;
 /**
  * Represents a native media progress event.
  *
- * <p>
- * <span style="color:red">Experimental API: This API is still under development
- * and is subject to change.
- * </span>
- * </p>
+ * <p><span style="color:red">Experimental API: This API is still under development and is subject
+ * to change. </span>
  */
-public class ProgressEvent
-  extends DomEvent<ProgressHandler> {
+public class ProgressEvent extends DomEvent<ProgressHandler> {
+
+  /** Event type for media progress events. Represents the meta-data associated with this event. */
+  private static final Type<ProgressHandler> TYPE =
+      new Type<>(BrowserEvents.PROGRESS, new ProgressEvent());
 
   /**
-   * Event type for media progress events. Represents the meta-data associated with this event.
-   */
-  private static final Type<ProgressHandler> TYPE = new Type<>(BrowserEvents.PROGRESS,
-                                                               new ProgressEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire media progress events.
    */
-  protected ProgressEvent() {
-  }
+  protected ProgressEvent() {}
 
   /**
    * Gets the event type associated with media progress events.

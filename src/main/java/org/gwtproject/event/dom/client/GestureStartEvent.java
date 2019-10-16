@@ -17,24 +17,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native gesture start event.
- */
-public class GestureStartEvent
-  extends DomEvent<GestureStartHandler> {
+/** Represents a native gesture start event. */
+public class GestureStartEvent extends DomEvent<GestureStartHandler> {
+
+  /** Event type for gesture start events. Represents the meta-data associated with this event. */
+  private static final Type<GestureStartHandler> TYPE =
+      new Type<>(BrowserEvents.GESTURESTART, new GestureStartEvent());
 
   /**
-   * Event type for gesture start events. Represents the meta-data associated with this event.
-   */
-  private static final Type<GestureStartHandler> TYPE = new Type<>(BrowserEvents.GESTURESTART,
-                                                                   new GestureStartEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire gesture start events.
    */
-  protected GestureStartEvent() {
-  }
+  protected GestureStartEvent() {}
 
   /**
    * Gets the event type associated with gesture start events.

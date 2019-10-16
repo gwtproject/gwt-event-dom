@@ -17,27 +17,22 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native drag enter event.
- */
-public class DragEnterEvent
-  extends DragDropEventBase<DragEnterHandler> {
+/** Represents a native drag enter event. */
+public class DragEnterEvent extends DragDropEventBase<DragEnterHandler> {
+
+  /** Event type for drag enter events. Represents the meta-data associated with this event. */
+  private static final Type<DragEnterHandler> TYPE =
+      new Type<>(BrowserEvents.DRAGENTER, new DragEnterEvent());
 
   /**
-   * Event type for drag enter events. Represents the meta-data associated with this event.
-   */
-  private static final Type<DragEnterHandler> TYPE = new Type<>(
-    BrowserEvents.DRAGENTER,
-    new DragEnterEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-   * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} or {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drag enter
    * events.
    */
-  protected DragEnterEvent() {
-  }
+  protected DragEnterEvent() {}
 
   /**
    * Gets the event type associated with drag enter events.

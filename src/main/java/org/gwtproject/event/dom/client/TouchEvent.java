@@ -25,18 +25,16 @@ import org.gwtproject.event.legacy.shared.EventHandler;
 
 /**
  * Abstract class representing touch events.
- * <p>
- * See {@link <a href="http://developer.apple.com/library/safari/documentation/UserExperience/Reference/TouchEventClassReference/TouchEvent/TouchEvent.html">Safari
+ *
+ * <p>See {@link <a
+ * href="http://developer.apple.com/library/safari/documentation/UserExperience/Reference/TouchEventClassReference/TouchEvent/TouchEvent.html">Safari
  * Touch Event Documentation</a>}
  *
  * @param <H> handler type
  */
-public abstract class TouchEvent<H extends EventHandler>
-  extends HumanInputEvent<H> {
+public abstract class TouchEvent<H extends EventHandler> extends HumanInputEvent<H> {
 
-  /**
-   * The implementation singleton.
-   */
+  /** The implementation singleton. */
   private static TouchSupportDetector impl;
 
   /**
@@ -79,8 +77,7 @@ public abstract class TouchEvent<H extends EventHandler>
   /**
    * Get an array of all current {@link Touch touches}. Note, that for {@link TouchEndEvent touch
    * end events}, the touch which has just ended will not be present in the array. Moreover, if the
-   * touch which just ended was the last remaining touch, then a zero length array will be
-   * returned.
+   * touch which just ended was the last remaining touch, then a zero length array will be returned.
    *
    * @return an array of touches
    */
@@ -125,8 +122,7 @@ public abstract class TouchEvent<H extends EventHandler>
 
     private boolean detectTouchSupport() {
       HTMLDivElement divElement = (HTMLDivElement) DomGlobal.document.createElement("div");
-      divElement.setAttribute("ontouchstart",
-                              "return;");
+      divElement.setAttribute("ontouchstart", "return;");
       return "function".equals(Js.typeof(divElement.ontouchstart));
     }
   }

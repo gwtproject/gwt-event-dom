@@ -34,104 +34,106 @@ import org.gwtproject.event.legacy.shared.EventHandler;
 import org.gwtproject.event.shared.HandlerRegistration;
 import org.gwtproject.event.shared.SimpleEventBus;
 
-/**
- * Events test.
- */
-public class DomEventTest
-  extends HandlerTestBase {
+/** Events test. */
+public class DomEventTest extends HandlerTestBase {
 
-    public void testKeyEvents() {
+  public void testKeyEvents() {
 
-      final Flag flag = new Flag();
-      eventbus = new SimpleEventBus();
-      HandlerRegistration downRegistration = eventbus.addHandler(
-        KeyDownEvent.getType(),
-        event -> flag.flag = true);
-      HandlerRegistration upRegistration = eventbus.addHandler(
-        KeyUpEvent.getType(),
-        event -> flag.flag = true);
+    final Flag flag = new Flag();
+    eventbus = new SimpleEventBus();
+    HandlerRegistration downRegistration =
+        eventbus.addHandler(KeyDownEvent.getType(), event -> flag.flag = true);
+    HandlerRegistration upRegistration =
+        eventbus.addHandler(KeyUpEvent.getType(), event -> flag.flag = true);
 
-      HandlerRegistration pressRegistration = eventbus.addHandler(
-        KeyPressEvent.getType(),
-        event -> flag.flag = true);
+    HandlerRegistration pressRegistration =
+        eventbus.addHandler(KeyPressEvent.getType(), event -> flag.flag = true);
 
-      checkFire(new KeyDownEvent(), downRegistration, flag, "onKeyDown");
-      checkFire(new KeyUpEvent(), upRegistration, flag, "onKeyUp");
-      checkFire(new KeyPressEvent(), pressRegistration, flag, "onKeyPressed");
-    }
+    checkFire(new KeyDownEvent(), downRegistration, flag, "onKeyDown");
+    checkFire(new KeyUpEvent(), upRegistration, flag, "onKeyUp");
+    checkFire(new KeyPressEvent(), pressRegistration, flag, "onKeyPressed");
+  }
 
-    public void testMouseEvents() {
-      final Flag flag = new Flag();
-      eventbus = new SimpleEventBus();
+  public void testMouseEvents() {
+    final Flag flag = new Flag();
+    eventbus = new SimpleEventBus();
 
-      HandlerRegistration downRegistration = eventbus.addHandler(
-          MouseDownEvent
-              .getType(), new MouseDownHandler() {
-            @Override
-            public void onMouseDown(MouseDownEvent event) {
-              flag.flag = true;
-            }
-          });
-      HandlerRegistration upRegistration = eventbus.addHandler(
-          MouseUpEvent.getType(), new MouseUpHandler() {
-            @Override
-            public void onMouseUp(MouseUpEvent event) {
-              flag.flag = true;
-            }
-          });
+    HandlerRegistration downRegistration =
+        eventbus.addHandler(
+            MouseDownEvent.getType(),
+            new MouseDownHandler() {
+              @Override
+              public void onMouseDown(MouseDownEvent event) {
+                flag.flag = true;
+              }
+            });
+    HandlerRegistration upRegistration =
+        eventbus.addHandler(
+            MouseUpEvent.getType(),
+            new MouseUpHandler() {
+              @Override
+              public void onMouseUp(MouseUpEvent event) {
+                flag.flag = true;
+              }
+            });
 
-      HandlerRegistration clickRegistration = eventbus.addHandler(
-        ClickEvent
-              .getType(),
-        (ClickHandler) event -> flag.flag = true);
+    HandlerRegistration clickRegistration =
+        eventbus.addHandler(ClickEvent.getType(), (ClickHandler) event -> flag.flag = true);
 
-      HandlerRegistration dblclickRegistration = eventbus.addHandler(
-        DoubleClickEvent.getType(),
-        (DoubleClickHandler) event -> flag.flag = true);
+    HandlerRegistration dblclickRegistration =
+        eventbus.addHandler(
+            DoubleClickEvent.getType(), (DoubleClickHandler) event -> flag.flag = true);
 
-      HandlerRegistration outRegistration = eventbus.addHandler(
-          MouseOutEvent.getType(), new MouseOutHandler() {
-            @Override
-            public void onMouseOut(MouseOutEvent event) {
-              flag.flag = true;
-            }
-          });
-      HandlerRegistration overRegistration = eventbus.addHandler(
-          MouseOverEvent.getType(), new MouseOverHandler() {
-            @Override
-            public void onMouseOver(MouseOverEvent event) {
-              flag.flag = true;
-            }
-          });
+    HandlerRegistration outRegistration =
+        eventbus.addHandler(
+            MouseOutEvent.getType(),
+            new MouseOutHandler() {
+              @Override
+              public void onMouseOut(MouseOutEvent event) {
+                flag.flag = true;
+              }
+            });
+    HandlerRegistration overRegistration =
+        eventbus.addHandler(
+            MouseOverEvent.getType(),
+            new MouseOverHandler() {
+              @Override
+              public void onMouseOver(MouseOverEvent event) {
+                flag.flag = true;
+              }
+            });
 
-      HandlerRegistration moveRegistration = eventbus.addHandler(
-          MouseMoveEvent.getType(), new MouseMoveHandler() {
-            @Override
-            public void onMouseMove(MouseMoveEvent event) {
-              flag.flag = true;
-            }
-          });
+    HandlerRegistration moveRegistration =
+        eventbus.addHandler(
+            MouseMoveEvent.getType(),
+            new MouseMoveHandler() {
+              @Override
+              public void onMouseMove(MouseMoveEvent event) {
+                flag.flag = true;
+              }
+            });
 
-      HandlerRegistration wheelRegistration = eventbus.addHandler(
-          MouseWheelEvent.getType(), new MouseWheelHandler() {
-            @Override
-            public void onMouseWheel(MouseWheelEvent event) {
-              flag.flag = true;
-            }
-          });
+    HandlerRegistration wheelRegistration =
+        eventbus.addHandler(
+            MouseWheelEvent.getType(),
+            new MouseWheelHandler() {
+              @Override
+              public void onMouseWheel(MouseWheelEvent event) {
+                flag.flag = true;
+              }
+            });
 
-      checkFire(new MouseDownEvent(), downRegistration, flag, "onMouseDown");
-      checkFire(new MouseUpEvent(), upRegistration, flag, "onMouseUp");
-      checkFire(new MouseOutEvent(), outRegistration, flag, "onMouseOut");
-      checkFire(new MouseOverEvent(), overRegistration, flag, "onMouseOver");
-      checkFire(new MouseMoveEvent(), moveRegistration, flag, "onMouseMove");
-      checkFire(new MouseWheelEvent(), wheelRegistration, flag, "onMouseWheel");
-      checkFire(new ClickEvent(), clickRegistration, flag, "onClick");
-      checkFire(new DoubleClickEvent(), dblclickRegistration, flag,
-          "onDoubleClick");
-    }
+    checkFire(new MouseDownEvent(), downRegistration, flag, "onMouseDown");
+    checkFire(new MouseUpEvent(), upRegistration, flag, "onMouseUp");
+    checkFire(new MouseOutEvent(), outRegistration, flag, "onMouseOut");
+    checkFire(new MouseOverEvent(), overRegistration, flag, "onMouseOver");
+    checkFire(new MouseMoveEvent(), moveRegistration, flag, "onMouseMove");
+    checkFire(new MouseWheelEvent(), wheelRegistration, flag, "onMouseWheel");
+    checkFire(new ClickEvent(), clickRegistration, flag, "onClick");
+    checkFire(new DoubleClickEvent(), dblclickRegistration, flag, "onDoubleClick");
+  }
 
-    // TODO: Once we have the button widget migrated, we can add these tests!
+  // TODO: Once we have the button widget migrated, we can add these tests!
   //  public void testMouseEventCoordinates() {
   //    Button b = new Button();
   //    RootPanel.get().add(b);
@@ -176,37 +178,36 @@ public class DomEventTest
   //      }
   //    }, CustomClickEvent.getType());
   //
-  //    NativeEvent event = Document.get().createClickEvent(0, 0, 0, 0, 0, false, false, false, false);
+  //    NativeEvent event = Document.get().createClickEvent(0, 0, 0, 0, 0, false, false, false,
+  // false);
   //    b.getElement().dispatchEvent(event);
   //
   //    assertTrue("Never received expected click event", first.flag);
   //    assertTrue("Never received expected click event", second.flag);
   //  }
 
-   private void checkFire(DomEvent<?> event, HandlerRegistration registration,
-       Flag flag, String eventName) {
+  private void checkFire(
+      DomEvent<?> event, HandlerRegistration registration, Flag flag, String eventName) {
 
-     flag.flag = false;
-     eventbus.fireEvent(event);
-     assertTrue(eventName + " didn't fire.", flag.flag);
+    flag.flag = false;
+    eventbus.fireEvent(event);
+    assertTrue(eventName + " didn't fire.", flag.flag);
 
-     flag.flag = false;
-     registration.removeHandler();
-     // event.reset(null);
-     eventbus.fireEvent(event);
-     assertTrue(eventName + " fired when it shouldn't have.", !flag.flag);
-   }
+    flag.flag = false;
+    registration.removeHandler();
+    // event.reset(null);
+    eventbus.fireEvent(event);
+    assertTrue(eventName + " fired when it shouldn't have.", !flag.flag);
+  }
 
   private SimpleEventBus eventbus;
-
 
   @Override
   public String getModuleName() {
     return "org.gwtproject.event.dom.EventDOMTest";
   }
 
-  interface CustomClickHandler
-    extends EventHandler {
+  interface CustomClickHandler extends EventHandler {
 
     void onClick(CustomClickEvent evt);
   }
@@ -216,12 +217,9 @@ public class DomEventTest
     public boolean flag = false;
   }
 
-  static class CustomClickEvent
-    extends MouseEvent<CustomClickHandler> {
+  static class CustomClickEvent extends MouseEvent<CustomClickHandler> {
 
-    public static final Type<CustomClickHandler> TYPE =
-      new Type<>("click",
-                 new CustomClickEvent());
+    public static final Type<CustomClickHandler> TYPE = new Type<>("click", new CustomClickEvent());
 
     public static Type<CustomClickHandler> getType() {
       return TYPE;

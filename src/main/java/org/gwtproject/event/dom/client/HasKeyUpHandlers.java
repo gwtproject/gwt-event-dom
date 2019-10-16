@@ -19,11 +19,9 @@ import org.gwtproject.event.shared.HandlerRegistration;
 import org.gwtproject.event.shared.HasHandlers;
 
 /**
- * A widget that implements this interface provides registration for {@link KeyUpHandler}
- * instances.
+ * A widget that implements this interface provides registration for {@link KeyUpHandler} instances.
  */
-public interface HasKeyUpHandlers
-  extends HasHandlers {
+public interface HasKeyUpHandlers extends HasHandlers {
 
   /**
    * Adds a {@link KeyUpEvent} handler.

@@ -17,25 +17,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native mouse down event.
- */
-public class MouseDownEvent
-  extends MouseEvent<MouseDownHandler> {
+/** Represents a native mouse down event. */
+public class MouseDownEvent extends MouseEvent<MouseDownHandler> {
+
+  /** Event type for mouse down events. Represents the meta-data associated with this event. */
+  private static final Type<MouseDownHandler> TYPE =
+      new Type<>(BrowserEvents.MOUSEDOWN, new MouseDownEvent());
 
   /**
-   * Event type for mouse down events. Represents the meta-data associated with this event.
-   */
-  private static final Type<MouseDownHandler> TYPE = new Type<>(
-    BrowserEvents.MOUSEDOWN,
-    new MouseDownEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire mouse down events.
    */
-  protected MouseDownEvent() {
-  }
+  protected MouseDownEvent() {}
 
   /**
    * Gets the event type associated with mouse down events.

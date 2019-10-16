@@ -17,27 +17,21 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native drop event.
- */
-public class DropEvent
-  extends DragDropEventBase<DropHandler> {
+/** Represents a native drop event. */
+public class DropEvent extends DragDropEventBase<DropHandler> {
+
+  /** Event type for drop events. Represents the meta-data associated with this event. */
+  private static final Type<DropHandler> TYPE = new Type<>(BrowserEvents.DROP, new DropEvent());
 
   /**
-   * Event type for drop events. Represents the meta-data associated with this event.
-   */
-  private static final Type<DropHandler> TYPE = new Type<>(
-    BrowserEvents.DROP,
-    new DropEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-   * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} or {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drop
    * events.
    */
-  protected DropEvent() {
-  }
+  protected DropEvent() {}
 
   /**
    * Gets the event type associated with drop events.

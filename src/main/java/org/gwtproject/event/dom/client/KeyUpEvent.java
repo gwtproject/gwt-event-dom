@@ -17,25 +17,18 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native key up event.
- */
-public class KeyUpEvent
-  extends KeyCodeEvent<KeyUpHandler> {
+/** Represents a native key up event. */
+public class KeyUpEvent extends KeyCodeEvent<KeyUpHandler> {
+
+  /** Event type for key up events. Represents the meta-data associated with this event. */
+  private static final Type<KeyUpHandler> TYPE = new Type<>(BrowserEvents.KEYUP, new KeyUpEvent());
 
   /**
-   * Event type for key up events. Represents the meta-data associated with this event.
-   */
-  private static final Type<KeyUpHandler> TYPE = new Type<>(
-    BrowserEvents.KEYUP,
-    new KeyUpEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire key up events.
    */
-  protected KeyUpEvent() {
-  }
+  protected KeyUpEvent() {}
 
   /**
    * Gets the event type associated with key up events.

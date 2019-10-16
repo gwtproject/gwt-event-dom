@@ -25,8 +25,7 @@ import org.gwtproject.event.legacy.shared.EventHandler;
  * @param <H> handler type
  */
 @PartialSupport
-public abstract class DragDropEventBase<H extends EventHandler>
-  extends DomEvent<H> {
+public abstract class DragDropEventBase<H extends EventHandler> extends DomEvent<H> {
 
   /**
    * Runtime check for whether drag events are supported in this browser.
@@ -62,11 +61,9 @@ public abstract class DragDropEventBase<H extends EventHandler>
    * Set the data in the {@link DataTransfer} object for the specified format.
    *
    * @param format the format
-   * @param data   the data to associate with the format
+   * @param data the data to associate with the format
    */
-  public void setData(String format,
-                      String data) {
-    getDataTransfer().setData(format,
-                              data);
+  public void setData(String format, String data) {
+    getDataTransfer().setData(format, data);
   }
 }

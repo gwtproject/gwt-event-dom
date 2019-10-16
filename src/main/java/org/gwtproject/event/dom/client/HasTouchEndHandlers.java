@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link TouchEndHandler}
  * instances.
  */
-public interface HasTouchEndHandlers
-  extends HasHandlers {
+public interface HasTouchEndHandlers extends HasHandlers {
 
   /**
    * Adds a {@link TouchEndEvent} handler.

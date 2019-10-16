@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link ContextMenuHandler}
  * instances.
  */
-public interface HasContextMenuHandlers
-  extends HasHandlers {
+public interface HasContextMenuHandlers extends HasHandlers {
 
   /**
    * Adds a {@link ContextMenuEvent} handler.

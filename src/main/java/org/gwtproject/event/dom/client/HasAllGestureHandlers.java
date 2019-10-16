@@ -18,14 +18,10 @@ package org.gwtproject.event.dom.client;
 /**
  * This is a convenience interface that includes all gesture handlers defined by the core GWT
  * system.
- * <p>
- * WARNING, PLEASE READ: As this interface is intended for developers who wish to handle all gesture
- * events in GWT, new gesture event handlers will be added to it. Therefore, updates can cause
- * breaking API changes.
- * </p>
+ *
+ * <p>WARNING, PLEASE READ: As this interface is intended for developers who wish to handle all
+ * gesture events in GWT, new gesture event handlers will be added to it. Therefore, updates can
+ * cause breaking API changes.
  */
 public interface HasAllGestureHandlers
-  extends HasGestureStartHandlers,
-          HasGestureChangeHandlers,
-          HasGestureEndHandlers {
-}
+    extends HasGestureStartHandlers, HasGestureChangeHandlers, HasGestureEndHandlers {}

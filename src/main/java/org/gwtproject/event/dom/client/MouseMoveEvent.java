@@ -17,25 +17,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native mouse move event.
- */
-public class MouseMoveEvent
-  extends MouseEvent<MouseMoveHandler> {
+/** Represents a native mouse move event. */
+public class MouseMoveEvent extends MouseEvent<MouseMoveHandler> {
+
+  /** Event type for mouse move events. Represents the meta-data associated with this event. */
+  private static final Type<MouseMoveHandler> TYPE =
+      new Type<>(BrowserEvents.MOUSEMOVE, new MouseMoveEvent());
 
   /**
-   * Event type for mouse move events. Represents the meta-data associated with this event.
-   */
-  private static final Type<MouseMoveHandler> TYPE = new Type<>(
-    BrowserEvents.MOUSEMOVE,
-    new MouseMoveEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire mouse move events.
    */
-  protected MouseMoveEvent() {
-  }
+  protected MouseMoveEvent() {}
 
   /**
    * Gets the event type associated with mouse move events.

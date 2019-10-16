@@ -24,14 +24,14 @@ import org.gwtproject.event.legacy.shared.EventHandler;
  *
  * @param <H> handler type
  */
-public abstract class MouseEvent<H extends EventHandler>
-  extends HumanInputEvent<H> {
+public abstract class MouseEvent<H extends EventHandler> extends HumanInputEvent<H> {
 
   /**
    * Gets the button value. Compare it to {@link NativeEvent#BUTTON_LEFT}, {@link
    * NativeEvent#BUTTON_RIGHT}, {@link NativeEvent#BUTTON_MIDDLE}
-   * <p>
-   * Note: this is unreliable for events not caused by the depression or release of a mouse button.
+   *
+   * <p>Note: this is unreliable for events not caused by the depression or release of a mouse
+   * button.
    *
    * @return the button value
    */
@@ -78,9 +78,10 @@ public abstract class MouseEvent<H extends EventHandler>
    */
   public int getRelativeX(Element target) {
     NativeEvent e = getNativeEvent();
-    return e.getClientX() - target.getAbsoluteLeft() + target.getScrollLeft() +
-           target.getOwnerDocument()
-                 .getScrollLeft();
+    return e.getClientX()
+        - target.getAbsoluteLeft()
+        + target.getScrollLeft()
+        + target.getOwnerDocument().getScrollLeft();
   }
 
   /**
@@ -113,9 +114,10 @@ public abstract class MouseEvent<H extends EventHandler>
    */
   public int getRelativeY(Element target) {
     NativeEvent e = getNativeEvent();
-    return e.getClientY() - target.getAbsoluteTop() + target.getScrollTop() +
-           target.getOwnerDocument()
-                 .getScrollTop();
+    return e.getClientY()
+        - target.getAbsoluteTop()
+        + target.getScrollTop()
+        + target.getOwnerDocument().getScrollTop();
   }
 
   /**

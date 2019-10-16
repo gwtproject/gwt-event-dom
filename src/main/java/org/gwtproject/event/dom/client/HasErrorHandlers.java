@@ -19,11 +19,9 @@ import org.gwtproject.event.shared.HandlerRegistration;
 import org.gwtproject.event.shared.HasHandlers;
 
 /**
- * A widget that implements this interface provides registration for {@link ErrorHandler}
- * instances.
+ * A widget that implements this interface provides registration for {@link ErrorHandler} instances.
  */
-public interface HasErrorHandlers
-  extends HasHandlers {
+public interface HasErrorHandlers extends HasHandlers {
 
   /**
    * Adds an {@link ErrorEvent} handler.

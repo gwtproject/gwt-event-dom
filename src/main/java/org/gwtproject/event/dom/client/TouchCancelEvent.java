@@ -32,24 +32,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native touch start event.
- */
-public class TouchCancelEvent
-  extends TouchEvent<TouchCancelHandler> {
+/** Represents a native touch start event. */
+public class TouchCancelEvent extends TouchEvent<TouchCancelHandler> {
+
+  /** Event type for touch start events. Represents the meta-data associated with this event. */
+  private static final Type<TouchCancelHandler> TYPE =
+      new Type<>(BrowserEvents.TOUCHCANCEL, new TouchCancelEvent());
 
   /**
-   * Event type for touch start events. Represents the meta-data associated with this event.
-   */
-  private static final Type<TouchCancelHandler> TYPE = new Type<>(BrowserEvents.TOUCHCANCEL,
-                                                                  new TouchCancelEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire touch start events.
    */
-  protected TouchCancelEvent() {
-  }
+  protected TouchCancelEvent() {}
 
   /**
    * Gets the event type associated with touch start events.

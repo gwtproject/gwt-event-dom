@@ -17,11 +17,8 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.event.legacy.shared.EventHandler;
 
-/**
- * Handler interface for {@link DragLeaveEvent} events.
- */
-public interface DragLeaveHandler
-  extends EventHandler {
+/** Handler interface for {@link DragLeaveEvent} events. */
+public interface DragLeaveHandler extends EventHandler {
 
   /**
    * Called when a {@link DragLeaveEvent} is fired.

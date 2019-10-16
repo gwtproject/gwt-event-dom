@@ -17,24 +17,21 @@ package org.gwtproject.event.dom.client;
 
 /**
  * Receiver used to handle all mouse events at once.
- * <p>
- * WARNING, PLEASE READ: As this class is intended for developers who wish to handle all mouse
+ *
+ * <p>WARNING, PLEASE READ: As this class is intended for developers who wish to handle all mouse
  * events in GWT, new mouse handler interfaces will be added to it. Therefore, updates to GWT could
  * cause breaking API changes.
  */
 public abstract class HandlesAllMouseEvents
-  implements MouseDownHandler,
-             MouseUpHandler,
-             MouseMoveHandler,
-             MouseOutHandler,
-             MouseOverHandler,
-             MouseWheelHandler {
+    implements MouseDownHandler,
+        MouseUpHandler,
+        MouseMoveHandler,
+        MouseOutHandler,
+        MouseOverHandler,
+        MouseWheelHandler {
 
-  /**
-   * Constructor.
-   */
-  public HandlesAllMouseEvents() {
-  }
+  /** Constructor. */
+  public HandlesAllMouseEvents() {}
 
   /**
    * Convenience method to handle all mouse events from an event source.
@@ -42,20 +39,21 @@ public abstract class HandlesAllMouseEvents
    * @param eventSource the event source
    */
   public void handle(HasAllMouseHandlers eventSource) {
-    handle(eventSource,
-           this);
+    handle(eventSource, this);
   }
 
   /**
    * Convenience method used to handle all mouse events from an event source.
    *
-   * @param <H>      receiver type, must implement all mouse handlers
-   * @param source   the event source
+   * @param <H> receiver type, must implement all mouse handlers
+   * @param source the event source
    * @param reciever the receiver implementing all mouse handlers
    */
-  public static <H extends MouseDownHandler & MouseUpHandler & MouseOutHandler & MouseOverHandler & MouseMoveHandler & MouseWheelHandler> void handle(
-    HasAllMouseHandlers source,
-    H reciever) {
+  public static <
+          H extends
+              MouseDownHandler & MouseUpHandler & MouseOutHandler & MouseOverHandler
+                  & MouseMoveHandler & MouseWheelHandler>
+      void handle(HasAllMouseHandlers source, H reciever) {
     source.addMouseDownHandler(reciever);
     source.addMouseUpHandler(reciever);
     source.addMouseOutHandler(reciever);

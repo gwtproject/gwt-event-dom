@@ -31,83 +31,85 @@
 package org.gwtproject.event.dom.client;
 
 import com.google.gwt.junit.client.GWTTestCase;
-
 import java.util.HashSet;
 
-/**
- * Support code for handler tests.
- */
-public abstract class HandlerTestBase
-  extends GWTTestCase {
+/** Support code for handler tests. */
+public abstract class HandlerTestBase extends GWTTestCase {
 
   Adaptor adaptor1 = new Adaptor();
   private HashSet<Object> active = new HashSet<>();
-  MouseDownHandler mouse1 = new MouseDownHandler() {
-    @Override
-    public void onMouseDown(MouseDownEvent event) {
-      add(mouse1);
-    }
+  MouseDownHandler mouse1 =
+      new MouseDownHandler() {
+        @Override
+        public void onMouseDown(MouseDownEvent event) {
+          add(mouse1);
+        }
 
-    @Override
-    public String toString() {
-      return "mouse 1";
-    }
-  };
-  MouseDownHandler mouse2 = new MouseDownHandler() {
-    @Override
-    public void onMouseDown(MouseDownEvent event) {
-      add(mouse2);
-    }
+        @Override
+        public String toString() {
+          return "mouse 1";
+        }
+      };
+  MouseDownHandler mouse2 =
+      new MouseDownHandler() {
+        @Override
+        public void onMouseDown(MouseDownEvent event) {
+          add(mouse2);
+        }
 
-    @Override
-    public String toString() {
-      return "mouse 2";
-    }
-  };
-  MouseDownHandler mouse3 = new MouseDownHandler() {
-    @Override
-    public void onMouseDown(MouseDownEvent event) {
-      add(mouse3);
-    }
+        @Override
+        public String toString() {
+          return "mouse 2";
+        }
+      };
+  MouseDownHandler mouse3 =
+      new MouseDownHandler() {
+        @Override
+        public void onMouseDown(MouseDownEvent event) {
+          add(mouse3);
+        }
 
-    @Override
-    public String toString() {
-      return "mouse 3";
-    }
-  };
-  ClickHandler     click1 = new ClickHandler() {
-    @Override
-    public void onClick(ClickEvent event) {
-      add(click1);
-    }
+        @Override
+        public String toString() {
+          return "mouse 3";
+        }
+      };
+  ClickHandler click1 =
+      new ClickHandler() {
+        @Override
+        public void onClick(ClickEvent event) {
+          add(click1);
+        }
 
-    @Override
-    public String toString() {
-      return "click 1";
-    }
-  };
-  ClickHandler     click2 = new ClickHandler() {
-    @Override
-    public void onClick(ClickEvent event) {
-      add(click2);
-    }
+        @Override
+        public String toString() {
+          return "click 1";
+        }
+      };
+  ClickHandler click2 =
+      new ClickHandler() {
+        @Override
+        public void onClick(ClickEvent event) {
+          add(click2);
+        }
 
-    @Override
-    public String toString() {
-      return "click 2";
-    }
-  };
-  ClickHandler     click3 = new ClickHandler() {
-    @Override
-    public void onClick(ClickEvent event) {
-      add(click3);
-    }
+        @Override
+        public String toString() {
+          return "click 2";
+        }
+      };
+  ClickHandler click3 =
+      new ClickHandler() {
+        @Override
+        public void onClick(ClickEvent event) {
+          add(click3);
+        }
 
-    @Override
-    public String toString() {
-      return "click 3";
-    }
-  };
+        @Override
+        public String toString() {
+          return "click 3";
+        }
+      };
 
   @Override
   public String getModuleName() {
@@ -120,15 +122,13 @@ public abstract class HandlerTestBase
 
   void assertFired(Object... handler) {
     for (int i = 0; i < handler.length; i++) {
-      assertTrue(handler[i] + " should have fired",
-                 active.contains(handler[i]));
+      assertTrue(handler[i] + " should have fired", active.contains(handler[i]));
     }
   }
 
   void assertNotFired(Object... handler) {
     for (int i = 0; i < handler.length; i++) {
-      assertFalse(handler[i] + " should not have fired",
-                  active.contains(handler[i]));
+      assertFalse(handler[i] + " should not have fired", active.contains(handler[i]));
     }
   }
 
@@ -136,9 +136,7 @@ public abstract class HandlerTestBase
     active.clear();
   }
 
-  class Adaptor
-    implements ClickHandler,
-               MouseDownHandler {
+  class Adaptor implements ClickHandler, MouseDownHandler {
 
     @Override
     public void onClick(ClickEvent event) {

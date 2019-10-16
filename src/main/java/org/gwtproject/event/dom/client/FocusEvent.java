@@ -17,25 +17,18 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native focus event.
- */
-public class FocusEvent
-  extends DomEvent<FocusHandler> {
+/** Represents a native focus event. */
+public class FocusEvent extends DomEvent<FocusHandler> {
+
+  /** Event type for focus events. Represents the meta-data associated with this event. */
+  private static final Type<FocusHandler> TYPE = new Type<>(BrowserEvents.FOCUS, new FocusEvent());
 
   /**
-   * Event type for focus events. Represents the meta-data associated with this event.
-   */
-  private static final Type<FocusHandler> TYPE = new Type<>(
-    BrowserEvents.FOCUS,
-    new FocusEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire focus events.
    */
-  protected FocusEvent() {
-  }
+  protected FocusEvent() {}
 
   /**
    * Gets the event type associated with focus events.

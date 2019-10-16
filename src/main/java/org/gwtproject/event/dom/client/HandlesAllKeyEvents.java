@@ -17,21 +17,15 @@ package org.gwtproject.event.dom.client;
 
 /**
  * Receiver used to handle all key events at once.
- * <p>
- * WARNING, PLEASE READ: As this class is intended for developers who wish to handle all key events
- * in GWT, new key handler interfaces will be added to it. Therefore, updates to GWT could cause
- * breaking API changes.
+ *
+ * <p>WARNING, PLEASE READ: As this class is intended for developers who wish to handle all key
+ * events in GWT, new key handler interfaces will be added to it. Therefore, updates to GWT could
+ * cause breaking API changes.
  */
-public abstract class HandlesAllKeyEvents
-  implements KeyDownHandler,
-             KeyUpHandler,
-             KeyPressHandler {
+public abstract class HandlesAllKeyEvents implements KeyDownHandler, KeyUpHandler, KeyPressHandler {
 
-  /**
-   * Constructor.
-   */
-  public HandlesAllKeyEvents() {
-  }
+  /** Constructor. */
+  public HandlesAllKeyEvents() {}
 
   /**
    * Convenience method to handle all key events from an event source.
@@ -39,20 +33,18 @@ public abstract class HandlesAllKeyEvents
    * @param source the event source
    */
   public final void addKeyHandlersTo(HasAllKeyHandlers source) {
-    addHandlers(source,
-                this);
+    addHandlers(source, this);
   }
 
   /**
    * Convenience method used to handle all key events from an event source.
    *
-   * @param <H>         receiver type, must implement all key handlers
+   * @param <H> receiver type, must implement all key handlers
    * @param eventSource the event source
-   * @param reciever    the receiver implementing all key handlers
+   * @param reciever the receiver implementing all key handlers
    */
   public static <H extends KeyDownHandler & KeyUpHandler & KeyPressHandler> void addHandlers(
-    HasAllKeyHandlers eventSource,
-    H reciever) {
+      HasAllKeyHandlers eventSource, H reciever) {
     eventSource.addKeyDownHandler(reciever);
     eventSource.addKeyPressHandler(reciever);
     eventSource.addKeyUpHandler(reciever);

@@ -17,24 +17,18 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native blur event.
- */
-public class BlurEvent
-  extends DomEvent<BlurHandler> {
+/** Represents a native blur event. */
+public class BlurEvent extends DomEvent<BlurHandler> {
+
+  /** Event type for blur events. Represents the meta-data associated with this event. */
+  private static final Type<BlurHandler> TYPE = new Type<>(BrowserEvents.BLUR, new BlurEvent());
 
   /**
-   * Event type for blur events. Represents the meta-data associated with this event.
-   */
-  private static final Type<BlurHandler> TYPE = new Type<>(BrowserEvents.BLUR,
-                                                           new BlurEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire blur events.
    */
-  protected BlurEvent() {
-  }
+  protected BlurEvent() {}
 
   /**
    * Gets the event type associated with blur events.
