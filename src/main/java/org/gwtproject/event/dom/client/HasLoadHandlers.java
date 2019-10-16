@@ -21,8 +21,7 @@ import org.gwtproject.event.shared.HasHandlers;
 /**
  * A widget that implements this interface provides registration for {@link LoadHandler} instances.
  */
-public interface HasLoadHandlers
-  extends HasHandlers {
+public interface HasLoadHandlers extends HasHandlers {
 
   /**
    * Adds a {@link LoadEvent} handler.

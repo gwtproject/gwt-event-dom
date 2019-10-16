@@ -24,8 +24,7 @@ import org.gwtproject.event.legacy.shared.EventHandler;
  *
  * @param <H> The event handler type
  */
-public abstract class KeyEvent<H extends EventHandler>
-  extends DomEvent<H> {
+public abstract class KeyEvent<H extends EventHandler> extends DomEvent<H> {
 
   /**
    * Does this event have any modifier keys down? Specifically. is the control, meta, shift, or alt
@@ -34,8 +33,7 @@ public abstract class KeyEvent<H extends EventHandler>
    * @return whether this event have any modifier key down
    */
   public boolean isAnyModifierKeyDown() {
-    return isControlKeyDown() || isShiftKeyDown() || isMetaKeyDown()
-           || isAltKeyDown();
+    return isControlKeyDown() || isShiftKeyDown() || isMetaKeyDown() || isAltKeyDown();
   }
 
   /**

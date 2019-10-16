@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link KeyPressHandler}
  * instances.
  */
-public interface HasKeyPressHandlers
-  extends HasHandlers {
+public interface HasKeyPressHandlers extends HasHandlers {
 
   /**
    * Adds a {@link KeyPressEvent} handler.

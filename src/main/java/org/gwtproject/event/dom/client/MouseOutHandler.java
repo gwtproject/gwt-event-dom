@@ -17,11 +17,8 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.event.legacy.shared.EventHandler;
 
-/**
- * Handler interface for {@link MouseOutEvent} events.
- */
-public interface MouseOutHandler
-  extends EventHandler {
+/** Handler interface for {@link MouseOutEvent} events. */
+public interface MouseOutHandler extends EventHandler {
 
   /**
    * Called when MouseOutEvent is fired.

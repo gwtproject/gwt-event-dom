@@ -17,22 +17,16 @@ package org.gwtproject.event.dom.client;
 
 /**
  * Receiver used to handle all touch events at once.
- * <p>
- * WARNING, PLEASE READ: As this class is intended for developers who wish to handle all touch
+ *
+ * <p>WARNING, PLEASE READ: As this class is intended for developers who wish to handle all touch
  * events in GWT, new touch handler interfaces will be added to it. Therefore, updates to GWT could
  * cause breaking API changes.
  */
 public abstract class HandlesAllTouchEvents
-  implements TouchStartHandler,
-             TouchMoveHandler,
-             TouchEndHandler,
-             TouchCancelHandler {
+    implements TouchStartHandler, TouchMoveHandler, TouchEndHandler, TouchCancelHandler {
 
-  /**
-   * Constructor.
-   */
-  public HandlesAllTouchEvents() {
-  }
+  /** Constructor. */
+  public HandlesAllTouchEvents() {}
 
   /**
    * Convenience method to handle all touch events from an event source.
@@ -40,21 +34,19 @@ public abstract class HandlesAllTouchEvents
    * @param eventSource the event source
    */
   public void handle(HasAllTouchHandlers eventSource) {
-    handle(eventSource,
-           this);
+    handle(eventSource, this);
   }
 
   /**
    * Convenience method used to handle all touch events from an event source.
    *
-   * @param <H>      receiver type, must implement all touch handlers
-   * @param source   the event source
+   * @param <H> receiver type, must implement all touch handlers
+   * @param source the event source
    * @param reciever the receiver implementing all touch handlers
    */
-  public static <H extends TouchStartHandler & TouchMoveHandler
-                     & TouchEndHandler & TouchCancelHandler>
-  void handle(HasAllTouchHandlers source,
-              H reciever) {
+  public static <
+          H extends TouchStartHandler & TouchMoveHandler & TouchEndHandler & TouchCancelHandler>
+      void handle(HasAllTouchHandlers source, H reciever) {
     source.addTouchStartHandler(reciever);
     source.addTouchMoveHandler(reciever);
     source.addTouchEndHandler(reciever);

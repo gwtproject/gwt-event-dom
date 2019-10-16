@@ -19,11 +19,9 @@ import org.gwtproject.event.shared.HandlerRegistration;
 import org.gwtproject.event.shared.HasHandlers;
 
 /**
- * A widget that implements this interface provides registration for {@link FocusHandler}
- * instances.
+ * A widget that implements this interface provides registration for {@link FocusHandler} instances.
  */
-public interface HasFocusHandlers
-  extends HasHandlers {
+public interface HasFocusHandlers extends HasHandlers {
 
   /**
    * Adds a {@link FocusEvent} handler.

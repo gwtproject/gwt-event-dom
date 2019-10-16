@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link MouseDownHandler}
  * instances.
  */
-public interface HasMouseDownHandlers
-  extends HasHandlers {
+public interface HasMouseDownHandlers extends HasHandlers {
 
   /**
    * Adds a {@link MouseDownEvent} handler.

@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link ChangeHandler}
  * instances.
  */
-public interface HasChangeHandlers
-  extends HasHandlers {
+public interface HasChangeHandlers extends HasHandlers {
 
   /**
    * Adds a {@link ChangeEvent} handler.

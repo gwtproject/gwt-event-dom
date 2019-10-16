@@ -17,24 +17,18 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native load event.
- */
-public class LoadEvent
-  extends DomEvent<LoadHandler> {
+/** Represents a native load event. */
+public class LoadEvent extends DomEvent<LoadHandler> {
+
+  /** Event type for load events. Represents the meta-data associated with this event. */
+  private static final Type<LoadHandler> TYPE = new Type<>(BrowserEvents.LOAD, new LoadEvent());
 
   /**
-   * Event type for load events. Represents the meta-data associated with this event.
-   */
-  private static final Type<LoadHandler> TYPE = new Type<>(BrowserEvents.LOAD,
-                                                           new LoadEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire load events.
    */
-  protected LoadEvent() {
-  }
+  protected LoadEvent() {}
 
   /**
    * Gets the event type associated with load events.

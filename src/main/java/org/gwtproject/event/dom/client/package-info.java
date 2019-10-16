@@ -13,7 +13,5 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-/**
- * Types related to DOM events.
- */
+/** Types related to DOM events. */
 package org.gwtproject.event.dom.client;

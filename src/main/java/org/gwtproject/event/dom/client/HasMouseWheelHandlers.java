@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link MouseWheelHandler}
  * instances.
  */
-public interface HasMouseWheelHandlers
-  extends HasHandlers {
+public interface HasMouseWheelHandlers extends HasHandlers {
 
   /**
    * Adds a {@link MouseWheelEvent} handler.

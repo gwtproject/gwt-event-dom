@@ -19,18 +19,14 @@ package org.gwtproject.event.dom.client;
  * This is a convenience interface that includes all drag and drop handlers defined by the core GWT
  * system.
  *
- * <p>
- * <span style="color:red">Experimental API: This API is still under development
- * and is subject to change.
- * </span>
- * </p>
+ * <p><span style="color:red">Experimental API: This API is still under development and is subject
+ * to change. </span>
  */
 public interface HasAllDragAndDropHandlers
-  extends HasDragEndHandlers,
-          HasDragEnterHandlers,
-          HasDragLeaveHandlers,
-          HasDragHandlers,
-          HasDragOverHandlers,
-          HasDragStartHandlers,
-          HasDropHandlers {
-}
+    extends HasDragEndHandlers,
+        HasDragEnterHandlers,
+        HasDragLeaveHandlers,
+        HasDragHandlers,
+        HasDragOverHandlers,
+        HasDragStartHandlers,
+        HasDropHandlers {}

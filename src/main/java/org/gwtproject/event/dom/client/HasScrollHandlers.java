@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link ScrollHandler}
  * instances.
  */
-public interface HasScrollHandlers
-  extends HasHandlers {
+public interface HasScrollHandlers extends HasHandlers {
 
   /**
    * Adds a {@link ScrollEvent} handler.

@@ -17,11 +17,8 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.event.legacy.shared.EventHandler;
 
-/**
- * Handler interface for {@link KeyPressEvent} events.
- */
-public interface KeyPressHandler
-  extends EventHandler {
+/** Handler interface for {@link KeyPressEvent} events. */
+public interface KeyPressHandler extends EventHandler {
 
   /**
    * Called when KeyPressEvent is fired.

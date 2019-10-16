@@ -17,25 +17,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native double click event.
- */
-public class DoubleClickEvent
-  extends MouseEvent<DoubleClickHandler> {
+/** Represents a native double click event. */
+public class DoubleClickEvent extends MouseEvent<DoubleClickHandler> {
+
+  /** Event type for double click events. Represents the meta-data associated with this event. */
+  private static final Type<DoubleClickHandler> TYPE =
+      new Type<>(BrowserEvents.DBLCLICK, new DoubleClickEvent());
 
   /**
-   * Event type for double click events. Represents the meta-data associated with this event.
-   */
-  private static final Type<DoubleClickHandler> TYPE = new Type<>(
-    BrowserEvents.DBLCLICK,
-    new DoubleClickEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire double click events.
    */
-  protected DoubleClickEvent() {
-  }
+  protected DoubleClickEvent() {}
 
   /**
    * Gets the event type associated with double click events.

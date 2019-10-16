@@ -17,24 +17,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native gesture change event.
- */
-public class GestureChangeEvent
-  extends DomEvent<GestureChangeHandler> {
+/** Represents a native gesture change event. */
+public class GestureChangeEvent extends DomEvent<GestureChangeHandler> {
+
+  /** Event type for gesture change events. Represents the meta-data associated with this event. */
+  private static final Type<GestureChangeHandler> TYPE =
+      new Type<>(BrowserEvents.GESTURECHANGE, new GestureChangeEvent());
 
   /**
-   * Event type for gesture change events. Represents the meta-data associated with this event.
-   */
-  private static final Type<GestureChangeHandler> TYPE = new Type<>(BrowserEvents.GESTURECHANGE,
-                                                                    new GestureChangeEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire gesture change events.
    */
-  protected GestureChangeEvent() {
-  }
+  protected GestureChangeEvent() {}
 
   /**
    * Gets the event type associated with gesture change events.

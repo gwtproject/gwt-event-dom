@@ -17,27 +17,22 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native drag leave event.
- */
-public class DragLeaveEvent
-  extends DragDropEventBase<DragLeaveHandler> {
+/** Represents a native drag leave event. */
+public class DragLeaveEvent extends DragDropEventBase<DragLeaveHandler> {
+
+  /** Event type for drag leave events. Represents the meta-data associated with this event. */
+  private static final Type<DragLeaveHandler> TYPE =
+      new Type<>(BrowserEvents.DRAGLEAVE, new DragLeaveEvent());
 
   /**
-   * Event type for drag leave events. Represents the meta-data associated with this event.
-   */
-  private static final Type<DragLeaveHandler> TYPE = new Type<>(
-    BrowserEvents.DRAGLEAVE,
-    new DragLeaveEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-   * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} or {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drag exit
    * events.
    */
-  protected DragLeaveEvent() {
-  }
+  protected DragLeaveEvent() {}
 
   /**
    * Gets the event type associated with drag exit events.

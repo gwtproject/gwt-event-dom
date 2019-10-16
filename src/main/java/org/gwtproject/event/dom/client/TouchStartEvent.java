@@ -33,24 +33,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native touch start event.
- */
-public class TouchStartEvent
-  extends TouchEvent<TouchStartHandler> {
+/** Represents a native touch start event. */
+public class TouchStartEvent extends TouchEvent<TouchStartHandler> {
+
+  /** Event type for touch start events. Represents the meta-data associated with this event. */
+  private static final Type<TouchStartHandler> TYPE =
+      new Type<>(BrowserEvents.TOUCHSTART, new TouchStartEvent());
 
   /**
-   * Event type for touch start events. Represents the meta-data associated with this event.
-   */
-  private static final Type<TouchStartHandler> TYPE = new Type<>(BrowserEvents.TOUCHSTART,
-                                                                 new TouchStartEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire touch start events.
    */
-  protected TouchStartEvent() {
-  }
+  protected TouchStartEvent() {}
 
   /**
    * Gets the event type associated with touch start events.

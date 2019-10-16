@@ -19,11 +19,8 @@ import junit.framework.Test;
 import junit.framework.TestSuite;
 import org.gwtproject.event.dom.client.DomEventTest;
 
-/**
- * Tests of the animation package.
- */
+/** Tests of the animation package. */
 public class EventDOMGwtSuite {
-
 
   public static Test suite() {
     TestSuite suite = new TestSuite("Tests of the event dom package");

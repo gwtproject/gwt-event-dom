@@ -15,6 +15,8 @@
  */
 package org.gwtproject.event.dom.client;
 
+import java.util.ArrayList;
+import java.util.List;
 import jsinterop.base.Js;
 import jsinterop.base.JsPropertyMap;
 import org.gwtproject.dom.client.Element;
@@ -23,9 +25,6 @@ import org.gwtproject.event.legacy.shared.EventHandler;
 import org.gwtproject.event.shared.Event;
 import org.gwtproject.event.shared.HasHandlers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * {@link DomEvent} is a subclass of {@link Event} that provides events that underlying native
  * browser event object as well as a subclass of {@link Type} that understands GWT event bits used
@@ -33,37 +32,31 @@ import java.util.List;
  *
  * @param <H> handler type
  */
-public abstract class DomEvent<H extends EventHandler>
-  extends Event<H>
-  implements HasNativeEvent {
+public abstract class DomEvent<H extends EventHandler> extends Event<H> implements HasNativeEvent {
 
   private static JsPropertyMap<List<Type<?>>> registered;
-  private        NativeEvent                  nativeEvent;
-  private        Element                      relativeElem;
+  private NativeEvent nativeEvent;
+  private Element relativeElem;
 
   /**
    * Fires the given native event on the specified handlers.
    *
-   * @param nativeEvent   the native event
+   * @param nativeEvent the native event
    * @param handlerSource the source of the handlers to fire
    */
-  public static void fireNativeEvent(NativeEvent nativeEvent,
-                                     HasHandlers handlerSource) {
-    fireNativeEvent(nativeEvent,
-                    handlerSource,
-                    null);
+  public static void fireNativeEvent(NativeEvent nativeEvent, HasHandlers handlerSource) {
+    fireNativeEvent(nativeEvent, handlerSource, null);
   }
 
   /**
    * Fires the given native event on the specified handlers.
    *
-   * @param nativeEvent   the native event
+   * @param nativeEvent the native event
    * @param handlerSource the source of the handlers to fire
-   * @param relativeElem  the element relative to which event coordinates will be measured
+   * @param relativeElem the element relative to which event coordinates will be measured
    */
-  public static void fireNativeEvent(NativeEvent nativeEvent,
-                                     HasHandlers handlerSource,
-                                     Element relativeElem) {
+  public static void fireNativeEvent(
+      NativeEvent nativeEvent, HasHandlers handlerSource, Element relativeElem) {
     assert nativeEvent != null : "nativeEvent must not be null";
     if (registered != null) {
       List<Type<?>> types = registered.get(nativeEvent.getType());
@@ -124,16 +117,12 @@ public abstract class DomEvent<H extends EventHandler>
     this.relativeElem = relativeElem;
   }
 
-  /**
-   * Prevents the wrapped native event's default action.
-   */
+  /** Prevents the wrapped native event's default action. */
   public void preventDefault() {
     nativeEvent.preventDefault();
   }
 
-  /**
-   * Stops the propagation of the underlying native event.
-   */
+  /** Stops the propagation of the underlying native event. */
   public void stopPropagation() {
     nativeEvent.stopPropagation();
   }
@@ -144,26 +133,22 @@ public abstract class DomEvent<H extends EventHandler>
    *
    * @param <H> handler type
    */
-  public static class Type<H extends EventHandler>
-    extends Event.Type<H> {
+  public static class Type<H extends EventHandler> extends Event.Type<H> {
 
     private DomEvent<H> flyweight;
-    private String      name;
+    private String name;
 
     /**
      * This constructor allows dom event types to be triggered by the {@link
      * DomEvent#fireNativeEvent(NativeEvent, HasHandlers)} method. It should only be used by
      * implementors supporting new dom events.
      *
-     * <p>
-     * Any such dom event type must act as a flyweight around a native event object.
-     * </p>
+     * <p>Any such dom event type must act as a flyweight around a native event object.
      *
      * @param eventName the raw native event name
      * @param flyweight the instance that will be used as a flyweight to wrap a native event
      */
-    public Type(String eventName,
-                DomEvent<H> flyweight) {
+    public Type(String eventName, DomEvent<H> flyweight) {
       this.flyweight = flyweight;
       // Until we have eager clinits implemented, we are manually initializing
       // DomEvent here.
@@ -173,8 +158,7 @@ public abstract class DomEvent<H extends EventHandler>
       List<Type<?>> types = registered.get(eventName);
       if (types == null) {
         types = new ArrayList<Type<?>>();
-        registered.set(eventName,
-                       types);
+        registered.set(eventName, types);
       }
       types.add(this);
       name = eventName;

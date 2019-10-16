@@ -17,25 +17,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native change event.
- */
-public class ChangeEvent
-  extends DomEvent<ChangeHandler> {
+/** Represents a native change event. */
+public class ChangeEvent extends DomEvent<ChangeHandler> {
+
+  /** Event type for change events. Represents the meta-data associated with this event. */
+  private static final Type<ChangeHandler> TYPE =
+      new Type<>(BrowserEvents.CHANGE, new ChangeEvent());
 
   /**
-   * Event type for change events. Represents the meta-data associated with this event.
-   */
-  private static final Type<ChangeHandler> TYPE = new Type<>(
-    BrowserEvents.CHANGE,
-    new ChangeEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire change events.
    */
-  protected ChangeEvent() {
-  }
+  protected ChangeEvent() {}
 
   /**
    * Gets the event type associated with change events.

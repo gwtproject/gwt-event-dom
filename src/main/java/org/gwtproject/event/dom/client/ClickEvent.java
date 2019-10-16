@@ -17,25 +17,18 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native click event.
- */
-public class ClickEvent
-  extends MouseEvent<ClickHandler> {
+/** Represents a native click event. */
+public class ClickEvent extends MouseEvent<ClickHandler> {
+
+  /** Event type for click events. Represents the meta-data associated with this event. */
+  private static final Type<ClickHandler> TYPE = new Type<>(BrowserEvents.CLICK, new ClickEvent());
 
   /**
-   * Event type for click events. Represents the meta-data associated with this event.
-   */
-  private static final Type<ClickHandler> TYPE = new Type<>(
-    BrowserEvents.CLICK,
-    new ClickEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire click events.
    */
-  protected ClickEvent() {
-  }
+  protected ClickEvent() {}
 
   /**
    * Gets the event type associated with click events.

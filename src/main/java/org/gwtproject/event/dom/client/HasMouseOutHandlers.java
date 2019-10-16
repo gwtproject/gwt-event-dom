@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link MouseOutHandler}
  * instances.
  */
-public interface HasMouseOutHandlers
-  extends HasHandlers {
+public interface HasMouseOutHandlers extends HasHandlers {
 
   /**
    * Adds a {@link MouseOutEvent} handler.

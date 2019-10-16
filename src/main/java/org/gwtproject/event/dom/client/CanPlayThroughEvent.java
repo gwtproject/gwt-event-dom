@@ -20,28 +20,24 @@ import org.gwtproject.dom.client.BrowserEvents;
 /**
  * Represents a native media can play through event.
  *
- * <p>
- * <span style="color:red">Experimental API: This API is still under development
- * and is subject to change.
- * </span>
- * </p>
+ * <p><span style="color:red">Experimental API: This API is still under development and is subject
+ * to change. </span>
  */
-public class CanPlayThroughEvent
-  extends DomEvent<CanPlayThroughHandler> {
+public class CanPlayThroughEvent extends DomEvent<CanPlayThroughHandler> {
 
   /**
    * Event type for media can play through events. Represents the meta-data associated with this
    * event.
    */
-  private static final Type<CanPlayThroughHandler> TYPE = new Type<>(BrowserEvents.CANPLAYTHROUGH,
-                                                                     new CanPlayThroughEvent());
+  private static final Type<CanPlayThroughHandler> TYPE =
+      new Type<>(BrowserEvents.CANPLAYTHROUGH, new CanPlayThroughEvent());
 
   /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire media can play through events.
    */
-  protected CanPlayThroughEvent() {
-  }
+  protected CanPlayThroughEvent() {}
 
   /**
    * Gets the event type associated with media can play through events.

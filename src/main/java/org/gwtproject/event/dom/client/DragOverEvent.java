@@ -17,27 +17,22 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native drag over event.
- */
-public class DragOverEvent
-  extends DragDropEventBase<DragOverHandler> {
+/** Represents a native drag over event. */
+public class DragOverEvent extends DragDropEventBase<DragOverHandler> {
+
+  /** Event type for drag over events. Represents the meta-data associated with this event. */
+  private static final Type<DragOverHandler> TYPE =
+      new Type<>(BrowserEvents.DRAGOVER, new DragOverEvent());
 
   /**
-   * Event type for drag over events. Represents the meta-data associated with this event.
-   */
-  private static final Type<DragOverHandler> TYPE = new Type<>(
-    BrowserEvents.DRAGOVER,
-    new DragOverEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
-   * org.gwtproject.event.shared.HasHandlers)} or {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * org.gwtproject.event.shared.HasHandlers)} or {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers, org.gwtproject.dom.client.Element)} to fire drag over
    * events.
    */
-  protected DragOverEvent() {
-  }
+  protected DragOverEvent() {}
 
   /**
    * Gets the event type associated with drag over events.

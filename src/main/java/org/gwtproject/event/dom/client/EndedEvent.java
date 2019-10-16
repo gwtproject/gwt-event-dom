@@ -20,27 +20,20 @@ import org.gwtproject.dom.client.BrowserEvents;
 /**
  * Represents a native media ended event.
  *
- * <p>
- * <span style="color:red">Experimental API: This API is still under development
- * and is subject to change.
- * </span>
- * </p>
+ * <p><span style="color:red">Experimental API: This API is still under development and is subject
+ * to change. </span>
  */
-public class EndedEvent
-  extends DomEvent<EndedHandler> {
+public class EndedEvent extends DomEvent<EndedHandler> {
+
+  /** Event type for media ended events. Represents the meta-data associated with this event. */
+  private static final Type<EndedHandler> TYPE = new Type<>(BrowserEvents.ENDED, new EndedEvent());
 
   /**
-   * Event type for media ended events. Represents the meta-data associated with this event.
-   */
-  private static final Type<EndedHandler> TYPE = new Type<>(BrowserEvents.ENDED,
-                                                            new EndedEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire media ended events.
    */
-  protected EndedEvent() {
-  }
+  protected EndedEvent() {}
 
   /**
    * Gets the event type associated with media ended events.

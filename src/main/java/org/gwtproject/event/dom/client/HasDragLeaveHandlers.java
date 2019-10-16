@@ -22,14 +22,10 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link DragLeaveHandler}
  * instances.
  *
- * <p>
- * <span style="color:red">Experimental API: This API is still under development
- * and is subject to change.
- * </span>
- * </p>
+ * <p><span style="color:red">Experimental API: This API is still under development and is subject
+ * to change. </span>
  */
-public interface HasDragLeaveHandlers
-  extends HasHandlers {
+public interface HasDragLeaveHandlers extends HasHandlers {
 
   /**
    * Adds a {@link DragLeaveEvent} handler.

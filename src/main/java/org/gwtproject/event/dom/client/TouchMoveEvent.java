@@ -17,25 +17,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native touch move event.
- */
-public class TouchMoveEvent
-  extends TouchEvent<TouchMoveHandler> {
+/** Represents a native touch move event. */
+public class TouchMoveEvent extends TouchEvent<TouchMoveHandler> {
+
+  /** Event type for touch move events. Represents the meta-data associated with this event. */
+  private static final Type<TouchMoveHandler> TYPE =
+      new Type<>(BrowserEvents.TOUCHMOVE, new TouchMoveEvent());
 
   /**
-   * Event type for touch move events. Represents the meta-data associated with this event.
-   */
-  private static final Type<TouchMoveHandler> TYPE = new Type<>(
-    BrowserEvents.TOUCHMOVE,
-    new TouchMoveEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire touch move events.
    */
-  protected TouchMoveEvent() {
-  }
+  protected TouchMoveEvent() {}
 
   /**
    * Gets the event type associated with touch move events.

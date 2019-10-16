@@ -17,25 +17,19 @@ package org.gwtproject.event.dom.client;
 
 import org.gwtproject.dom.client.BrowserEvents;
 
-/**
- * Represents a native context menu event.
- */
-public class ContextMenuEvent
-  extends DomEvent<ContextMenuHandler> {
+/** Represents a native context menu event. */
+public class ContextMenuEvent extends DomEvent<ContextMenuHandler> {
+
+  /** Event type for context menu events. Represents the meta-data associated with this event. */
+  private static final Type<ContextMenuHandler> TYPE =
+      new Type<>(BrowserEvents.CONTEXTMENU, new ContextMenuEvent());
 
   /**
-   * Event type for context menu events. Represents the meta-data associated with this event.
-   */
-  private static final Type<ContextMenuHandler> TYPE = new Type<>(
-    BrowserEvents.CONTEXTMENU,
-    new ContextMenuEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire context menu events.
    */
-  protected ContextMenuEvent() {
-  }
+  protected ContextMenuEvent() {}
 
   /**
    * Gets the event type associated with context menu events.

@@ -20,14 +20,10 @@ import org.gwtproject.event.legacy.shared.EventHandler;
 /**
  * Handler interface for {@link LoadedMetadataEvent} events.
  *
- * <p>
- * <span style="color:red">Experimental API: This API is still under development
- * and is subject to change.
- * </span>
- * </p>
+ * <p><span style="color:red">Experimental API: This API is still under development and is subject
+ * to change. </span>
  */
-public interface LoadedMetadataHandler
-  extends EventHandler {
+public interface LoadedMetadataHandler extends EventHandler {
 
   /**
    * Called when LoadedMetadataEvent is fired.

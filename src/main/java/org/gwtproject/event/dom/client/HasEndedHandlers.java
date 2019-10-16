@@ -19,17 +19,12 @@ import org.gwtproject.event.shared.HandlerRegistration;
 import org.gwtproject.event.shared.HasHandlers;
 
 /**
- * A widget that implements this interface provides registration for {@link EndedHandler}
- * instances.
+ * A widget that implements this interface provides registration for {@link EndedHandler} instances.
  *
- * <p>
- * <span style="color:red">Experimental API: This API is still under development
- * and is subject to change.
- * </span>
- * </p>
+ * <p><span style="color:red">Experimental API: This API is still under development and is subject
+ * to change. </span>
  */
-public interface HasEndedHandlers
-  extends HasHandlers {
+public interface HasEndedHandlers extends HasHandlers {
 
   /**
    * Adds a {@link EndedEvent} handler.

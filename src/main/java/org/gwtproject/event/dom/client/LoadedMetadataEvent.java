@@ -35,29 +35,24 @@ import org.gwtproject.dom.client.BrowserEvents;
 /**
  * Represents a native loadedmetadata event.
  *
- * <p>
- * <span style="color:red">Experimental API: This API is still under development
- * and is subject to change.
- * </span>
- * </p>
+ * <p><span style="color:red">Experimental API: This API is still under development and is subject
+ * to change. </span>
  */
-public class LoadedMetadataEvent
-  extends DomEvent<LoadedMetadataHandler> {
+public class LoadedMetadataEvent extends DomEvent<LoadedMetadataHandler> {
 
   /**
    * Event type for media loadedmetadata events. Represents the meta-data associated with this
    * event.
    */
   private static final Type<LoadedMetadataHandler> TYPE =
-    new Type<>(BrowserEvents.LOADEDMETADATA,
-               new LoadedMetadataEvent());
+      new Type<>(BrowserEvents.LOADEDMETADATA, new LoadedMetadataEvent());
 
   /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire media loadedmetadata events.
    */
-  protected LoadedMetadataEvent() {
-  }
+  protected LoadedMetadataEvent() {}
 
   /**
    * Gets the event type associated with media loadedmetadata events.

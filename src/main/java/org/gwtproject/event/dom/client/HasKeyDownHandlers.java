@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link KeyDownHandler}
  * instances.
  */
-public interface HasKeyDownHandlers
-  extends HasHandlers {
+public interface HasKeyDownHandlers extends HasHandlers {
 
   /**
    * Adds a {@link KeyDownEvent} handler.

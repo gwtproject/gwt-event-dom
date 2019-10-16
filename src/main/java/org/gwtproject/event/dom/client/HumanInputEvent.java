@@ -22,8 +22,7 @@ import org.gwtproject.event.legacy.shared.EventHandler;
  *
  * @param <H> handler type
  */
-public abstract class HumanInputEvent<H extends EventHandler>
-  extends DomEvent<H> {
+public abstract class HumanInputEvent<H extends EventHandler> extends DomEvent<H> {
 
   /**
    * Is <code>alt</code> key down.

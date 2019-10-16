@@ -15,9 +15,7 @@
  */
 package org.gwtproject.event.dom.client;
 
-/**
- * Handler interface for {@link DragEnterEvent} events.
- */
+/** Handler interface for {@link DragEnterEvent} events. */
 public interface DragEnterClickHandler {
 
   /**

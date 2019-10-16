@@ -21,8 +21,7 @@ import org.gwtproject.event.shared.HasHandlers;
 /**
  * A widget that implements this interface provides registration for {@link BlurHandler} instances.
  */
-public interface HasBlurHandlers
-  extends HasHandlers {
+public interface HasBlurHandlers extends HasHandlers {
 
   /**
    * Adds a {@link BlurEvent} handler.

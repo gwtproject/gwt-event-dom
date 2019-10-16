@@ -22,14 +22,10 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link ProgressHandler}
  * instances.
  *
- * <p>
- * <span style="color:red">Experimental API: This API is still under development
- * and is subject to change.
- * </span>
- * </p>
+ * <p><span style="color:red">Experimental API: This API is still under development and is subject
+ * to change. </span>
  */
-public interface HasProgressHandlers
-  extends HasHandlers {
+public interface HasProgressHandlers extends HasHandlers {
 
   /**
    * Adds a {@link ProgressEvent} handler.

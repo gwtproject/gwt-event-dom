@@ -18,25 +18,19 @@ package org.gwtproject.event.dom.client;
 import org.gwtproject.dom.client.BrowserEvents;
 import org.gwtproject.dom.client.EventTarget;
 
-/**
- * Represents a native mouse out event.
- */
-public class MouseOutEvent
-  extends MouseEvent<MouseOutHandler> {
+/** Represents a native mouse out event. */
+public class MouseOutEvent extends MouseEvent<MouseOutHandler> {
+
+  /** Event type for mouse out events. Represents the meta-data associated with this event. */
+  private static final Type<MouseOutHandler> TYPE =
+      new Type<>(BrowserEvents.MOUSEOUT, new MouseOutEvent());
 
   /**
-   * Event type for mouse out events. Represents the meta-data associated with this event.
-   */
-  private static final Type<MouseOutHandler> TYPE = new Type<>(
-    BrowserEvents.MOUSEOUT,
-    new MouseOutEvent());
-
-  /**
-   * Protected constructor, use {@link DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
+   * Protected constructor, use {@link
+   * DomEvent#fireNativeEvent(org.gwtproject.dom.client.NativeEvent,
    * org.gwtproject.event.shared.HasHandlers)} to fire mouse out events.
    */
-  protected MouseOutEvent() {
-  }
+  protected MouseOutEvent() {}
 
   /**
    * Gets the event type associated with mouse out events.

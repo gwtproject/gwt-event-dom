@@ -22,8 +22,7 @@ import org.gwtproject.event.shared.HasHandlers;
  * A widget that implements this interface provides registration for {@link MouseUpHandler}
  * instances.
  */
-public interface HasMouseUpHandlers
-  extends HasHandlers {
+public interface HasMouseUpHandlers extends HasHandlers {
 
   /**
    * Adds a {@link MouseUpEvent} handler.

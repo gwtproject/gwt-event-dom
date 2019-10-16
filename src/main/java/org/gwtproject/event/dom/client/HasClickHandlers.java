@@ -19,11 +19,9 @@ import org.gwtproject.event.shared.HandlerRegistration;
 import org.gwtproject.event.shared.HasHandlers;
 
 /**
- * A widget that implements this interface provides registration for {@link ClickHandler}
- * instances.
+ * A widget that implements this interface provides registration for {@link ClickHandler} instances.
  */
-public interface HasClickHandlers
-  extends HasHandlers {
+public interface HasClickHandlers extends HasHandlers {
 
   /**
    * Adds a {@link ClickEvent} handler.
