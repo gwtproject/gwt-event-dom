@@ -195,6 +195,7 @@
         <groupId>com.vertispan.j2cl</groupId>
         <artifactId>j2cl-maven-plugin</artifactId>
         <version>${maven.j2cl.plugin}</version>
+        <extensions>true</extensions>
         <executions>
           <execution>
             <id>j2cl-test</id>

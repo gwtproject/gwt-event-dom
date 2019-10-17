@@ -19,7 +19,7 @@ import com.google.gwt.junit.client.GWTTestCase;
 import java.util.HashSet;
 
 /** Support code for handler tests. */
-public abstract class HandlerGwt2BaseTest extends GWTTestCase {
+public abstract class AbstractHandlerGwt2Base extends GWTTestCase {
 
   Adaptor adaptor1 = new Adaptor();
   private HashSet<Object> active = new HashSet<>();

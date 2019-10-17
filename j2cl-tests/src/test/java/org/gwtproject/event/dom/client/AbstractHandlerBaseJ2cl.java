@@ -36,7 +36,7 @@ import static junit.framework.TestCase.assertTrue;
 import java.util.HashSet;
 
 /** Support code for handler tests. */
-public abstract class HandlerBaseJ2cl {
+public abstract class AbstractHandlerBaseJ2cl {
 
   Adaptor adaptor1 = new Adaptor();
   private HashSet<Object> active = new HashSet<>();

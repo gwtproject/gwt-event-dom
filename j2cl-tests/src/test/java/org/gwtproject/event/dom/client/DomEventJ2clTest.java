@@ -40,7 +40,7 @@ import org.junit.Test;
 
 /** Events test. */
 @J2clTestInput(DomEventJ2clTest.class)
-public class DomEventJ2clTest extends HandlerBaseJ2cl {
+public class DomEventJ2clTest extends AbstractHandlerBaseJ2cl {
 
   @Test
   public void testKeyEvents() {
