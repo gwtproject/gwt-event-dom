@@ -300,7 +300,7 @@
 
   <repositories>
     <repository>
-      <id>vertispan-gwt-snpashot-releases</id>
+      <id>vertispan-gwt-snapshot-releases</id>
       <name>Vertispan GWT hosted SNAPSHOT artifacts-releases</name>
       <url>${vertispan.gwt.repo.url}</url>
     </repository>
