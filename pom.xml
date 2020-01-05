@@ -44,8 +44,8 @@
 
   <modules>
     <module>gwt-event-dom</module>
-    <module>gwt2-tests</module>
-    <module>j2cl-tests</module>
+    <module>gwt-event-dom-gwt2-tests</module>
+    <module>gwt-event-dom-j2cl-tests</module>
   </modules>
 
   <properties>
