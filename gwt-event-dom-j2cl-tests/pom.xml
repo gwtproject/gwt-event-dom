@@ -102,31 +102,10 @@
       <scope>test</scope>
     </dependency>
 
-    <!-- As the other projects are gwt2, we need to explicitly depend on a j2cl-compatible version of jsinterop-base -->
-    <dependency>
-      <groupId>com.vertispan.jsinterop</groupId>
-      <artifactId>base</artifactId>
-      <version>${jsinterop.base.version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
-      <version>${slf4j.version}</version>
-      <scope>test</scope>
-    </dependency>
-
     <!-- test dependencies -->
     <dependency>
       <groupId>com.vertispan.j2cl</groupId>
       <artifactId>junit-annotations</artifactId>
-      <version>${j2cl.version}</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-      <groupId>com.vertispan.j2cl</groupId>
-      <artifactId>gwttestcase-emul</artifactId>
       <version>${j2cl.version}</version>
       <scope>test</scope>
     </dependency>
@@ -141,14 +120,6 @@
       <groupId>com.vertispan.j2cl</groupId>
       <artifactId>junit-emul</artifactId>
       <version>${j2cl.version}</version>
-      <scope>test</scope>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/junit/junit -->
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
