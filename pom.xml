@@ -11,7 +11,8 @@
   <packaging>pom</packaging>
 
   <name>GWT Event DOM Parent</name>
-  <description>Parent POM containing the gwt-event-dom module and the test modules (gwt2-tests and j2cl-tests)</description>
+  <description>Parent POM containing the gwt-event-dom module and the test modules (gwt2-tests and j2cl-tests)
+  </description>
   <url>https://github.com/gwtproject/gwt-event-dom</url>
 
   <organization>
@@ -69,9 +70,44 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>${maven.deploy.plugin}</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
     </plugins>
     <pluginManagement>
       <plugins>
+        <plugin>
+          <groupId>com.mycila</groupId>
+          <artifactId>license-maven-plugin</artifactId>
+          <version>${maven.licence.plugin}</version>
+          <configuration>
+            <header>LICENSE.header</header>
+            <encoding>${project.build.sourceEncoding}</encoding>
+            <skipExistingHeaders>true</skipExistingHeaders>
+            <mapping>
+              <java>SLASHSTAR_STYLE</java>
+            </mapping>
+            <includes>
+              <include>sec/test/java</include>
+            </includes>
+            <properties>
+              <year>${project.inceptionYear}</year>
+              <name>${project.organization.name}</name>
+            </properties>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-deploy-plugin</artifactId>
