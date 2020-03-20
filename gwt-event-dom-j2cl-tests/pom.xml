@@ -165,33 +165,6 @@
 
     <plugins>
       <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>${maven.compiler.plugin}</version>
-        <configuration>
-          <encoding>${project.build.sourceEncoding}</encoding>
-          <source>${maven.compiler.source}</source>
-          <target>${maven.compiler.target}</target>
-        </configuration>
-        <executions>
-          <execution>
-            <id>default-Compile</id>
-            <goals>
-              <goal>compile</goal>
-            </goals>
-            <phase>compile</phase>
-          </execution>
-          <execution>
-            <id>default-testCompile</id>
-            <goals>
-              <goal>testCompile</goal>
-            </goals>
-            <phase>test-compile</phase>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
         <groupId>com.vertispan.j2cl</groupId>
         <artifactId>j2cl-maven-plugin</artifactId>
         <version>${maven.j2cl.plugin}</version>
@@ -205,16 +178,6 @@
             <goals>
               <goal>test</goal>
             </goals>
-            <configuration>
-              <defines>
-                <gwt.enableDebugId>true</gwt.enableDebugId>
-                <gwt.cspCompatModeEnabled>true</gwt.cspCompatModeEnabled>
-                <gwt.strictCspTestingEnabled>true</gwt.strictCspTestingEnabled>
-              </defines>
-              <tests>
-                <test>org.gwtproject.event.dom.client.DomEventJ2clTest</test>
-              </tests>
-            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -258,72 +221,14 @@
           <skipTests>true</skipTests>
         </configuration>
       </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>${maven.jar.plugin}</version>
-        <executions>
-          <execution>
-            <id>default-jar</id>
-            <phase>none</phase>
-            <configuration>
-              <finalName>unwanted</finalName>
-              <classifier>unwanted</classifier>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-install-plugin</artifactId>
-        <version>${maven.install.plugin}</version>
-        <configuration>
-          <skip>true</skip>
-        </configuration>
-      </plugin>
     </plugins>
-
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-deploy-plugin</artifactId>
-          <version>${maven.deploy.plugin}</version>
-          <configuration>
-            <skip>true</skip>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
   </build>
 
   <repositories>
     <repository>
-      <id>vertispan-gwt-snapshot-releases</id>
-      <name>Vertispan GWT hosted SNAPSHOT artifacts-releases</name>
-      <url>${vertispan.gwt.repo.url}</url>
-    </repository>
-    <repository>
-      <id>vertispan-gwt-releases</id>
-      <name>Vertispan GWT hosted artifacts-releases</name>
-      <url>${vertispan.gwt.repo.url}</url>
-    </repository>
-    <repository>
-      <id>vertispan-j2cl-releases</id>
-      <name>Vertispan J2CL hosted artifacts-releases</name>
-      <url>${vertispan.j2cl.repo.url}</url>
-    </repository>
-    <repository>
       <id>vertispan-j2cl-snapshots</id>
       <name>Vertispan J2CL hosted artifacts-snapshots</name>
       <url>${vertispan.j2cl.repo.url}</url>
-    </repository>
-    <repository>
-      <id>google-snapshot-repo</id>
-      <name>Google SnapShot Repo</name>
-      <url>${google.snapshot.repo.url}</url>
     </repository>
   </repositories>
 
@@ -334,17 +239,4 @@
       <url>${vertispan.j2cl.repo.url}</url>
     </pluginRepository>
   </pluginRepositories>
-
-  <distributionManagement>
-    <repository>
-      <id>vertispan-releases</id>
-      <name>Vertispan hosted artifacts-releases</name>
-      <url>${vertispan.j2cl.repo.url}</url>
-    </repository>
-    <snapshotRepository>
-      <id>vertispan-snapshots</id>
-      <name>Vertispan hosted artifacts-snapshots</name>
-      <url>${vertispan.j2cl.repo.url}</url>
-    </snapshotRepository>
-  </distributionManagement>
 </project>
