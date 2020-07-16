@@ -63,11 +63,6 @@
     <maven.install.plugin>3.0.0-M1</maven.install.plugin>
     <maven.license.plugin>3.0</maven.license.plugin>
     <maven.surfire.plugin>3.0.0-M1</maven.surfire.plugin>
-
-    <elemental2.version>1.1.0</elemental2.version>
-    <gwt-dom.version>HEAD-SNAPSHOT</gwt-dom.version>
-    <gwt-event.version>1.0.0-RC1</gwt-event.version>
-    <junit.version>4.12</junit.version>
   </properties>
 
   <build>
@@ -182,4 +177,17 @@
       <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
+
+  <repositories>
+    <repository>
+      <id>oss.sonatype.org-snapshot</id>
+      <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+      <releases>
+        <enabled>false</enabled>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 </project>

@@ -50,6 +50,10 @@
     <maven.gpg.plugin>1.6</maven.gpg.plugin>
     <maven.javadoc.plugin>3.2.0</maven.javadoc.plugin>
     <maven.source.plugin>3.2.1</maven.source.plugin>
+
+    <elemental2.version>1.1.0</elemental2.version>
+    <gwt-dom.version>HEAD-SNAPSHOT</gwt-dom.version>
+    <gwt-event.version>1.0.0-RC1</gwt-event.version>
   </properties>
 
   <dependencies>
