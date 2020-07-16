@@ -51,3 +51,4 @@ GWT Event DOM depends on the following modules:
 * gwt-dom
 * gwt-event
 * gwt-event-legacy
+
