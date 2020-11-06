@@ -15,37 +15,8 @@
   <description>Test cases for the J2Cl tests</description>
   <url>https://github.com/gwtproject/gwt-event-dom</url>
 
-  <organization>
-    <name>The GWT Project Authors</name>
-    <url>https://github.com/gwtproject</url>
-  </organization>
-
-  <licenses>
-    <license>
-      <name>The Apache Software License, Version 2.0</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-    </license>
-  </licenses>
-
-  <developers>
-    <developer>
-      <name>The GWT Project Authors</name>
-      <organization>The GWT Project Authors</organization>
-      <url>https://github.com/gwtproject</url>
-    </developer>
-  </developers>
-
-  <scm>
-    <connection>scm:git:git://github.com/gwtproject/gwt-event-dom.git</connection>
-    <developerConnection>scm:git:ssh://github.com/gwtproject/gwt-event-dom.git</developerConnection>
-    <url>https://github.com/gwtproject/gwt-event-dom/tree/master</url>
-  </scm>
-
-  <inceptionYear>2019</inceptionYear>
-
   <properties>
     <maven.j2cl.plugin>0.16-SNAPSHOT</maven.j2cl.plugin>
-    <maven.resource.plugin>3.1.0</maven.resource.plugin>
 
     <!-- CI -->
     <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
@@ -107,14 +78,6 @@
         <version>${maven.surfire.plugin}</version>
         <configuration>
           <skipTests>true</skipTests>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>${maven.deploy.plugin}</version>
-        <configuration>
-          <skip>true</skip>
         </configuration>
       </plugin>
     </plugins>
