@@ -26,9 +26,9 @@ import org.gwtproject.event.legacy.shared.EventHandler;
 /**
  * Abstract class representing touch events.
  *
- * <p>See {@link <a
+ * <p>See <a
  * href="http://developer.apple.com/library/safari/documentation/UserExperience/Reference/TouchEventClassReference/TouchEvent/TouchEvent.html">Safari
- * Touch Event Documentation</a>}
+ * Touch Event Documentation</a>
  *
  * @param <H> handler type
  */
