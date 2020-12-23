@@ -68,7 +68,7 @@
         <version>${maven.gwt.plugin}</version>
         <extensions>true</extensions>
         <configuration>
-          <moduleName>org.gwtproject.event.EventDOM</moduleName>
+          <moduleName>org.gwtproject.event.dom.DomEvent</moduleName>
         </configuration>
       </plugin>
     </plugins>
