@@ -16,12 +16,9 @@
   <url>https://github.com/gwtproject/gwt-event-dom</url>
 
   <properties>
-    <maven.j2cl.plugin>0.16-SNAPSHOT</maven.j2cl.plugin>
+    <maven.j2cl.plugin>0.19</maven.j2cl.plugin>
 
-    <!-- CI -->
-    <vertispan.j2cl.repo.url>https://repo.vertispan.com/j2cl/</vertispan.j2cl.repo.url>
-
-    <j2cl.version>0.8-SNAPSHOT</j2cl.version>
+    <j2cl.version>0.10.0-3c97afeac</j2cl.version>
   </properties>
 
   <dependencies>
@@ -82,24 +79,4 @@
       </plugin>
     </plugins>
   </build>
-
-  <repositories>
-    <repository>
-      <id>vertispan-snapshots</id>
-      <name>Vertispan hosted artifacts-releases</name>
-      <url>${vertispan.j2cl.repo.url}</url>
-    </repository>
-    <repository>
-      <id>ossrh</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
-    </repository>
-  </repositories>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>vertispan-releases</id>
-      <name>Vertispan hosted artifacts-releases</name>
-      <url>${vertispan.j2cl.repo.url}</url>
-    </pluginRepository>
-  </pluginRepositories>
 </project>
