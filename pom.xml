@@ -65,7 +65,7 @@
 
     <elemental2.version>1.1.0</elemental2.version>
     <gwt-event.version>1.0.0-RC1</gwt-event.version>
-    <gwt-dom.version>1.0.0-RC1</gwt-dom.version>
+    <gwt-dom.version>1.0.0-RC2</gwt-dom.version>
 
     <junit.version>4.13.1</junit.version>
   </properties>
