@@ -6,14 +6,14 @@ A future-proof port of the `com.google.gwt.event.EventDOM` GWT module, with no d
 
 ##  Migrating from `com.google.gwt.event.EventDOM`
 
-```xml
-<dependency>
-    <groupId>org.gwtproject.event</groupId>
-    <artifactId>gwt-event-dom</artifactId>
-    <version>1.0-SNAPSHOT</version>
-</dependency>
-```
-   ```
+1. If you are using Maven, update the dependeny in your POM:
+    ```xml
+    <dependency>
+        <groupId>org.gwtproject.event</groupId>
+        <artifactId>gwt-event-dom</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+    ```
 
    For Gradle:
 
