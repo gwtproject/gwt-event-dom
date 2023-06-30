@@ -66,11 +66,13 @@ public abstract class DomEvent<H extends EventHandler> extends Event<H> implemen
           // loop.
           NativeEvent currentNative = type.flyweight.nativeEvent;
           Element currentRelativeElem = type.flyweight.relativeElem;
+          Object currentSource = type.flyweight.getSource();
           type.flyweight.setNativeEvent(nativeEvent);
           type.flyweight.setRelativeElement(relativeElem);
           handlerSource.fireEvent(type.flyweight);
           type.flyweight.setNativeEvent(currentNative);
           type.flyweight.setRelativeElement(currentRelativeElem);
+          type.flyweight.setSource(currentSource);
         }
       }
     }
